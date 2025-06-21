@@ -1,0 +1,597 @@
+/* Global Styles & Font Imports */
+html, body {
+    width: 100%; 
+    background-color: var(--beige);
+}
+
+body {
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    font-family: 'Merriweather', serif; /* Default font */
+}
+
+:root {
+    --beige: #dbc59c;
+    --red: #d63f13;
+    --khaki: #6b6d32;
+    --masthead-red-transparent: rgba(214, 63, 19, 0.95); /* #d63f13 with 95% opacity */
+    --khaki-transparent: rgba(107, 109, 50, 0.95); /* #6b6d32 with 95% opacity */
+    --monarch-block-background: rgba(227, 217, 198, 0.90); /* #e3d9c6 with 90% opacity */
+    --stroke-bottom-color: #b9b191;
+    --stroke-top-color: #d63f13;
+}
+
+/* Fixed Map Background */
+.website-wrapper {
+    position: relative;
+    width: 100vw; /* Take full viewport width */
+    min-height: 100vh; /* Take full viewport height */
+    overflow-x: hidden; /* <-- MOVED HERE */
+    background-image: url('images/MapBCKD.jpg');
+    background-size: auto 100vh; /* Set height to 100% of viewport height, auto width */
+    background-position: center center; /* Center the image */
+    background-attachment: fixed; /* Make the background fixed while content scrolls */
+    background-repeat: no-repeat;
+    background-color: var(--beige); /* Fallback/seamless transition */
+}
+
+/* Main Scrolling Container */
+.main-container {
+    width: 1200px; /* Fixed width for desktop */
+    max-width: 95%; /* Adjust for smaller screens */
+    margin: 0 auto; /* Center the container */
+    position: relative; /* To allow z-index for content passing behind masthead */
+    z-index: 1; /* Content passes behind masthead later */
+    padding-top: 740px; /* MODIFIED: Removed the large padding */
+    box-sizing: border-box; /* Include padding in width/height */
+}
+
+/* Masthead Block Styling */
+.masthead-block {
+    position: absolute; /* Ensures it's out of the layout flow by default */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* This keeps it centered */
+    width: 1200px;
+    max-width: 95%;
+    height: 740px;
+    background-color: var(--masthead-red-transparent);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+/* This class is added by JS to fix the masthead */
+.masthead-block.is-fixed-to-top {
+    position: fixed;
+    top: -625px; /* 115px (nav height) - 740px (masthead height) */
+    
+    /* ADDED: These lines ensure it stays centered when fixed */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navigation-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 115px;
+    display: flex;
+    justify-content: center; /* This centers the .nav-button-container */
+    align-items: center;
+    z-index: 20;
+    pointer-events: none;
+    /* The 'gap' property is no longer needed here */
+}
+
+/* This container acts as a track for the buttons */
+.nav-button-container {
+    width: 1200px;
+    max-width: 95%; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 25px; /* NEW: Pushes buttons in from the edges */
+    box-sizing: border-box; /* NEW: Ensures padding is included in the width calculation */
+}
+
+.nav-button {
+    pointer-events: auto;
+    background: none;
+    border: none;
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--beige);
+    cursor: pointer;
+    padding: 10px 15px;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+    letter-spacing: 1px; /* NEW: Increases space between letters */
+}
+
+.nav-button:hover {
+    color: var(--khaki); /* Example hover effect */
+}
+
+.masthead-title {
+    font-family: 'Merriweather', serif;
+    font-weight: 300; /* Light */
+    font-size: 76px;
+    text-transform: capitalize; 
+    color: var(--beige);
+    text-align: center;
+    margin: 0; /* Reset default margin */
+    padding-bottom: 20px; /* Space from subtitle */
+}
+
+.masthead-subtitle {
+    font-family: 'Merriweather', serif;
+    font-style: italic; /* Italic */
+    font-size: 30px;
+    text-transform: none;
+    color: var(--beige);
+    text-align: center;
+    margin: 0; /* Reset default margin */
+}
+
+/* Add a smooth transition for the opacity fade effect */
+.masthead-title,
+.masthead-subtitle {
+    transition: opacity 0.3s ease-out;
+}
+
+/* House Block Styling */
+.house-block {
+	width: 100%;
+	height: 118px;
+	background-color: var(--khaki-transparent);
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	padding-left: 30px;
+	box-sizing: border-box;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+/* NEW: Class to apply when house block is visible and should animate in */
+.house-block.is-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.house-title {
+    font-family: 'Merriweather', serif;
+    font-weight: 300; /* Light */
+    font-size: 48px;
+    text-transform: none; /* Controlled by JS capitalization */
+    color: var(--beige);
+    margin: 0;
+}
+
+/* Monarch Block Container (for Masonry layout) */
+.monarchs-grid {
+    display: flex; /* Use flexbox to create columns */
+    justify-content: space-between; /* Space between columns */
+    align-items: flex-start; /* Align columns to the top */
+    margin-bottom: 30px; /* Spacing below the entire grid */
+}
+
+/* Specific styling for the columns within the masonry layout */
+.monarchs-grid .monarch-column {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 15px); /* Half width minus half the gap */
+    gap: 30px; /* Spacing between blocks in the column */
+}
+
+
+/* Monarch Block Styling */
+.monarch-block {
+	background-color: var(--monarch-block-background); /* Removed !important from debug color */
+	border-radius: 30px;
+	padding: 0; /* Manage padding within its internal sections */
+	box-sizing: border-box;
+	position: relative; /* For absolute positioning of crest and portrait */
+
+	/* --- NEW: Initial state for animation --- */
+	opacity: 0;
+	transform: scale(0.66);
+	/* -------------------------------------- */
+	
+	transition: opacity 0.4s ease-out, transform 0.4s ease-out; /* Animation speed */
+}
+
+/* Class to apply when monarch block is visible and should animate in */
+.monarch-block.is-visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* NEW: Monarch Block Internal Sections for Vertical Control */
+.monarch-header-top-section,
+.monarch-visual-and-titles-wrapper,
+.monarch-bottom-sections {
+    /* Apply common horizontal padding for content within these sections */
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    width: 100%; /* Ensure they take full width of monarch block's content area */
+}
+
+.monarch-header-top-section {
+    padding-top: 30px; /* Top padding for the entire block's content */
+    margin-bottom: 25px; /* Space between top section and visual/titles section */
+}
+
+.monarch-visual-and-titles-wrapper {
+    position: relative; /* CRUCIAL: Makes children (portrait, titles) absolute relative to this wrapper */
+    height: 100px; /* Explicit height to contain absolute portrait (100px) + margin for titles text (25px) */
+    margin-bottom: 25px; /* Space between visual/titles section and bottom sections */
+}
+
+.monarch-bottom-sections {
+    padding-bottom: 50px; /* Bottom padding for the entire block's content */
+    /* No margin-top needed here, visual-and-titles-wrapper's margin-bottom creates the space */
+}
+
+/* Portrait Placeholder Styling - Now absolutely positioned within .monarch-visual-and-titles-wrapper */
+.monarch-portrait-placeholder {
+    width: 140px;
+    height: 100px;
+    background-color: var(--khaki);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute; /* Absolute positioning */
+    left: 0px; /* Pull left to override monarch-block's padding */
+    top: 0; /* Aligns with the top of the .monarch-visual-and-titles-wrapper */
+    z-index: 2; /* Ensure it's on top */
+}
+
+/* Monarch Block Text Styles - Fine-tuned vertical spacing and alignment */
+.monarch-block .house-name-text {
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    font-weight: 300; /* Light */
+    font-size: 16px;
+    color: var(--khaki);
+    text-align: left;
+    margin-top: 0; /* Adjusted: Align roughly with crest top */
+    margin-bottom: 20px; /* More space to monarch name */
+}
+
+.monarch-block .monarch-name-text {
+    font-family: 'Merriweather', serif;
+    font-weight: 400; /* Regular */
+    font-size: 36px;
+    color: var(--red);
+    text-align: left;
+    margin-top: 30px; 
+    margin-bottom: 5px; /* Closer to nickname */
+}
+
+.monarch-block .nickname-years-text {
+    font-family: 'Merriweather', serif;
+    font-weight: 400; /* Regular */
+    font-size: 16px;
+    color: var(--khaki);
+    text-align: left;
+    margin-top: 0; 
+    margin-bottom: 0; /* No margin-bottom, handled by parent section's margin-bottom */
+}
+
+.monarch-block .titles-text {
+    font-family: 'Merriweather', serif;
+    font-weight: 400; 
+    font-size: 18px;
+    text-transform: uppercase;
+    color: var(--khaki);
+    text-align: left;
+    position: absolute; /* Absolute positioning within .monarch-visual-and-titles-wrapper */
+    left: calc(140px + 25px); /* Positioned relative to portrait's space */
+    top: 10px; /* 25px down from top of portrait */
+    margin-top: 0; /* No margin-top here, controlled by 'top' property */
+    margin-bottom: 0;
+    padding-right: 30px; 
+    /* width: calc(100% - 140px - 25px); /* Moved to media query */ */
+    /* box-sizing: border-box; /* Include padding in width */
+}
+
+.monarch-block .section-heading {
+    font-family: 'Merriweather', serif;
+    font-weight: 400; /* Regular */
+    font-size: 16px;
+    text-transform: capitalize; /* <--- MODIFIED: Should be capitalize */
+    color: var(--red);
+    text-align: left;
+    margin-top: 0; /* <--- MODIFIED: Reset to 0 for default */
+    margin-bottom: 5px; /* Spacing before list items */
+}
+
+/* NEW RULE: For "Married to" and "Children" headings (2nd and 3rd headings in sequence) */
+.monarch-block .section-heading:nth-of-type(2),
+.monarch-block .section-heading:nth-of-type(3) {
+    margin-top: 20px; /* <--- ADDED: More space for double line leading. Adjust as needed (e.g., 20px, 25px) */
+}
+
+.monarch-block .section-list {
+    list-style: none; 
+    padding-left: 0; /* Reset default padding */
+    margin: 0; 
+}
+
+/* NEW: Styling for the inbreeding explanation paragraph */
+.inbreeding-explanation-text {
+    font-family: 'Merriweather', serif;
+    font-weight: 400; /* Regular weight */
+    font-size: 16px;
+    color: var(--khaki);
+    line-height: 1.6; /* A little extra line spacing for readability */
+    margin: 0;
+}
+
+.monarch-block .section-list li {
+    font-family: 'Merriweather', serif;
+    font-weight: 300; 
+    font-size: 16px;
+    text-transform: none; 
+    color: var(--khaki);
+    margin-bottom: 5px; 
+    position: relative; 
+    padding-left: 20px; /* Space for custom bullet */
+}
+
+.monarch-block .section-list li::before {
+    content: "•"; 
+    color: var(--khaki); 
+    position: absolute;
+    left: 0; 
+    top: 0;
+}
+
+.monarch-block .section-list ul.section-list {
+    padding-left: 20px; /* Indentation for list items */
+    margin-top: 4px; /* <--- ADDED: Adjust this value to get desired leading after "daughter of" */
+}
+
+
+/* Inbreeding Rate Device (SVG Crest) Styling */
+.inbreeding-crest-container {
+    width: 129px; 
+    height: 146px; 
+    position: absolute; 
+    top: 30px; /* Aligned with top padding */
+    right: 30px; /* Aligned with right padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    pointer-events: none; 
+}
+
+.inbreeding-crest-container svg {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.inbreeding-crest-container .crest-text-overlay {
+    position: relative; 
+    z-index: 2; 
+    font-family: 'Merriweather', serif;
+    color: var(--khaki);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+}
+
+.inbreeding-crest-container .crest-text-label {
+	font-weight: 400;	
+	font-size: 16px; /* MODIFIED: Increased to 16px */
+	text-transform: none; 
+	line-height: 1;
+	position: relative; 
+}
+
+.inbreeding-crest-container .crest-text-label:first-of-type {
+	bottom: 8px; /* Pushes "Inbreeding" UP from its original position */
+}
+
+.inbreeding-crest-container .crest-text-label:last-of-type {
+	top: 8px; /* Pushes "Rate" DOWN from its original position */
+}
+
+.inbreeding-crest-container .crest-rate-number {
+    font-weight: 400; 
+    font-size: 36px;
+    text-transform: lowercase;
+    color: var(--red);
+    line-height: 1; 
+}
+
+/* SVG specific styling for the crests */
+.inbreeding-crest-container .crest-bottom-stroke {
+    stroke: var(--stroke-bottom-color);
+    stroke-width: 7px;
+    fill: none; 
+    stroke-miterlimit: 10; 
+}
+
+.inbreeding-crest-container .crest-top-stroke {
+    stroke: var(--stroke-top-color);
+    stroke-width: 7px;
+    fill: none; 
+    stroke-miterlimit: 10;  
+    stroke-linecap: round;  
+    
+    stroke-dasharray: 391;
+    stroke-dashoffset: 391;
+    
+    /* MODIFIED: Using a more pronounced, exponential easing curve */
+    transition: stroke-dashoffset 0.9s cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s;
+
+    transform-origin: center;
+    transform: scaleX(-1);
+}
+
+/* --- NEW: Footer Styling --- */
+
+/* --- Footer Styling --- */
+footer {
+    width: 1200px;
+    max-width: 95%;
+    margin: 100px auto 0 auto;
+
+    background-color: var(--khaki-transparent);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    /* MODIFIED: Changed padding to add 100px at the bottom */
+    padding: 50px 50px 100px 50px; 
+    box-sizing: border-box;
+}
+
+footer .footer-text {
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.7;
+    text-transform: none;
+    color: var(--beige);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5em; /* Adds space between paragraphs */
+}
+
+/* NEW: This rule removes the bottom margin from the very last paragraph */
+footer .footer-text:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1240px) { 
+    .main-container {
+        width: 100%;
+    }
+    .masthead-block {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) { 
+    .monarchs-grid {
+        column-count: 1; 
+        display: block; 
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%; 
+    }
+    .monarchs-grid .monarch-column {
+        width: 100%; 
+        gap: 0; 
+    }
+    .masthead-title {
+        font-size: 56px; 
+    }
+    .masthead-subtitle {
+        font-size: 24px;
+    }
+    .house-title {
+        font-size: 36px;
+    }
+    .masthead-block {
+        height: auto; 
+        padding-top: 100px; 
+        padding-bottom: 50px;
+    }
+    /* Mobile Monarch Block Internal Layout - Reset Absolute Positioning */
+    .monarch-block {
+        padding: 20px; /* General padding reduction */
+    }
+    .monarch-block .monarch-header-top-section,
+    .monarch-block .monarch-visual-and-titles-wrapper,
+    .monarch-block .monarch-bottom-sections {
+        padding-left: 0; /* Reset for mobile */
+        padding-right: 0; /* Reset for mobile */
+    }
+    .monarch-block .monarch-portrait-placeholder {
+        position: static; /* Revert to static for normal flow */
+        margin: 15px auto; /* Center portrait with vertical margin */
+        left: auto; top: auto; /* Reset explicit positioning */
+        float: none; 
+        display: block; 
+        z-index: auto; 
+    }
+    .monarch-block .titles-text {
+        position: static; /* Revert to static for normal flow */
+        margin-top: 15px; 
+        margin-left: 0; 
+        text-align: center; 
+        width: auto; 
+        box-sizing: border-box; 
+        padding-left: 0; 
+        padding-right: 0; 
+    }
+    .monarch-block .section-heading,
+    .monarch-block .section-list {
+        margin-left: 0; 
+        text-align: left; 
+        clear: both; /* Ensure clearing floats */
+        padding-left: 0; 
+        padding-right: 0; 
+    }
+    .monarch-block .section-list li {
+        padding-left: 20px; 
+    }
+    .inbreeding-crest-container {
+        right: 50%;
+        transform: translateX(50%);
+        top: 10px; 
+    }
+}
+
+@media (max-width: 480px) { 
+    .masthead-title {
+        font-size: 40px;
+    }
+    .masthead-subtitle {
+        font-size: 20px;
+    }
+    .house-title {
+        font-size: 28px;
+        padding-left: 15px; 
+    }
+    .monarch-block {
+        padding: 15px; 
+    }
+    .monarch-block .monarch-name-text {
+        font-size: 30px;
+    }
+}
+
+/* --- ANIMATION RULES (Place at bottom of CSS) --- */
+
+/* Initial hidden state for House Blocks */
+.house-block {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Final visible state for House Blocks */
+.house-block.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

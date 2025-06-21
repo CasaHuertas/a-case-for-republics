@@ -1,0 +1,1855 @@
+[
+  {
+    "id": "henry_vii",
+    "house": "Tudor",
+    "name": "Henry VII",
+    "nickname": null,
+    "birth_year": 1457,
+    "death_year": 1509,
+    "inbreeding_rate": 12.48,
+    "inbreeding_explanation": null,
+    "titles": "King of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, Lord of Ireland 🇮🇪",
+    "reign_years": "1485-1509",
+    "parents": {
+      "father": { "name": "Edmund Tudor", "title": "Earl of Richmond", "house": "Tudor" },
+      "mother": { "name": "Margaret Beaufort", "title": "Countess of Richmond and Derby", "house": "Beaufort" }
+    },
+    "spouses": [
+      {
+        "name": "Elizabeth of York", "birth_title": "Princess of York", "house": "York",
+        "parents": {
+          "father": { "name": "Edward IV", "title": "King of England", "house": "York" },
+          "mother": { "name": "Elizabeth Woodville", "title": null, "house": "Woodville" }
+        }
+      }
+    ],
+    "children": [
+      { "name": "Arthur", "title": "Prince of Wales" },
+      { "name": "Margaret", "title": "Princess of England, Queen Consort of Scotland" },
+      { "name": "Henry VIII", "title": "King of England" },
+      { "name": "Mary", "title": "Princess of England, Queen Consort of France" }
+    ]
+  },
+  {
+    "id": "henry_viii",
+    "house": "Tudor",
+    "name": "Henry VIII",
+    "nickname": null,
+    "birth_year": 1491,
+    "death_year": 1547,
+    "inbreeding_rate": 25.00,
+    "inbreeding_explanation": "His parents, Henry VII and Elizabeth of York (York), were third cousins. His inbreeding rate primarily reflects the genetic implications of his first marriage to Catherine of Aragon (Trastámara), his deceased brother's wife, a union of close affinity. The rate is calculated for their child, Mary I.",
+    "titles": "King of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, Lord of Ireland 🇮🇪, later King of Ireland 🇮🇪",
+    "reign_years": "1509-1547",
+    "parents": {
+      "father": { "name": "Henry VII", "title": "King of England", "house": "Tudor" },
+      "mother": { "name": "Elizabeth of York", "title": "Princess of York", "house": "York" }
+    },
+    "spouses": [
+        { "name": "Catherine of Aragon", "birth_title": "Infanta of Castile", "house": "Trastámara", "parents": { "father": { "name": "Ferdinand II", "title": "King of Aragon", "house": "Trastámara" }, "mother": { "name": "Isabella I", "title": "Queen of Castile", "house": "Trastámara" } } },
+        { "name": "Anne Boleyn", "birth_title": null, "house": "Boleyn", "parents": { "father": { "name": "Thomas Boleyn", "title": "Earl of Wiltshire", "house": "Boleyn" }, "mother": { "name": "Elizabeth Howard", "title": null, "house": "Howard" } } },
+        { "name": "Jane Seymour", "birth_title": null, "house": "Seymour", "parents": { "father": { "name": "John Seymour", "title": null, "house": "Seymour" }, "mother": { "name": "Margery Wentworth", "title": null, "house": "Wentworth" } } },
+        { "name": "Anne of Cleves", "birth_title": "Princess of Cleves", "house": "La Marck", "parents": { "father": { "name": "John III", "title": "Duke of Cleves", "house": "La Marck" }, "mother": { "name": "Maria of Jülich-Berg", "title": null, "house": "Jülich-Cleves-Berg" } } },
+        { "name": "Catherine Howard", "birth_title": null, "house": "Howard", "parents": { "father": { "name": "Lord Edmund Howard", "title": null, "house": "Howard" }, "mother": { "name": "Joyce Culpeper", "title": null, "house": "Culpeper" } } },
+        { "name": "Catherine Parr", "birth_title": null, "house": "Parr", "parents": { "father": { "name": "Sir Thomas Parr", "title": null, "house": "Parr" }, "mother": { "name": "Maud Green", "title": null, "house": "Green" } } }
+    ],
+    "children": [
+      { "name": "Mary I", "title": "Princess of England, later Queen of England" },
+      { "name": "Elizabeth I", "title": "Princess of England, later Queen of England" },
+      { "name": "Edward VI", "title": "Prince of Wales, later King of England" }
+    ]
+  },
+  {
+    "id": "edward_vi",
+    "house": "Tudor",
+    "name": "Edward VI",
+    "nickname": null,
+    "birth_year": 1537,
+    "death_year": 1553,
+    "inbreeding_rate": 17.68,
+    "inbreeding_explanation": "As the son of Henry VIII, he inherited a baseline of inbreeding. His mother, Jane Seymour (Seymour), was Henry's third cousin. Their union was less genetically close than Henry's previous marriages, resulting in a lower inbreeding rate for their son compared to his half-sisters.",
+    "titles": "King of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, King of Ireland 🇮🇪",
+    "reign_years": "1547-1553",
+    "parents": {
+      "father": { "name": "Henry VIII", "title": "King of England", "house": "Tudor" },
+      "mother": { "name": "Jane Seymour", "title": null, "house": "Seymour" }
+    },
+    "spouses": "Never Married",
+    "children": []
+  },
+  {
+    "id": "mary_i",
+    "house": "Tudor",
+    "name": "Mary I",
+    "nickname": null,
+    "birth_year": 1516,
+    "death_year": 1558,
+    "inbreeding_rate": 35.36,
+    "inbreeding_explanation": "Her parents, Henry VIII of England and his first wife, Catherine of Aragon (Trastámara), were third cousins once removed, both descending from John of Gaunt (Lancaster). The high rate reflects the compounded inheritance from a web of aristocratic English and Spanish intermarriages.",
+    "titles": "Queen of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, Queen of Ireland 🇮🇪",
+    "reign_years": "1553-1558",
+    "parents": {
+      "father": { "name": "Henry VIII", "title": "King of England", "house": "Tudor" },
+      "mother": { "name": "Catherine of Aragon", "title": "Infanta of Castile", "house": "Trastámara" }
+    },
+    "spouses": [
+      { "name": "Philip II", "birth_title": "Prince of Asturias", "house": "Habsburg", "parents": { "father": { "name": "Charles V", "title": "Holy Roman Emperor", "house": "Habsburg" }, "mother": { "name": "Isabella of Portugal", "title": "Infanta of Portugal", "house": "Aviz" } } }
+    ],
+    "children": []
+  },
+  {
+    "id": "elizabeth_i",
+    "house": "Tudor",
+    "name": "Elizabeth I",
+    "nickname": null,
+    "birth_year": 1533,
+    "death_year": 1603,
+    "inbreeding_rate": 35.36,
+    "inbreeding_explanation": "Her parents were Henry VIII and his second wife, Anne Boleyn (Boleyn). The high rate is a reflection of the complex web of relations in the English aristocracy; Anne's mother was a Howard, a family with close and repeated intermarriages with royalty, which concentrated the genetic pool passed to Elizabeth.",
+    "titles": "Queen of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, Queen of Ireland 🇮🇪",
+    "reign_years": "1558-1603",
+    "parents": {
+      "father": { "name": "Henry VIII", "title": "King of England", "house": "Tudor" },
+      "mother": { "name": "Anne Boleyn", "title": null, "house": "Boleyn" }
+    },
+    "spouses": "Never Married",
+    "children": []
+  },
+  {
+    "id": "james_iv_of_scotland",
+    "house": "Stuart",
+    "name": "James IV of Scotland",
+    "nickname": null,
+    "birth_year": 1473,
+    "death_year": 1513,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "King of Scots 🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+    "reign_years": "1488-1513",
+    "parents": {
+      "father": { "name": "James III", "title": "King of Scots", "house": "Stuart" },
+      "mother": { "name": "Margaret of Denmark", "title": "Princess of Denmark", "house": "Oldenburg" }
+    },
+    "spouses": [
+      { "name": "Margaret Tudor", "birth_title": "Princess of England", "house": "Tudor", "parents": { "father": { "name": "Henry VII", "title": "King of England", "house": "Tudor" }, "mother": { "name": "Elizabeth of York", "title": "Princess of York", "house": "York" } } }
+    ],
+    "children": [
+      { "name": "James V", "title": "King of Scots" },
+      { "name": "Arthur", "title": "Duke of Rothesay" },
+      { "name": "Alexander", "title": "Duke of Ross" }
+    ]
+  },
+  {
+    "id": "james_v_of_scotland",
+    "house": "Stuart",
+    "name": "James V of Scotland",
+    "nickname": null,
+    "birth_year": 1512,
+    "death_year": 1542,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "King of Scots 🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+    "reign_years": "1513-1542",
+    "parents": {
+      "father": { "name": "James IV", "title": "King of Scots", "house": "Stuart" },
+      "mother": { "name": "Margaret Tudor", "title": "Princess of England", "house": "Tudor" }
+    },
+    "spouses": [
+      { "name": "Madeleine of Valois", "birth_title": "Princess of France", "house": "Valois", "parents": { "father": { "name": "Francis I", "title": "King of France", "house": "Valois" }, "mother": { "name": "Claude", "title": "Duchess of Brittany", "house": "Valois-Orléans" } } },
+      { "name": "Mary of Guise", "birth_title": null, "house": "Lorraine", "parents": { "father": { "name": "Claude", "title": "Duke of Guise", "house": "Lorraine" }, "mother": { "name": "Antoinette de Bourbon", "title": null, "house": "Bourbon" } } }
+    ],
+    "children": [
+      { "name": "Mary, Queen of Scots", "title": "Queen of Scots" }
+    ]
+  },
+  {
+    "id": "mary_queen_of_scots",
+    "house": "Stuart",
+    "name": "Mary, Queen of Scots",
+    "nickname": null,
+    "birth_year": 1542,
+    "death_year": 1587,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "Queen of Scots 🏴󠁧󠁢󠁳󠁣󠁴󠁿, Queen Consort of France 🇫🇷",
+    "reign_years": "1542-1567",
+    "parents": {
+      "father": { "name": "James V", "title": "King of Scots", "house": "Stuart" },
+      "mother": { "name": "Mary of Guise", "title": null, "house": "Lorraine" }
+    },
+    "spouses": [
+      { "name": "Francis II", "birth_title": "Dauphin of France", "house": "Valois", "parents": { "father": { "name": "Henry II", "title": "King of France", "house": "Valois" }, "mother": { "name": "Catherine de' Medici", "title": null, "house": "Medici" } } },
+      { "name": "Henry Stuart", "birth_title": "Lord Darnley", "house": "Stuart", "parents": { "father": { "name": "Matthew Stewart", "title": "4th Earl of Lennox", "house": "Stuart" }, "mother": { "name": "Margaret Douglas", "title": null, "house": "Douglas" } } },
+      { "name": "James Hepburn", "birth_title": "4th Earl of Bothwell", "house": "Hepburn", "parents": { "father": { "name": "Patrick Hepburn", "title": "3rd Earl of Bothwell", "house": "Hepburn" }, "mother": { "name": "Agnes Sinclair", "title": null, "house": "Sinclair" } } }
+    ],
+    "children": [
+      { "name": "James I", "title": "King of England, King of Scots" }
+    ]
+  },
+  {
+    "id": "james_i",
+    "house": "Stuart",
+    "name": "James I",
+    "nickname": null,
+    "birth_year": 1566,
+    "death_year": 1625,
+    "inbreeding_rate": 50,
+    "inbreeding_explanation": "His high rate is due to his parents, Mary, Queen of Scots, and Henry Stuart, Lord Darnley, being closely related through multiple lines. They were primarily half-first cousins, as both descended from their shared grandmother, Margaret Tudor (Tudor). This relationship was strengthened by their more distant shared Stuart ancestry.",
+    "titles": "King of Scots 🏴󠁧󠁢󠁳󠁣󠁴󠁿, King of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, King of Ireland 🇮🇪",
+    "reign_years": "1567-1625",
+    "parents": {
+      "father": { "name": "Henry Stuart", "title": "Lord Darnley", "house": "Stuart" },
+      "mother": { "name": "Mary, Queen of Scots", "title": "Queen of Scots", "house": "Stuart" }
+    },
+    "spouses": [
+      { "name": "Anne of Denmark", "birth_title": "Princess of Denmark", "house": "Oldenburg", "parents": { "father": { "name": "Frederick II", "title": "King of Denmark and Norway", "house": "Oldenburg" }, "mother": { "name": "Sophie of Mecklenburg-Güstrow", "title": null, "house": "Mecklenburg-Güstrow" } } }
+    ],
+    "children": [
+      { "name": "Henry", "title": "Prince of Wales" },
+      { "name": "Elizabeth", "title": "Princess of England, Queen Consort of Bohemia" },
+      { "name": "Charles I", "title": "King of England, King of Scots, King of Ireland" }
+    ]
+  },
+  {
+    "id": "charles_i",
+    "house": "Stuart",
+    "name": "Charles I",
+    "nickname": null,
+    "birth_year": 1600,
+    "death_year": 1649,
+    "inbreeding_rate": 39.53,
+    "inbreeding_explanation": "His father was James I. His mother, Anne of Denmark (Oldenburg), was not a close relative, but she was herself the product of a first-cousin marriage. Charles I therefore inherited a significant genetic load from both his father's direct inbreeding and his mother's own inherited inbreeding.",
+    "titles": "King of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, King of Scots 🏴󠁧󠁢󠁳󠁣󠁴󠁿, King of Ireland 🇮🇪",
+    "reign_years": "1625-1649",
+    "parents": {
+      "father": { "name": "James I", "title": "King of England", "house": "Stuart" },
+      "mother": { "name": "Anne of Denmark", "title": "Princess of Denmark", "house": "Oldenburg" }
+    },
+    "spouses": [
+      { "name": "Henrietta Maria of France", "birth_title": "Princess of France", "house": "Bourbon", "parents": { "father": { "name": "Henry IV", "title": "King of France", "house": "Bourbon" }, "mother": { "name": "Marie de' Medici", "title": null, "house": "Medici" } } }
+    ],
+    "children": [
+      { "name": "Charles II", "title": "King of England, King of Scots, King of Ireland" },
+      { "name": "Mary", "title": "Princess Royal, Princess of England, Princess Consort of Orange" },
+      { "name": "James II", "title": "King of England, King of Scots, King of Ireland" },
+      { "name": "Anne", "title": "Princess of England" },
+      { "name": "Henry", "title": "Duke of Gloucester" },
+      { "name": "Henrietta Anne", "title": "Princess of England, Duchess Consort of Orléans" }
+    ]
+  },
+  {
+    "id": "charles_ii_stuart",
+    "house": "Stuart",
+    "name": "Charles II",
+    "nickname": null,
+    "birth_year": 1630,
+    "death_year": 1685,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "King of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, King of Scots 🏴󠁧󠁢󠁳󠁣󠁴󠁿, King of Ireland 🇮🇪",
+    "reign_years": "1660-1685",
+    "parents": {
+      "father": { "name": "Charles I", "title": "King of England", "house": "Stuart" },
+      "mother": { "name": "Henrietta Maria of France", "title": "Princess of France", "house": "Bourbon" }
+    },
+    "spouses": [
+      { "name": "Catherine of Braganza", "birth_title": "Infanta of Portugal", "house": "Braganza", "parents": { "father": { "name": "John IV", "title": "King of Portugal", "house": "Braganza" }, "mother": { "name": "Luisa de Guzmán", "title": null, "house": "Medina Sidonia" } } }
+    ],
+    "children": []
+  },
+  {
+    "id": "james_ii",
+    "house": "Stuart",
+    "name": "James II",
+    "nickname": null,
+    "birth_year": 1633,
+    "death_year": 1701,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "King of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, King of Scots 🏴󠁧󠁢󠁳󠁣󠁴󠁿, King of Ireland 🇮🇪",
+    "reign_years": "1685-1688",
+    "parents": {
+      "father": { "name": "Charles I", "title": "King of England", "house": "Stuart" },
+      "mother": { "name": "Henrietta Maria of France", "title": "Princess of France", "house": "Bourbon" }
+    },
+    "spouses": [
+      { "name": "Anne Hyde", "birth_title": null, "house": "Hyde", "parents": { "father": { "name": "Edward Hyde", "title": "1st Earl of Clarendon", "house": "Hyde" }, "mother": { "name": "Frances Aylesbury", "title": null, "house": "Aylesbury" } } },
+      { "name": "Mary of Modena", "birth_title": "Princess of Modena", "house": "Este", "parents": { "father": { "name": "Alfonso IV d'Este", "title": "Duke of Modena", "house": "Este" }, "mother": { "name": "Laura Martinozzi", "title": null, "house": "Martinozzi" } } }
+    ],
+    "children": [
+      { "name": "Mary II", "title": "Princess of England, Queen of England, Queen of Scots, Queen of Ireland" },
+      { "name": "Anne I", "title": "Princess of England, Queen of England, Queen of Scots, Queen of Ireland" },
+      { "name": "James Francis Edward Stuart", "title": "Prince of Wales" }
+    ]
+  },
+  {
+    "id": "mary_ii",
+    "house": "Stuart",
+    "name": "Mary II",
+    "nickname": null,
+    "birth_year": 1662,
+    "death_year": 1694,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "Queen of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, Queen of Scots 🏴󠁧󠁢󠁳󠁣󠁴󠁿, Queen of Ireland 🇮🇪",
+    "reign_years": "1689-1694",
+    "parents": {
+      "father": { "name": "James II", "title": "King of England", "house": "Stuart" },
+      "mother": { "name": "Anne Hyde", "title": null, "house": "Hyde" }
+    },
+    "spouses": [
+      { "name": "William III", "birth_title": "Prince of Orange", "house": "Orange-Nassau", "parents": { "father": { "name": "William II", "title": "Prince of Orange", "house": "Orange-Nassau" }, "mother": { "name": "Mary, Princess Royal", "title": "Princess of England", "house": "Stuart" } } }
+    ],
+    "children": []
+  },
+  {
+    "id": "anne_i",
+    "house": "Stuart",
+    "name": "Anne I",
+    "nickname": null,
+    "birth_year": 1665,
+    "death_year": 1714,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "Queen of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, Queen of Scots 🏴󠁧󠁢󠁳󠁣󠁴󠁿, Queen of Ireland 🇮🇪, later Queen of Great Britain 🇬🇧",
+    "reign_years": "1702-1714",
+    "parents": {
+      "father": { "name": "James II", "title": "King of England", "house": "Stuart" },
+      "mother": { "name": "Anne Hyde", "title": null, "house": "Hyde" }
+    },
+    "spouses": [
+      { "name": "Prince George of Denmark", "birth_title": "Prince of Denmark", "house": "Oldenburg", "parents": { "father": { "name": "Frederick III", "title": "King of Denmark and Norway", "house": "Oldenburg" }, "mother": { "name": "Sophie Amalie of Brunswick-Lüneburg", "title": null, "house": "Brunswick-Lüneburg" } } }
+    ],
+    "children": []
+  },
+  {
+    "id": "henry_iv_france",
+    "house": "Bourbon",
+    "name": "Henry IV",
+    "nickname": null,
+    "birth_year": 1553,
+    "death_year": 1610,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "King of France 🇫🇷",
+    "reign_years": "1589-1610",
+    "parents": {
+      "father": { "name": "Antoine of Bourbon", "title": "Duke of Vendôme", "house": "Bourbon" },
+      "mother": { "name": "Jeanne d'Albret", "title": "Queen of Navarre", "house": "Albret" }
+    },
+    "spouses": [
+      { "name": "Marguerite of Valois", "birth_title": "Princess of France", "house": "Valois", "parents": { "father": { "name": "Henry II", "title": "King of France", "house": "Valois" }, "mother": { "name": "Catherine de' Medici", "title": null, "house": "Medici" } } },
+      { "name": "Marie de' Medici", "birth_title": null, "house": "Medici", "parents": { "father": { "name": "Francesco I de' Medici", "title": "Grand Duke of Tuscany", "house": "Medici" }, "mother": { "name": "Joanna of Austria", "title": "Archduchess of Austria", "house": "Habsburg" } } }
+    ],
+    "children": [
+      { "name": "Louis XIII", "title": "King of France" },
+      { "name": "Elisabeth", "title": "Princess of France, Queen Consort of Spain" },
+      { "name": "Christine Marie", "title": "Princess of France, Duchess Consort of Savoy" },
+      { "name": "Gaston", "title": "Duke of Orléans" },
+      { "name": "Henrietta Maria", "title": "Princess of France, Queen Consort of England" }
+    ]
+  },
+  {
+    "id": "louis_xiii_france",
+    "house": "Bourbon",
+    "name": "Louis XIII",
+    "nickname": null,
+    "birth_year": 1601,
+    "death_year": 1643,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "King of France 🇫🇷",
+    "reign_years": "1610-1643",
+    "parents": {
+      "father": { "name": "Henry IV", "title": "King of France", "house": "Bourbon" },
+      "mother": { "name": "Marie de' Medici", "title": null, "house": "Medici" }
+    },
+    "spouses": [
+      { "name": "Anne of Austria", "birth_title": "Infanta of Spain", "house": "Habsburg", "parents": { "father": { "name": "Philip III", "title": "King of Spain", "house": "Habsburg" }, "mother": { "name": "Margaret of Austria", "title": "Archduchess of Austria", "house": "Habsburg" } } }
+    ],
+    "children": [
+      { "name": "Louis XIV", "title": "King of France" },
+      { "name": "Philippe", "title": "Duke of Orléans" }
+    ]
+  },
+  {
+    "id": "louis_xiv_france",
+    "house": "Bourbon",
+    "name": "Louis XIV",
+    "nickname": "The Sun King",
+    "birth_year": 1638,
+    "death_year": 1715,
+    "inbreeding_rate": 50.00,
+    "inbreeding_explanation": "His significant inbreeding comes from his parents, Louis XIII of France and Anne of Austria (Habsburg), who were double first cousins. This was because his paternal grandfather and maternal grandmother were siblings, and his paternal grandmother and maternal grandfather were also siblings. This perfectly symmetrical, close-family union is the source of his high inbreeding rate.",
+    "titles": "King of France 🇫🇷",
+    "reign_years": "1643-1715",
+    "parents": {
+      "father": { "name": "Louis XIII", "title": "King of France", "house": "Bourbon" },
+      "mother": { "name": "Anne of Austria", "title": "Infanta of Spain", "house": "Habsburg" }
+    },
+    "spouses": [
+      { "name": "Maria Theresa of Spain", "birth_title": "Infanta of Spain", "house": "Habsburg", "parents": { "father": { "name": "Philip IV", "title": "King of Spain", "house": "Habsburg" }, "mother": { "name": "Elisabeth of France", "title": "Princess of France", "house": "Bourbon" } } }
+    ],
+    "children": [
+      { "name": "Louis", "title": "Grand Dauphin of France" }
+    ]
+  },
+  {
+    "id": "louis_xv_france",
+    "house": "Bourbon",
+    "name": "Louis XV",
+    "nickname": "The Beloved",
+    "birth_year": 1710,
+    "death_year": 1774,
+    "inbreeding_rate": 25.00,
+    "inbreeding_explanation": "His parents, Louis, Duke of Burgundy, and Marie Adélaïde of Savoy (Savoy), were second cousins. The inbreeding score is primarily a reflection of the accumulated intermarriages from previous generations, particularly that of his paternal grandparents who were first cousins.",
+    "titles": "King of France 🇫🇷",
+    "reign_years": "1715-1774",
+    "parents": {
+      "father": { "name": "Louis, Duke of Burgundy", "title": null, "house": "Bourbon" },
+      "mother": { "name": "Marie Adélaïde of Savoy", "title": "Princess of Savoy", "house": "Savoy" }
+    },
+    "spouses": [
+      { "name": "Marie Leszczyńska", "birth_title": "Princess of Poland", "house": "Leszczyński", "parents": { "father": { "name": "Stanisław I Leszczyński", "title": "King of Poland", "house": "Leszczyński" }, "mother": { "name": "Katarzyna Opalińska", "title": null, "house": "Opaliński" } } }
+    ],
+    "children": [
+      { "name": "Louis", "title": "Dauphin of France" },
+      { "name": "Louise Élisabeth", "title": "Princess of France, Duchess Consort of Parma" }
+    ]
+  },
+  {
+    "id": "louis_xvi_france",
+    "house": "Bourbon",
+    "name": "Louis XVI",
+    "nickname": null,
+    "birth_year": 1754,
+    "death_year": 1793,
+    "inbreeding_rate": 25.00,
+    "inbreeding_explanation": "His parents, Louis, Dauphin of France, and Maria Josepha of Saxony (Wettin), were second cousins. This relatively distant relation still produced a notable inbreeding rate due to the dense web of shared ancestry between the Bourbon, Habsburg, and other German royal lines in prior generations.",
+    "titles": "King of France 🇫🇷",
+    "reign_years": "1774-1792",
+    "parents": {
+      "father": { "name": "Louis, Dauphin of France", "title": null, "house": "Bourbon" },
+      "mother": { "name": "Maria Josepha of Saxony", "title": "Princess of Saxony", "house": "Wettin" }
+    },
+    "spouses": [
+      { "name": "Marie Antoinette", "birth_title": "Archduchess of Austria", "house": "Habsburg-Lorraine", "parents": { "father": { "name": "Francis I Stephen", "title": "Holy Roman Emperor", "house": "Habsburg-Lorraine" }, "mother": { "name": "Maria Theresa", "title": "Archduchess of Austria", "house": "Habsburg" } } }
+    ],
+    "children": [
+      { "name": "Marie Thérèse Charlotte", "title": "Princess Royal" },
+      { "name": "Louis Joseph", "title": "Dauphin of France" },
+      { "name": "Louis XVII", "title": "King of France (Titular)" },
+      { "name": "Sophie Hélène Béatrice", "title": "Princess of France" }
+    ]
+  },
+  {
+    "id": "louis_xviii_france",
+    "house": "Bourbon",
+    "name": "Louis XVIII",
+    "nickname": null,
+    "birth_year": 1755,
+    "death_year": 1824,
+    "inbreeding_rate": 25.00,
+    "inbreeding_explanation": "As the brother of Louis XVI, he shares the exact same parentage and inherited inbreeding from the dense ancestral connections between the great royal houses of Europe.",
+    "titles": "King of France 🇫🇷",
+    "reign_years": "1814-1824",
+    "parents": {
+      "father": { "name": "Louis, Dauphin of France", "title": null, "house": "Bourbon" },
+      "mother": { "name": "Maria Josepha of Saxony", "title": "Princess of Saxony", "house": "Wettin" }
+    },
+    "spouses": [
+      { "name": "Marie Joséphine of Savoy", "birth_title": "Princess of Savoy", "house": "Savoy", "parents": { "father": { "name": "Victor Amadeus III", "title": "King of Sardinia", "house": "Savoy" }, "mother": { "name": "Maria Antonia Ferdinanda of Spain", "title": "Infanta of Spain", "house": "Bourbon" } } }
+    ],
+    "children": []
+  },
+  {
+    "id": "charles_x_france",
+    "house": "Bourbon",
+    "name": "Charles X",
+    "nickname": null,
+    "birth_year": 1757,
+    "death_year": 1836,
+    "inbreeding_rate": 25.00,
+    "inbreeding_explanation": "The youngest brother of Louis XVI and Louis XVIII, he has an identical genetic inheritance, reflecting the established pattern of intermarriage within the Bourbon family and their relatives.",
+    "titles": "King of France 🇫🇷",
+    "reign_years": "1824-1830",
+    "parents": {
+      "father": { "name": "Louis, Dauphin of France", "title": null, "house": "Bourbon" },
+      "mother": { "name": "Maria Josepha of Saxony", "title": "Princess of Saxony", "house": "Wettin" }
+    },
+    "spouses": [
+      { "name": "Marie Thérèse of Savoy", "birth_title": "Princess of Savoy", "house": "Savoy", "parents": { "father": { "name": "Victor Amadeus III", "title": "King of Sardinia", "house": "Savoy" }, "mother": { "name": "Maria Antonia Ferdinanda of Spain", "title": "Infanta of Spain", "house": "Bourbon" } } }
+    ],
+    "children": [
+      { "name": "Louis Antoine", "title": "Duke of Angoulême" },
+      { "name": "Charles Ferdinand", "title": "Duke of Berry" }
+    ]
+  },
+  {
+    "id": "louis_philippe_i_orleans",
+    "house": "Orléans (Cadet branch of Bourbon)",
+    "name": "Louis Philippe I Orléans",
+    "nickname": "The Citizen King",
+    "birth_year": 1773,
+    "death_year": 1850,
+    "inbreeding_rate": 35.36,
+    "inbreeding_explanation": "His parents, Louis Philippe II, Duke of Orléans, and Louise Marie Adélaïde de Bourbon, were second cousins. His rate is particularly high for a second-cousin union because both of his grandmothers were granddaughters of a Habsburg emperor, and his grandfathers also shared recent common ancestors.",
+    "titles": "King of the French 🇫🇷",
+    "reign_years": "1830-1848",
+    "parents": {
+      "father": { "name": "Louis Philippe II, Duke of Orléans", "title": null, "house": "Orléans" },
+      "mother": { "name": "Louise Marie Adélaïde de Bourbon", "title": "Duchess of Orléans", "house": "Bourbon" }
+    },
+    "spouses": [
+      { "name": "Maria Amalia of Naples and Sicily", "birth_title": "Princess of Naples and Sicily", "house": "Bourbon-Two Sicilies", "parents": { "father": { "name": "Ferdinand I", "title": "King of the Two Sicilies", "house": "Bourbon-Two Sicilies" }, "mother": { "name": "Maria Carolina of Austria", "title": "Archduchess of Austria", "house": "Habsburg-Lorraine" } } }
+    ],
+    "children": []
+  },
+  {
+    "id": "philip_v_spain",
+    "house": "Bourbon (Spain)",
+    "name": "Philip V",
+    "nickname": "The Animus",
+    "birth_year": 1683,
+    "death_year": 1746,
+    "inbreeding_rate": 35.36,
+    "inbreeding_explanation": "His parents, Louis, Grand Dauphin of France, and Maria Anna Victoria of Bavaria (Wittelsbach), were first cousins. His already high rate was significantly elevated because his paternal grandparents, King Louis XIV of France and Maria Theresa of Spain (Habsburg), were themselves double first cousins, carrying forward an immense pre-existing genetic load.",
+    "titles": "King of Spain 🇪🇸",
+    "reign_years": "1700-1746",
+    "parents": {
+      "father": { "name": "Louis, Grand Dauphin of France", "title": null, "house": "Bourbon" },
+      "mother": { "name": "Maria Anna Victoria of Bavaria", "title": "Duchess in Bavaria", "house": "Wittelsbach" }
+    },
+    "spouses": [
+      { "name": "Maria Luisa of Savoy", "birth_title": "Princess of Savoy", "house": "Savoy", "parents": { "father": { "name": "Victor Amadeus II", "title": "Duke of Savoy", "house": "Savoy" }, "mother": { "name": "Anne Marie d'Orléans", "title": "Princess of France", "house": "Orléans" } } },
+      { "name": "Elisabeth Farnese", "birth_title": "Duchess of Parma", "house": "Farnese", "parents": { "father": { "name": "Odoardo Farnese", "title": "Hereditary Prince of Parma", "house": "Farnese" }, "mother": { "name": "Dorothea Sophie of Neuburg", "title": "Duchess of Neuburg", "house": "Wittelsbach" } } }
+    ],
+    "children": [
+      { "name": "Louis I", "title": "King of Spain" },
+      { "name": "Ferdinand VI", "title": "King of Spain" },
+      { "name": "Charles III", "title": "King of Spain" },
+      { "name": "Mariana Victoria", "title": "Infanta of Spain, Queen Consort of Portugal" },
+      { "name": "Philip", "title": "Duke of Parma" },
+      { "name": "Maria Antonia Ferdinanda", "title": "Infanta of Spain, Queen Consort of Sardinia" }
+    ]
+  },
+  {
+    "id": "ferdinand_vi_spain",
+    "house": "Bourbon (Spain)",
+    "name": "Ferdinand VI",
+    "nickname": null,
+    "birth_year": 1713,
+    "death_year": 1759,
+    "inbreeding_rate": 25.00,
+    "inbreeding_explanation": "As the son of Philip V, he inherited a significant baseline of inbreeding from his father's side. His mother, Maria Luisa of Savoy (Savoy), introduced a less-related line, keeping his own rate from escalating further.",
+    "titles": "King of Spain 🇪🇸",
+    "reign_years": "1746-1759",
+    "parents": {
+      "father": { "name": "Philip V", "title": "King of Spain", "house": "Bourbon" },
+      "mother": { "name": "Maria Luisa of Savoy", "title": "Princess of Savoy", "house": "Savoy" }
+    },
+    "spouses": [
+      { "name": "Barbara of Portugal", "birth_title": "Infanta of Portugal", "house": "Braganza", "parents": { "father": { "name": "John V", "title": "King of Portugal", "house": "Braganza" }, "mother": { "name": "Maria Anna of Austria", "title": "Archduchess of Austria", "house": "Habsburg" } } }
+    ],
+    "children": []
+  },
+  {
+    "id": "charles_iii_spain",
+    "house": "Bourbon (Spain)",
+    "name": "Charles III",
+    "nickname": "The Industrious",
+    "birth_year": 1716,
+    "death_year": 1788,
+    "inbreeding_rate": 8.84,
+    "inbreeding_explanation": null,
+    "titles": "King of Spain 🇪🇸, King of Naples 🇮🇹, King of Sicily 🇮🇹, Duke of Parma 🇮🇹",
+    "reign_years": "1759-1788",
+    "parents": {
+      "father": { "name": "Philip V", "title": "King of Spain", "house": "Bourbon" },
+      "mother": { "name": "Elisabeth Farnese", "title": "Duchess of Parma", "house": "Farnese" }
+    },
+    "spouses": [
+      { "name": "Maria Amalia of Saxony", "birth_title": "Princess of Saxony", "house": "Wettin", "parents": { "father": { "name": "Augustus III", "title": "King of Poland", "house": "Wettin" }, "mother": { "name": "Maria Josepha of Austria", "title": "Archduchess of Austria", "house": "Habsburg" } } }
+    ],
+    "children": [
+      { "name": "Maria Josefa", "title": "Infanta of Spain" },
+      { "name": "Maria Luisa", "title": "Infanta of Spain, Empress Consort of the Holy Roman Empire" },
+      { "name": "Philip", "title": "Duke of Calabria" },
+      { "name": "Charles IV", "title": "King of Spain" },
+      { "name": "Ferdinand I", "title": "King of the Two Sicilies" },
+      { "name": "Gabriel", "title": "Infante of Spain" },
+      { "name": "Antonio Pascual", "title": "Infante of Spain" },
+      { "name": "Francisco Javier", "title": "Infante of Spain" }
+    ]
+  },
+  {
+    "id": "charles_iv_spain",
+    "house": "Bourbon (Spain)",
+    "name": "Charles IV",
+    "nickname": "The Hunter",
+    "birth_year": 1748,
+    "death_year": 1819,
+    "inbreeding_rate": 50.00,
+    "inbreeding_explanation": "His parents, Charles III of Spain and Maria Amalia of Saxony (Wettin), were first cousins once removed. This union's high rate is compounded by the fact that his paternal grandmother was a Bourbon and his maternal grandmother was a Habsburg, representing the continued consolidation of these two dominant houses.",
+    "titles": "King of Spain 🇪🇸",
+    "reign_years": "1788-1808",
+    "parents": {
+      "father": { "name": "Charles III", "title": "King of Spain", "house": "Bourbon" },
+      "mother": { "name": "Maria Amalia of Saxony", "title": "Princess of Saxony", "house": "Wettin" }
+    },
+    "spouses": [
+      { "name": "Maria Luisa of Parma", "birth_title": "Infanta of Parma", "house": "Bourbon-Parma", "parents": { "father": { "name": "Philip", "title": "Duke of Parma", "house": "Bourbon-Parma" }, "mother": { "name": "Louise Élisabeth of France", "title": "Princess of France", "house": "Bourbon" } } }
+    ],
+    "children": [
+      { "name": "Charlotte", "title": "Infanta of Spain, Queen Consort of Portugal" },
+      { "name": "Ferdinand VII", "title": "King of Spain" },
+      { "name": "Carlos María Isidro", "title": "Infante of Spain" },
+      { "name": "Maria Isabella", "title": "Infanta of Spain, Queen Consort of the Two Sicilies" },
+      { "name": "Francisco de Paula", "title": "Infante of Spain" }
+    ]
+  },
+  {
+    "id": "ferdinand_vii_spain",
+    "house": "Bourbon (Spain)",
+    "name": "Ferdinand VII",
+    "nickname": "The Desired, The Felon King",
+    "birth_year": 1784,
+    "death_year": 1833,
+    "inbreeding_rate": 50.00,
+    "inbreeding_explanation": "His parents, Charles IV of Spain and Maria Luisa of Parma (Bourbon-Parma), were first cousins. The high rate comes from the fact that his four grandparents were all direct descendants of King Louis XIV of France (Bourbon), making for an extremely narrow pool of recent ancestors.",
+    "titles": "King of Spain 🇪🇸",
+    "reign_years": "1808, 1813-1833",
+    "parents": {
+      "father": { "name": "Charles IV", "title": "King of Spain", "house": "Bourbon" },
+      "mother": { "name": "Maria Luisa of Parma", "title": "Infanta of Parma", "house": "Bourbon-Parma" }
+    },
+    "spouses": [
+      { "name": "Maria Antonia of Naples and Sicily", "birth_title": "Princess of Naples and Sicily", "house": "Bourbon-Two Sicilies", "parents": { "father": { "name": "Ferdinand I", "title": "King of the Two Sicilies", "house": "Bourbon-Two Sicilies" }, "mother": { "name": "Maria Carolina of Austria", "title": "Archduchess of Austria", "house": "Habsburg-Lorraine" } } },
+      { "name": "Maria Isabella of Portugal", "birth_title": "Infanta of Portugal", "house": "Braganza", "parents": { "father": { "name": "John VI", "title": "King of Portugal", "house": "Braganza" }, "mother": { "name": "Carlota Joaquina of Spain", "title": "Infanta of Spain", "house": "Bourbon" } } },
+      { "name": "Maria Josepha Amalia of Saxony", "birth_title": "Princess of Saxony", "house": "Wettin", "parents": { "father": { "name": "Maximilian", "title": "Hereditary Prince of Saxony", "house": "Wettin" }, "mother": { "name": "Carolina of Parma", "title": "Princess of Parma", "house": "Bourbon-Parma" } } },
+      { "name": "Maria Christina of the Two Sicilies", "birth_title": "Princess of the Two Sicilies", "house": "Bourbon-Two Sicilies", "parents": { "father": { "name": "Francis I", "title": "King of the Two Sicilies", "house": "Bourbon-Two Sicilies" }, "mother": { "name": "Maria Isabella of Spain", "title": "Infanta of Spain", "house": "Bourbon" } } }
+    ],
+    "children": [
+      { "name": "Isabella II", "title": "Queen of Spain" },
+      { "name": "Luisa Fernanda", "title": "Infanta of Spain" }
+    ]
+  },
+  {
+    "id": "isabella_ii_spain",
+    "house": "Bourbon (Spain)",
+    "name": "Isabella II",
+    "nickname": null,
+    "birth_year": 1830,
+    "death_year": 1904,
+    "inbreeding_rate": 50.00,
+    "inbreeding_explanation": "Her parentage is a complex web of close relations. Her mother, Maria Christina of the Two Sicilies (Bourbon-Two Sicilies), was her father Ferdinand VII's niece. Furthermore, her paternal grandparents and maternal grandparents were both pairs of first cousins, creating multiple layers of inbreeding.",
+    "titles": "Queen of Spain 🇪🇸",
+    "reign_years": "1833-1868",
+    "parents": {
+      "father": { "name": "Ferdinand VII", "title": "King of Spain", "house": "Bourbon" },
+      "mother": { "name": "Maria Christina of the Two Sicilies", "title": "Princess of the Two Sicilies", "house": "Bourbon-Two Sicilies" }
+    },
+    "spouses": [
+      { "name": "Francis, Duke of Cádiz", "birth_title": null, "house": "Bourbon", "parents": { "father": { "name": "Francis de Paula", "title": "Infante of Spain", "house": "Bourbon" }, "mother": { "name": "Luisa Carlotta of Naples and Sicily", "title": "Princess of Naples and Sicily", "house": "Bourbon-Two Sicilies" } } }
+    ],
+    "children": [
+      { "name": "Alfonso XII", "title": "King of Spain" },
+      { "name": "Isabella", "title": "Infanta of Spain" },
+      { "name": "María de la Paz", "title": "Infanta of Spain" },
+      { "name": "María Eulalia", "title": "Infanta of Spain" }
+    ]
+  },
+  {
+    "id": "alfonso_xii_spain",
+    "house": "Bourbon (Spain)",
+    "name": "Alfonso XII",
+    "nickname": "The Peacemaker",
+    "birth_year": 1857,
+    "death_year": 1885,
+    "inbreeding_rate": 70.71,
+    "inbreeding_explanation": "His extreme rate stems from his parents being double first cousins. His mother, Queen Isabella II, and his officially recognized father, Francis, Duke of Cádiz, were the children of two brothers from the Spanish Bourbon line. This was severely compounded by the fact that his maternal grandmother was also his paternal grandfather's sister.",
+    "titles": "King of Spain 🇪🇸",
+    "reign_years": "1874-1885",
+    "parents": {
+      "father": { "name": "Francis, Duke of Cádiz", "title": null, "house": "Bourbon" },
+      "mother": { "name": "Isabella II", "title": "Queen of Spain", "house": "Bourbon" }
+    },
+    "spouses": [
+      { "name": "Mercedes of Orléans", "birth_title": "Princess of Orléans", "house": "Orléans", "parents": { "father": { "name": "Antoine", "title": "Duke of Montpensier", "house": "Orléans" }, "mother": { "name": "Luisa Fernanda of Spain", "title": "Infanta of Spain", "house": "Bourbon" } } },
+      { "name": "Maria Christina of Austria", "birth_title": "Archduchess of Austria", "house": "Habsburg-Lorraine", "parents": { "father": { "name": "Archduke Karl Ferdinand of Austria", "title": null, "house": "Habsburg-Lorraine" }, "mother": { "name": "Archduchess Elisabeth Franziska of Austria", "title": null, "house": "Habsburg-Lorraine" } } }
+    ],
+    "children": [
+      { "name": "Mercedes", "title": "Princess of Asturias" },
+      { "name": "Maria Teresa", "title": "Infanta of Spain" },
+      { "name": "Alfonso XIII", "title": "King of Spain" }
+    ]
+  },
+  {
+    "id": "alfonso_xiii_spain",
+    "house": "Bourbon (Spain)",
+    "name": "Alfonso XIII",
+    "nickname": "The African",
+    "birth_year": 1886,
+    "death_year": 1941,
+    "inbreeding_rate": 25.00,
+    "inbreeding_explanation": "His father, Alfonso XII, was one of the most inbred monarchs in history. While his mother, Maria Christina of Austria (Habsburg-Lorraine), came from a less intertwined branch of the Habsburgs, he still inherited a significant genetic load.",
+    "titles": "King of Spain 🇪🇸",
+    "reign_years": "1886-1931",
+    "parents": {
+      "father": { "name": "Alfonso XII", "title": "King of Spain", "house": "Bourbon" },
+      "mother": { "name": "Maria Christina of Austria", "title": "Archduchess of Austria", "house": "Habsburg-Lorraine" }
+    },
+    "spouses": [
+      { "name": "Victoria Eugenie of Battenberg", "birth_title": "Princess of Battenberg", "house": "Battenberg", "parents": { "father": { "name": "Prince Henry of Battenberg", "title": null, "house": "Battenberg" }, "mother": { "name": "Princess Beatrice of the United Kingdom", "title": null, "house": "Saxe-Coburg and Gotha" } } }
+    ],
+    "children": [
+      { "name": "Alfonso", "title": "Prince of Asturias" },
+      { "name": "Jaime", "title": "Duke of Segovia" },
+      { "name": "Beatriz", "title": "Infanta of Spain" },
+      { "name": "Cristina", "title": "Infanta of Spain" },
+      { "name": "Juan", "title": "Count of Barcelona" },
+      { "name": "Gonzalo", "title": "Infante of Spain" }
+    ]
+  },
+  {
+    "id": "juan_carlos_i_spain",
+    "house": "Bourbon (Spain)",
+    "name": "Juan Carlos I",
+    "nickname": null,
+    "birth_year": 1938,
+    "death_year": null,
+    "inbreeding_rate": 50.00,
+    "inbreeding_explanation": "His parents, Infante Juan, Count of Barcelona, and Princess María de las Mercedes of Bourbon-Two Sicilies (Bourbon-Two Sicilies), were second cousins. However, both of their family trees were so saturated with prior unions of first cousins that their marriage produced an exceptionally high coefficient of inbreeding.",
+    "titles": "King of Spain 🇪🇸",
+    "reign_years": "1975-2014",
+    "parents": {
+      "father": { "name": "Juan, Count of Barcelona", "title": null, "house": "Bourbon" },
+      "mother": { "name": "María de las Mercedes of Bourbon-Two Sicilies", "title": "Princess of Bourbon-Two Sicilies", "house": "Bourbon-Two Sicilies" }
+    },
+    "spouses": [
+      { "name": "Sofía of Greece and Denmark", "birth_title": "Princess of Greece and Denmark", "house": "Glücksburg", "parents": { "father": { "name": "Paul I", "title": "King of the Hellenes", "house": "Glücksburg" }, "mother": { "name": "Frederica of Hanover", "title": "Princess of Hanover", "house": "Hanover" } } }
+    ],
+    "children": [
+      { "name": "Elena", "title": "Infanta of Spain, Duchess Consort of Lugo" },
+      { "name": "Cristina", "title": "Infanta of Spain" },
+      { "name": "Felipe VI", "title": "King of Spain" }
+    ]
+  },
+  {
+    "id": "felipe_vi_spain",
+    "house": "Bourbon (Spain)",
+    "name": "Felipe VI",
+    "nickname": null,
+    "birth_year": 1968,
+    "death_year": null,
+    "inbreeding_rate": 17.68,
+    "inbreeding_explanation": "As the son of Juan Carlos I, he inherited the family's significant inbreeding. His rate is lower than his father's because his mother, Queen Sofía of Greece and Denmark (Glücksburg), hailed from a different royal line, introducing more genetic diversity than had been seen in the Spanish monarchy for centuries.",
+    "titles": "King of Spain 🇪🇸",
+    "reign_years": "2014-Present",
+    "parents": {
+      "father": { "name": "Juan Carlos I", "title": "King of Spain", "house": "Bourbon" },
+      "mother": { "name": "Sofía of Greece and Denmark", "title": "Princess of Greece and Denmark", "house": "Glücksburg" }
+    },
+    "spouses": [
+      { "name": "Letizia Ortiz Rocasolano", "birth_title": null, "house": null, "parents": { "father": { "name": "Jesús José Ortiz Álvarez", "title": null, "house": null }, "mother": { "name": "María de la Paloma Rocasolano Rodríguez", "title": null, "house": null } } }
+    ],
+    "children": [
+      { "name": "Leonor", "title": "Princess of Asturias" },
+      { "name": "Sofía", "title": "Infanta of Spain" }
+    ]
+  },
+  {
+    "id": "maximilian_i_hre",
+    "house": "Habsburg (Austria)",
+    "name": "Maximilian I",
+    "nickname": null,
+    "birth_year": 1459,
+    "death_year": 1519,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "Holy Roman Emperor 🇩🇪, Archduke of Austria 🇦🇹",
+    "reign_years": "1493-1519",
+    "parents": {
+      "father": { "name": "Frederick III", "title": "Holy Roman Emperor", "house": "Habsburg" },
+      "mother": { "name": "Eleanor of Portugal", "title": "Infanta of Portugal", "house": "Aviz" }
+    },
+    "spouses": [
+      { "name": "Mary of Burgundy", "birth_title": "Duchess of Burgundy", "house": "Valois-Burgundy", "parents": { "father": { "name": "Charles the Bold", "title": "Duke of Burgundy", "house": "Valois-Burgundy" }, "mother": { "name": "Isabella of Bourbon", "title": null, "house": "Bourbon" } } }
+    ],
+    "children": [
+      { "name": "Philip I", "title": "King of Castile" },
+      { "name": "Eleanor", "title": "Archduchess of Austria, Queen Consort of Portugal, Queen Consort of France" },
+      { "name": "Isabella", "title": "Archduchess of Austria, Queen Consort of Denmark" },
+      { "name": "Mary", "title": "Archduchess of Austria, Queen Consort of Hungary" },
+      { "name": "Catherine", "title": "Archduchess of Austria, Queen Consort of Portugal" }
+    ]
+  },
+  {
+    "id": "charles_v_hre",
+    "house": "Habsburg (Austria / Spain)",
+    "name": "Charles V",
+    "nickname": null,
+    "birth_year": 1500,
+    "death_year": 1558,
+    "inbreeding_rate": 50.00,
+    "inbreeding_explanation": "His parents, Philip I of Habsburg and Joanna of Castile (Trastámara), were second cousins. The high inbreeding rate is a direct result of his grandparents' generation: his paternal grandmother, Mary of Burgundy (Valois-Burgundy), and his maternal grandfather, Ferdinand II of Aragon (Trastámara), were first cousins.",
+    "titles": "Holy Roman Emperor 🇩🇪, King of Spain 🇪🇸, Archduke of Austria 🇦🇹, Lord of the Netherlands 🇳🇱",
+    "reign_years": "1519-1556",
+    "parents": {
+      "father": { "name": "Philip I", "title": "King of Castile", "house": "Habsburg" },
+      "mother": { "name": "Joanna", "title": "Queen of Castile and Aragon", "house": "Trastámara" }
+    },
+    "spouses": [
+      { "name": "Isabella of Portugal", "birth_title": "Infanta of Portugal", "house": "Aviz", "parents": { "father": { "name": "Manuel I", "title": "King of Portugal", "house": "Aviz" }, "mother": { "name": "Maria of Aragon", "title": "Infanta of Castile and Aragon", "house": "Trastámara" } } }
+    ],
+    "children": [
+      { "name": "Philip II", "title": "King of Spain" },
+      { "name": "Maria", "title": "Archduchess of Austria, Holy Roman Empress Consort" },
+      { "name": "Joanna", "title": "Infanta of Spain" }
+    ]
+  },
+  {
+    "id": "ferdinand_i_hre",
+    "house": "Habsburg (Austria)",
+    "name": "Ferdinand I",
+    "nickname": null,
+    "birth_year": 1503,
+    "death_year": 1564,
+    "inbreeding_rate": 50.00,
+    "inbreeding_explanation": "As the brother of Emperor Charles V, he shares the same parents and the same high coefficient of inbreeding, which was a result of a first-cousin marriage in their grandparents' generation that united the Burgundian and Spanish inheritances.",
+    "titles": "Holy Roman Emperor 🇩🇪, King of Bohemia 🇨🇿, King of Hungary 🇭🇺, Archduke of Austria 🇦🇹",
+    "reign_years": "1556-1564",
+    "parents": {
+      "father": { "name": "Philip I", "title": "King of Castile", "house": "Habsburg" },
+      "mother": { "name": "Joanna", "title": "Queen of Castile and Aragon", "house": "Trastámara" }
+    },
+    "spouses": [
+      { "name": "Anna of Bohemia and Hungary", "birth_title": "Princess of Bohemia and Hungary", "house": "Jagiellon", "parents": { "father": { "name": "Vladislaus II", "title": "King of Bohemia and Hungary", "house": "Jagiellon" }, "mother": { "name": "Anne of Foix-Candale", "title": null, "house": "Foix" } } }
+    ],
+    "children": [
+      { "name": "Maximilian II", "title": "Holy Roman Emperor" },
+      { "name": "Ferdinand II", "title": "Archduke of Austria" },
+      { "name": "Charles II", "title": "Archduke of Austria" },
+      { "name": "Anna", "title": "Archduchess of Austria, Duchess Consort of Bavaria" }
+    ]
+  },
+  {
+    "id": "maximilian_ii_hre",
+    "house": "Habsburg (Austria)",
+    "name": "Maximilian II",
+    "nickname": null,
+    "birth_year": 1527,
+    "death_year": 1576,
+    "inbreeding_rate": 50.00,
+    "inbreeding_explanation": "His parents, Emperor Ferdinand I and Anna of Bohemia and Hungary (Jagiellon), were first cousins. This continued the Habsburg tradition of consolidating power through close family marriage.",
+    "titles": "Holy Roman Emperor 🇩🇪, King of Bohemia 🇨🇿, King of Hungary 🇭🇺, Archduke of Austria 🇦🇹",
+    "reign_years": "1564-1576",
+    "parents": {
+      "father": { "name": "Ferdinand I", "title": "Holy Roman Emperor", "house": "Habsburg" },
+      "mother": { "name": "Anna of Bohemia and Hungary", "title": "Princess of Bohemia and Hungary", "house": "Jagiellon" }
+    },
+    "spouses": [
+      { "name": "Maria of Spain", "birth_title": "Infanta of Spain", "house": "Habsburg", "parents": { "father": { "name": "Charles V", "title": "Holy Roman Emperor", "house": "Habsburg" }, "mother": { "name": "Isabella of Portugal", "title": "Infanta of Portugal", "house": "Aviz" } } }
+    ],
+    "children": [
+      { "name": "Rudolf II", "title": "Holy Roman Emperor" },
+      { "name": "Ernest", "title": "Archduke of Austria" },
+      { "name": "Matthias", "title": "Holy Roman Emperor" },
+      { "name": "Maximilian", "title": "Archduke of Austria" },
+      { "name": "Albert VII", "title": "Archduke of Austria" },
+      { "name": "Anna", "title": "Archduchess of Austria, Queen Consort of Spain" }
+    ]
+  },
+  {
+    "id": "rudolf_ii_hre",
+    "house": "Habsburg (Austria)",
+    "name": "Rudolf II",
+    "nickname": null,
+    "birth_year": 1552,
+    "death_year": 1612,
+    "inbreeding_rate": 50.00,
+    "inbreeding_explanation": "His parents were first cousins: Emperor Maximilian II and Maria of Spain (Habsburg). His paternal grandfather, Emperor Ferdinand I, and his maternal grandfather, Emperor Charles V, were brothers, creating the close genetic loop responsible for his high rate.",
+    "titles": "Holy Roman Emperor 🇩🇪, King of Bohemia 🇨🇿, King of Hungary 🇭🇺, Archduke of Austria 🇦🇹",
+    "reign_years": "1576-1612",
+    "parents": {
+      "father": { "name": "Maximilian II", "title": "Holy Roman Emperor", "house": "Habsburg" },
+      "mother": { "name": "Maria of Spain", "title": "Infanta of Spain", "house": "Habsburg" }
+    },
+    "spouses": "Never Married",
+    "children": []
+  },
+  {
+    "id": "matthias_i_hre",
+    "house": "Habsburg (Austria)",
+    "name": "Matthias I",
+    "nickname": null,
+    "birth_year": 1557,
+    "death_year": 1619,
+    "inbreeding_rate": 50.00,
+    "inbreeding_explanation": "As the brother of Rudolf II, he shares the same first-cousin parentage—Emperor Maximilian II and Maria of Spain (Habsburg)—and the identical high inbreeding rate stemming from his grandfathers being brothers.",
+    "titles": "Holy Roman Emperor 🇩🇪, King of Bohemia 🇨🇿, King of Hungary 🇭🇺, Archduke of Austria 🇦🇹",
+    "reign_years": "1612-1619",
+    "parents": {
+      "father": { "name": "Maximilian II", "title": "Holy Roman Emperor", "house": "Habsburg" },
+      "mother": { "name": "Maria of Spain", "title": "Infanta of Spain", "house": "Habsburg" }
+    },
+    "spouses": [
+      { "name": "Anna of Tyrol", "birth_title": "Archduchess of Austria", "house": "Habsburg", "parents": { "father": { "name": "Ferdinand II", "title": "Archduke of Austria", "house": "Habsburg" }, "mother": { "name": "Anna Caterina Gonzaga", "title": null, "house": "Gonzaga" } } }
+    ],
+    "children": []
+  },
+  {
+    "id": "ferdinand_ii_hre",
+    "house": "Habsburg (Austria)",
+    "name": "Ferdinand II",
+    "nickname": null,
+    "birth_year": 1578,
+    "death_year": 1637,
+    "inbreeding_rate": 50.00,
+    "inbreeding_explanation": "His parents, Charles II, Archduke of Austria, and Maria Anna of Bavaria (Wittelsbach), were uncle and niece. This extremely close union is the primary source of his high inbreeding rate, as his maternal grandmother was his own paternal aunt.",
+    "titles": "Holy Roman Emperor 🇩🇪, King of Bohemia 🇨🇿, King of Hungary 🇭🇺, Archduke of Austria 🇦🇹",
+    "reign_years": "1619-1637",
+    "parents": {
+      "father": { "name": "Charles II", "title": "Archduke of Austria", "house": "Habsburg" },
+      "mother": { "name": "Maria Anna of Bavaria", "title": "Duchess in Bavaria", "house": "Wittelsbach" }
+    },
+    "spouses": [
+      { "name": "Maria Anna of Bavaria", "birth_title": "Duchess in Bavaria", "house": "Wittelsbach", "parents": { "father": { "name": "William V", "title": "Duke of Bavaria", "house": "Wittelsbach" }, "mother": { "name": "Renata of Lorraine", "title": null, "house": "Lorraine" } } },
+      { "name": "Eleonora Gonzaga", "birth_title": "Princess of Mantua", "house": "Gonzaga", "parents": { "father": { "name": "Vincenzo I Gonzaga", "title": "Duke of Mantua", "house": "Gonzaga" }, "mother": { "name": "Eleonora de' Medici", "title": null, "house": "Medici" } } }
+    ],
+    "children": [
+      { "name": "Ferdinand III", "title": "Holy Roman Emperor" },
+      { "name": "Maria Anna", "title": "Archduchess of Austria, Electress Consort of Bavaria" },
+      { "name": "Cecilia Renata", "title": "Archduchess of Austria, Queen Consort of Poland" }
+    ]
+  },
+  {
+    "id": "ferdinand_iii_hre",
+    "house": "Habsburg (Austria)",
+    "name": "Ferdinand III",
+    "nickname": null,
+    "birth_year": 1608,
+    "death_year": 1657,
+    "inbreeding_rate": 50.00,
+    "inbreeding_explanation": "His parents were first cousins: his father, Emperor Ferdinand II, and his mother, Maria Anna of Bavaria (Wittelsbach). His rate is so high because his parents were already severely inbred; his paternal grandparents were an uncle-niece pairing, and his maternal grandparents were also first cousins.",
+    "titles": "Holy Roman Emperor 🇩🇪, King of Bohemia 🇨🇿, King of Hungary 🇭🇺, Archduke of Austria 🇦🇹",
+    "reign_years": "1637-1657",
+    "parents": {
+      "father": { "name": "Ferdinand II", "title": "Holy Roman Emperor", "house": "Habsburg" },
+      "mother": { "name": "Maria Anna of Bavaria", "title": "Duchess in Bavaria", "house": "Wittelsbach" }
+    },
+    "spouses": [
+      { "name": "Maria Anna of Spain", "birth_title": "Infanta of Spain", "house": "Habsburg", "parents": { "father": { "name": "Philip III", "title": "King of Spain", "house": "Habsburg" }, "mother": { "name": "Margaret of Austria", "title": "Archduchess of Austria", "house": "Habsburg" } } },
+      { "name": "Maria Leopoldine of Austria", "birth_title": "Archduchess of Austria", "house": "Habsburg", "parents": { "father": { "name": "Leopold V", "title": "Archduke of Austria", "house": "Habsburg" }, "mother": { "name": "Claudia de' Medici", "title": null, "house": "Medici" } } },
+      { "name": "Eleonora Gonzaga", "birth_title": "Princess of Mantua", "house": "Gonzaga", "parents": { "father": { "name": "Charles II Gonzaga", "title": "Duke of Mantua", "house": "Gonzaga" }, "mother": { "name": "Isabella Clara of Austria", "title": null, "house": "Habsburg" } } }
+    ],
+    "children": [
+      { "name": "Ferdinand IV", "title": "King of Bohemia, King of Hungary" },
+      { "name": "Mariana", "title": "Archduchess of Austria, Queen Consort of Spain" },
+      { "name": "Leopold I", "title": "Holy Roman Emperor" },
+      { "name": "Maria Anna Josepha", "title": "Archduchess of Austria" }
+    ]
+  },
+  {
+    "id": "leopold_i_hre",
+    "house": "Habsburg (Austria)",
+    "name": "Leopold I",
+    "nickname": null,
+    "birth_year": 1640,
+    "death_year": 1705,
+    "inbreeding_rate": 35.36,
+    "inbreeding_explanation": "His parents, Emperor Ferdinand III and Maria Anna of Spain, were first cousins. His rate is notably high for this union because his paternal grandparents were also first cousins, and his maternal grandparents were first cousins once removed. This dense concentration of shared ancestors on both sides of his family is the source of his high rate.",
+    "titles": "Holy Roman Emperor 🇩🇪, King of Bohemia 🇨🇿, King of Hungary 🇭🇺, Archduke of Austria 🇦🇹",
+    "reign_years": "1658-1705",
+    "parents": {
+      "father": { "name": "Ferdinand III", "title": "Holy Roman Emperor", "house": "Habsburg" },
+      "mother": { "name": "Maria Anna of Spain", "title": "Infanta of Spain", "house": "Habsburg" }
+    },
+    "spouses": [
+      { "name": "Margaret Theresa of Spain", "birth_title": "Infanta of Spain", "house": "Habsburg", "parents": { "father": { "name": "Philip IV", "title": "King of Spain", "house": "Habsburg" }, "mother": { "name": "Mariana of Austria", "title": "Archduchess of Austria", "house": "Habsburg" } } },
+      { "name": "Claudia Felicitas of Austria", "birth_title": "Archduchess of Austria", "house": "Habsburg", "parents": { "father": { "name": "Ferdinand Charles", "title": "Archduke of Austria", "house": "Habsburg" }, "mother": { "name": "Anna de' Medici", "title": null, "house": "Medici" } } },
+      { "name": "Eleonore Magdalene of Neuburg", "birth_title": "Duchess of Neuburg", "house": "Wittelsbach", "parents": { "father": { "name": "Philip William", "title": "Elector Palatine", "house": "Wittelsbach" }, "mother": { "name": "Elisabeth Amalie of Hesse-Darmstadt", "title": null, "house": "Hesse-Darmstadt" } } }
+    ],
+    "children": [
+      { "name": "Joseph I", "title": "Holy Roman Emperor" },
+      { "name": "Charles VI", "title": "Holy Roman Emperor" },
+      { "name": "Maria Antonia", "title": "Archduchess of Austria, Electress Consort of Bavaria" }
+    ]
+  },
+  {
+    "id": "joseph_i_hre",
+    "house": "Habsburg (Austria)",
+    "name": "Joseph I",
+    "nickname": null,
+    "birth_year": 1678,
+    "death_year": 1711,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "Holy Roman Emperor 🇩🇪, King of Bohemia 🇨🇿, King of Hungary 🇭🇺, Archduke of Austria 🇦🇹",
+    "reign_years": "1705-1711",
+    "parents": {
+      "father": { "name": "Leopold I", "title": "Holy Roman Emperor", "house": "Habsburg" },
+      "mother": { "name": "Eleonore Magdalene of Neuburg", "title": "Duchess of Neuburg", "house": "Wittelsbach" }
+    },
+    "spouses": [
+      { "name": "Wilhelmine Amalie of Brunswick-Lüneburg", "birth_title": "Princess of Brunswick-Lüneburg", "house": "Welf", "parents": { "father": { "name": "John Frederick", "title": "Duke of Brunswick-Lüneburg", "house": "Welf" }, "mother": { "name": "Benedicta Henrietta of the Palatinate", "title": null, "house": "Wittelsbach" } } }
+    ],
+    "children": [
+      { "name": "Maria Josepha", "title": "Archduchess of Austria, Queen Consort of Poland" },
+      { "name": "Maria Amalia", "title": "Archduchess of Austria, Electress Consort of Bavaria" }
+    ]
+  },
+  {
+    "id": "charles_vi_hre",
+    "house": "Habsburg (Austria)",
+    "name": "Charles VI",
+    "nickname": null,
+    "birth_year": 1685,
+    "death_year": 1740,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "Holy Roman Emperor 🇩🇪, King of Bohemia 🇨🇿, King of Hungary 🇭🇺, Archduke of Austria 🇦🇹",
+    "reign_years": "1711-1740",
+    "parents": {
+      "father": { "name": "Leopold I", "title": "Holy Roman Emperor", "house": "Habsburg" },
+      "mother": { "name": "Eleonore Magdalene of Neuburg", "title": "Duchess of Neuburg", "house": "Wittelsbach" }
+    },
+    "spouses": [
+      { "name": "Elisabeth Christine of Brunswick-Wolfenbüttel", "birth_title": "Princess of Brunswick-Wolfenbüttel", "house": "Welf", "parents": { "father": { "name": "Louis Rudolph", "title": "Duke of Brunswick-Lüneburg", "house": "Welf" }, "mother": { "name": "Christine Louise of Oettingen-Oettingen", "title": null, "house": "Oettingen-Oettingen" } } }
+    ],
+    "children": [
+      { "name": "Maria Theresa", "title": "Archduchess of Austria, Holy Roman Empress Consort" }
+    ]
+  },
+  {
+    "id": "philip_i_spain_habsburg",
+    "house": "Habsburg (Spain)",
+    "name": "Philip I",
+    "nickname": "The Handsome",
+    "birth_year": 1478,
+    "death_year": 1506,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "King of Castile 🇪🇸, Duke of Burgundy 🇧🇪",
+    "reign_years": "1504-1506",
+    "parents": {
+      "father": { "name": "Maximilian I", "title": "Holy Roman Emperor", "house": "Habsburg" },
+      "mother": { "name": "Mary of Burgundy", "title": "Duchess of Burgundy", "house": "Valois-Burgundy" }
+    },
+    "spouses": [
+      { "name": "Joanna", "birth_title": "Queen of Castile and Aragon", "house": "Trastámara", "parents": { "father": { "name": "Ferdinand II", "title": "King of Aragon", "house": "Trastámara" }, "mother": { "name": "Isabella I", "title": "Queen of Castile", "house": "Trastámara" } } }
+    ],
+    "children": [
+      { "name": "Charles V", "title": "Holy Roman Emperor" },
+      { "name": "Ferdinand I", "title": "Holy Roman Emperor" },
+      { "name": "Eleanor", "title": "Archduchess of Austria, Queen Consort of Portugal, Queen Consort of France" },
+      { "name": "Isabella", "title": "Archduchess of Austria, Queen Consort of Denmark" },
+      { "name": "Mary", "title": "Archduchess of Austria, Queen Consort of Hungary" },
+      { "name": "Catherine", "title": "Archduchess of Austria, Queen Consort of Portugal" }
+    ]
+  },
+  {
+    "id": "philip_ii_spain_habsburg",
+    "house": "Habsburg (Spain)",
+    "name": "Philip II",
+    "nickname": "The Prudent",
+    "birth_year": 1527,
+    "death_year": 1598,
+    "inbreeding_rate": 50.00,
+    "inbreeding_explanation": "His parents, Emperor Charles V and Isabella of Portugal (Aviz), were first cousins. This union was further compounded by the fact that his paternal great-grandmother and his maternal grandmother were sisters, creating multiple loops in his ancestry.",
+    "titles": "King of Spain 🇪🇸, King of Portugal 🇵🇹, King of Naples 🇮🇹, King of Sicily 🇮🇹, Duke of Milan 🇮🇹, Lord of the Netherlands 🇳🇱",
+    "reign_years": "1556-1598",
+    "parents": {
+      "father": { "name": "Charles V", "title": "Holy Roman Emperor", "house": "Habsburg" },
+      "mother": { "name": "Isabella of Portugal", "title": "Infanta of Portugal", "house": "Aviz" }
+    },
+    "spouses": [
+      { "name": "Maria Manuela", "birth_title": "Princess of Portugal", "house": "Aviz", "parents": { "father": { "name": "John III", "title": "King of Portugal", "house": "Aviz" }, "mother": { "name": "Catherine of Austria", "title": "Archduchess of Austria", "house": "Habsburg" } } },
+      { "name": "Mary I", "birth_title": "Queen of England", "house": "Tudor", "parents": { "father": { "name": "Henry VIII", "title": "King of England", "house": "Tudor" }, "mother": { "name": "Catherine of Aragon", "title": "Infanta of Castile", "house": "Trastámara" } } },
+      { "name": "Elisabeth of Valois", "birth_title": "Princess of France", "house": "Valois", "parents": { "father": { "name": "Henry II", "title": "King of France", "house": "Valois" }, "mother": { "name": "Catherine de' Medici", "title": null, "house": "Medici" } } },
+      { "name": "Anna of Austria", "birth_title": "Archduchess of Austria", "house": "Habsburg", "parents": { "father": { "name": "Maximilian II", "title": "Holy Roman Emperor", "house": "Habsburg" }, "mother": { "name": "Maria of Spain", "title": "Infanta of Spain", "house": "Habsburg" } } }
+    ],
+    "children": [
+      { "name": "Carlos", "title": "Prince of Asturias" },
+      { "name": "Philip III", "title": "King of Spain" },
+      { "name": "Isabella Clara Eugenia", "title": "Infanta of Spain, Sovereign of the Spanish Netherlands" },
+      { "name": "Catherine Michelle", "title": "Infanta of Spain, Duchess Consort of Savoy" }
+    ]
+  },
+  {
+    "id": "philip_iii_spain_habsburg",
+    "house": "Habsburg (Spain)",
+    "name": "Philip III",
+    "nickname": "The Pious",
+    "birth_year": 1578,
+    "death_year": 1621,
+    "inbreeding_rate": 70.71,
+    "inbreeding_explanation": "His parents were Philip II of Spain and his fourth wife, Anna of Austria. Anna was her husband Philip's niece, making their union an uncle-niece marriage. This was compounded by the fact that Philip II's own parents were first cousins, resulting in an exceptionally high rate for his son.",
+    "titles": "King of Spain 🇪🇸, King of Portugal 🇵🇹, King of Naples 🇮🇹, King of Sicily 🇮🇹, Duke of Milan 🇮🇹",
+    "reign_years": "1598-1621",
+    "parents": {
+      "father": { "name": "Philip II", "title": "King of Spain", "house": "Habsburg" },
+      "mother": { "name": "Anna of Austria", "title": "Archduchess of Austria", "house": "Habsburg" }
+    },
+    "spouses": [
+      { "name": "Margaret of Austria", "birth_title": "Archduchess of Austria", "house": "Habsburg", "parents": { "father": { "name": "Charles II", "title": "Archduke of Austria", "house": "Habsburg" }, "mother": { "name": "Maria Anna of Bavaria", "title": "Duchess in Bavaria", "house": "Wittelsbach" } } }
+    ],
+    "children": [
+      { "name": "Anna", "title": "Infanta of Spain, Queen Consort of France" },
+      { "name": "Philip IV", "title": "King of Spain" },
+      { "name": "Maria Anna", "title": "Infanta of Spain, Holy Roman Empress Consort" },
+      { "name": "Charles", "title": "Infante of Spain" },
+      { "name": "Ferdinand", "title": "Cardinal-Infante" }
+    ]
+  },
+  {
+    "id": "philip_iv_spain_habsburg",
+    "house": "Habsburg (Spain)",
+    "name": "Philip IV",
+    "nickname": "The Planet King",
+    "birth_year": 1605,
+    "death_year": 1665,
+    "inbreeding_rate": 35.36,
+    "inbreeding_explanation": "His parents, Philip III of Spain and Margaret of Austria, were first cousins once removed. The resulting rate is particularly high because his paternal grandparents were uncle and niece, and his maternal grandparents were also first cousins, creating an immense inherited genetic load.",
+    "titles": "King of Spain 🇪🇸, King of Portugal 🇵🇹, King of Naples 🇮🇹, King of Sicily 🇮🇹, Duke of Milan 🇮🇹",
+    "reign_years": "1621-1665",
+    "parents": {
+      "father": { "name": "Philip III", "title": "King of Spain", "house": "Habsburg" },
+      "mother": { "name": "Margaret of Austria", "title": "Archduchess of Austria", "house": "Habsburg" }
+    },
+    "spouses": [
+      { "name": "Elisabeth of France", "birth_title": "Princess of France", "house": "Bourbon", "parents": { "father": { "name": "Henry IV", "title": "King of France", "house": "Bourbon" }, "mother": { "name": "Marie de' Medici", "title": null, "house": "Medici" } } },
+      { "name": "Mariana of Austria", "birth_title": "Archduchess of Austria", "house": "Habsburg", "parents": { "father": { "name": "Ferdinand III", "title": "Holy Roman Emperor", "house": "Habsburg" }, "mother": { "name": "Maria Anna of Spain", "title": "Infanta of Spain", "house": "Habsburg" } } }
+    ],
+    "children": [
+      { "name": "Maria Theresa", "title": "Infanta of Spain, Queen Consort of France" },
+      { "name": "Charles II", "title": "King of Spain" }
+    ]
+  },
+  {
+    "id": "charles_ii_spain_habsburg",
+    "house": "Habsburg (Spain)",
+    "name": "Charles II",
+    "nickname": "The Bewitched",
+    "birth_year": 1661,
+    "death_year": 1700,
+    "inbreeding_rate": 100.00,
+    "inbreeding_explanation": "His genetic collapse was the result of generations of Habsburg inbreeding. His own parents' marriage was between uncle and niece, Philip IV of Spain and Mariana of Austria. Looking back just one more generation, his maternal grandparents were first cousins. This relentless intermarriage meant that while a person normally has eight unique great-grandparents, Charles II effectively only had four. The result was a family tree so narrow that every one of his great-grandparents, regardless of the branch, was a descendant of the same ancestral couple from over a century and a half prior: Joanna (Trastámara) and Philip I of Castile (Habsburg). This produced a final coefficient of inbreeding higher than that of a child from a direct brother-sister union.",
+    "titles": "King of Spain 🇪🇸, King of Naples 🇮🇹, King of Sicily 🇮🇹, Duke of Milan 🇮🇹",
+    "reign_years": "1665-1700",
+    "parents": {
+      "father": { "name": "Philip IV", "title": "King of Spain", "house": "Habsburg" },
+      "mother": { "name": "Mariana of Austria", "title": "Archduchess of Austria", "house": "Habsburg" }
+    },
+    "spouses": [
+      { "name": "Marie Louise of Orléans", "birth_title": "Princess of France", "house": "Orléans", "parents": { "father": { "name": "Philip I", "title": "Duke of Orléans", "house": "Orléans" }, "mother": { "name": "Henrietta Anne of England", "title": "Princess of England", "house": "Stuart" } } },
+      { "name": "Maria Anna of Neuburg", "birth_title": "Princess of Neuburg", "house": "Wittelsbach", "parents": { "father": { "name": "Philip William", "title": "Elector Palatine", "house": "Wittelsbach" }, "mother": { "name": "Elisabeth Amalie of Hesse-Darmstadt", "title": null, "house": "Hesse-Darmstadt" } } }
+    ],
+    "children": []
+  },
+  {
+    "id": "francis_i_stephen_hl",
+    "house": "Habsburg-Lorraine",
+    "name": "Francis I Stephen",
+    "nickname": null,
+    "birth_year": 1708,
+    "death_year": 1765,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "Holy Roman Emperor 🇩🇪, Duke of Lorraine 🇫🇷, Grand Duke of Tuscany 🇮🇹",
+    "reign_years": "1745-1765",
+    "parents": {
+      "father": { "name": "Leopold", "title": "Duke of Lorraine", "house": "Lorraine" },
+      "mother": { "name": "Élisabeth Charlotte d'Orléans", "title": "Princess of Orléans", "house": "Orléans" }
+    },
+    "spouses": [
+      { "name": "Maria Theresa", "birth_title": "Archduchess of Austria", "house": "Habsburg", "parents": { "father": { "name": "Charles VI", "title": "Holy Roman Emperor", "house": "Habsburg" }, "mother": { "name": "Elisabeth Christine of Brunswick-Wolfenbüttel", "title": "Princess of Brunswick-Wolfenbüttel", "house": "Welf" } } }
+    ],
+    "children": [
+      { "name": "Joseph II", "title": "Holy Roman Emperor" },
+      { "name": "Leopold II", "title": "Holy Roman Emperor" },
+      { "name": "Maria Carolina", "title": "Archduchess of Austria, Queen Consort of Naples and Sicily" },
+      { "name": "Marie Antoinette", "title": "Archduchess of Austria, Queen Consort of France" },
+      { "name": "Maria Christina", "title": "Archduchess of Austria, Duchess Consort of Teschen" },
+      { "name": "Ferdinand", "title": "Archduke of Austria-Este" },
+      { "name": "Maria Amalia", "title": "Archduchess of Austria, Duchess Consort of Parma" }
+    ]
+  },
+  {
+    "id": "joseph_ii_hl",
+    "house": "Habsburg-Lorraine",
+    "name": "Joseph II",
+    "nickname": null,
+    "birth_year": 1741,
+    "death_year": 1790,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "Holy Roman Emperor 🇩🇪, Archduke of Austria 🇦🇹, King of Bohemia 🇨🇿, King of Hungary 🇭🇺",
+    "reign_years": "1765-1790",
+    "parents": {
+      "father": { "name": "Francis I Stephen", "title": "Holy Roman Emperor", "house": "Habsburg-Lorraine" },
+      "mother": { "name": "Maria Theresa", "title": "Archduchess of Austria", "house": "Habsburg" }
+    },
+    "spouses": [
+      { "name": "Isabella of Parma", "birth_title": "Princess of Parma", "house": "Bourbon-Parma", "parents": { "father": { "name": "Philip", "title": "Duke of Parma", "house": "Bourbon-Parma" }, "mother": { "name": "Louise Élisabeth of France", "title": "Princess of France", "house": "Bourbon" } } },
+      { "name": "Maria Josepha of Bavaria", "birth_title": "Princess of Bavaria", "house": "Wittelsbach", "parents": { "father": { "name": "Charles VII", "title": "Holy Roman Emperor", "house": "Wittelsbach" }, "mother": { "name": "Maria Amalia of Austria", "title": "Archduchess of Austria", "house": "Habsburg" } } }
+    ],
+    "children": []
+  },
+  {
+    "id": "leopold_ii_hl",
+    "house": "Habsburg-Lorraine",
+    "name": "Leopold II",
+    "nickname": null,
+    "birth_year": 1747,
+    "death_year": 1792,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "Holy Roman Emperor 🇩🇪, Grand Duke of Tuscany 🇮🇹, Archduke of Austria 🇦🇹",
+    "reign_years": "1790-1792",
+    "parents": {
+      "father": { "name": "Francis I Stephen", "title": "Holy Roman Emperor", "house": "Habsburg-Lorraine" },
+      "mother": { "name": "Maria Theresa", "title": "Archduchess of Austria", "house": "Habsburg" }
+    },
+    "spouses": [
+      { "name": "Maria Luisa of Spain", "birth_title": "Infanta of Spain", "house": "Bourbon", "parents": { "father": { "name": "Charles III", "title": "King of Spain", "house": "Bourbon" }, "mother": { "name": "Maria Amalia of Saxony", "title": "Princess of Saxony", "house": "Wettin" } } }
+    ],
+    "children": [
+      { "name": "Francis II", "title": "Holy Roman Emperor" },
+      { "name": "Ferdinand III", "title": "Grand Duke of Tuscany" },
+      { "name": "Charles", "title": "Duke of Teschen" },
+      { "name": "Alexander Leopold", "title": "Palatine of Hungary" },
+      { "name": "Joseph", "title": "Palatine of Hungary" },
+      { "name": "Ranier Joseph", "title": "Archduke of Austria" },
+      { "name": "Louis", "title": "Archduke of Austria" },
+      { "name": "Rudolph", "title": "Archduke of Austria, Cardinal" }
+    ]
+  },
+  {
+    "id": "francis_ii_hl",
+    "house": "Habsburg-Lorraine",
+    "name": "Francis II",
+    "nickname": null,
+    "birth_year": 1768,
+    "death_year": 1835,
+    "inbreeding_rate": 50.00,
+    "inbreeding_explanation": "His parents, Leopold II, Holy Roman Emperor, and Maria Luisa of Spain (Bourbon), were first cousins. His four grandparents were Francis I (Lorraine), Holy Roman Emperor; Maria Theresa (Habsburg), Archduchess of Austria; Charles III (Bourbon), King of Spain; and Maria Amalia of Saxony (Wettin), concentrating the genes of the major European powers.",
+    "titles": "Holy Roman Emperor 🇩🇪",
+    "reign_years": "1792-1806",
+    "parents": {
+      "father": { "name": "Leopold II", "title": "Holy Roman Emperor", "house": "Habsburg-Lorraine" },
+      "mother": { "name": "Maria Luisa of Spain", "title": "Infanta of Spain", "house": "Bourbon" }
+    },
+    "spouses": [
+      { "name": "Elisabeth of Württemberg", "birth_title": "Duchess of Württemberg", "house": "Württemberg", "parents": { "father": { "name": "Frederick II Eugene", "title": "Duke of Württemberg", "house": "Württemberg" }, "mother": { "name": "Friederike Dorothea of Brandenburg-Schwedt", "title": null, "house": "Hohenzollern" } } },
+      { "name": "Maria Theresa of Naples and Sicily", "birth_title": "Princess of Naples and Sicily", "house": "Bourbon-Two Sicilies", "parents": { "father": { "name": "Ferdinand I", "title": "King of the Two Sicilies", "house": "Bourbon-Two Sicilies" }, "mother": { "name": "Maria Carolina of Austria", "title": "Archduchess of Austria", "house": "Habsburg-Lorraine" } } },
+      { "name": "Maria Ludovika of Austria-Este", "birth_title": "Archduchess of Austria-Este", "house": "Habsburg-Este", "parents": { "father": { "name": "Ferdinand", "title": "Archduke of Austria-Este", "house": "Habsburg-Este" }, "mother": { "name": "Maria Beatrice d'Este", "title": "Duchess of Massa", "house": "Este" } } },
+      { "name": "Caroline Augusta of Bavaria", "birth_title": "Princess of Bavaria", "house": "Wittelsbach", "parents": { "father": { "name": "Maximilian I Joseph", "title": "King of Bavaria", "house": "Wittelsbach" }, "mother": { "name": "Augusta Wilhelmine of Hesse-Darmstadt", "title": null, "house": "Hesse-Darmstadt" } } }
+    ],
+    "children": [
+      { "name": "Ferdinand I", "title": "Emperor of Austria" },
+      { "name": "Maria Leopoldina", "title": "Archduchess of Austria, Empress Consort of Brazil" },
+      { "name": "Marie Louise", "title": "Archduchess of Austria, Empress Consort of the French" },
+      { "name": "Carolina Augusta", "title": "Archduchess of Austria" }
+    ]
+  },
+  {
+    "id": "francis_i_austria_hl",
+    "house": "Habsburg-Lorraine",
+    "name": "Francis I",
+    "nickname": null,
+    "birth_year": 1768,
+    "death_year": 1835,
+    "inbreeding_rate": 50.00,
+    "inbreeding_explanation": "His parents, Leopold II, Holy Roman Emperor, and Maria Luisa of Spain (Bourbon), were first cousins. His four grandparents were Francis I (Lorraine), Holy Roman Emperor; Maria Theresa (Habsburg), Archduchess of Austria; Charles III (Bourbon), King of Spain; and Maria Amalia of Saxony (Wettin), concentrating the genes of the major European powers.",
+    "titles": "Emperor of Austria 🇦🇹, King of Hungary 🇭🇺, King of Bohemia 🇨🇿",
+    "reign_years": "1804-1835",
+    "parents": {
+      "father": { "name": "Leopold II", "title": "Holy Roman Emperor", "house": "Habsburg-Lorraine" },
+      "mother": { "name": "Maria Luisa of Spain", "title": "Infanta of Spain", "house": "Bourbon" }
+    },
+    "spouses": [
+      { "name": "Elisabeth of Württemberg", "birth_title": "Duchess of Württemberg", "house": "Württemberg", "parents": { "father": { "name": "Frederick II Eugene", "title": "Duke of Württemberg", "house": "Württemberg" }, "mother": { "name": "Friederike Dorothea of Brandenburg-Schwedt", "title": null, "house": "Hohenzollern" } } },
+      { "name": "Maria Theresa of Naples and Sicily", "birth_title": "Princess of Naples and Sicily", "house": "Bourbon-Two Sicilies", "parents": { "father": { "name": "Ferdinand I", "title": "King of the Two Sicilies", "house": "Bourbon-Two Sicilies" }, "mother": { "name": "Maria Carolina of Austria", "title": "Archduchess of Austria", "house": "Habsburg-Lorraine" } } },
+      { "name": "Maria Ludovika of Austria-Este", "birth_title": "Archduchess of Austria-Este", "house": "Habsburg-Este", "parents": { "father": { "name": "Ferdinand", "title": "Archduke of Austria-Este", "house": "Habsburg-Este" }, "mother": { "name": "Maria Beatrice d'Este", "title": "Duchess of Massa", "house": "Este" } } },
+      { "name": "Caroline Augusta of Bavaria", "birth_title": "Princess of Bavaria", "house": "Wittelsbach", "parents": { "father": { "name": "Maximilian I Joseph", "title": "King of Bavaria", "house": "Wittelsbach" }, "mother": { "name": "Augusta Wilhelmine of Hesse-Darmstadt", "title": null, "house": "Hesse-Darmstadt" } } }
+    ],
+    "children": [
+      { "name": "Ferdinand I", "title": "Emperor of Austria" },
+      { "name": "Maria Leopoldina", "title": "Archduchess of Austria, Empress Consort of Brazil" },
+      { "name": "Marie Louise", "title": "Archduchess of Austria, Empress Consort of the French" },
+      { "name": "Carolina Augusta", "title": "Archduchess of Austria" }
+    ]
+  },
+  {
+    "id": "ferdinand_i_austria_hl",
+    "house": "Habsburg-Lorraine",
+    "name": "Ferdinand I",
+    "nickname": null,
+    "birth_year": 1793,
+    "death_year": 1875,
+    "inbreeding_rate": 50.00,
+    "inbreeding_explanation": "His high rate is a direct result of his parents, Emperor Francis I and Maria Theresa of Naples and Sicily (Bourbon-Two Sicilies), being double first cousins. This was reflected in his significant health problems, including epilepsy.",
+    "titles": "Emperor of Austria 🇦🇹, King of Hungary 🇭🇺, King of Bohemia 🇨🇿",
+    "reign_years": "1835-1848",
+    "parents": {
+      "father": { "name": "Francis I", "title": "Emperor of Austria", "house": "Habsburg-Lorraine" },
+      "mother": { "name": "Maria Theresa of Naples and Sicily", "title": "Princess of Naples and Sicily", "house": "Bourbon-Two Sicilies" }
+    },
+    "spouses": [
+      { "name": "Maria Anna of Savoy", "birth_title": "Princess of Savoy", "house": "Savoy", "parents": { "father": { "name": "Victor Emmanuel I", "title": "King of Sardinia", "house": "Savoy" }, "mother": { "name": "Maria Theresa of Austria-Este", "title": "Archduchess of Austria-Este", "house": "Habsburg-Este" } } }
+    ],
+    "children": []
+  },
+  {
+    "id": "francis_joseph_hl",
+    "house": "Habsburg-Lorraine",
+    "name": "Francis Joseph",
+    "nickname": null,
+    "birth_year": 1830,
+    "death_year": 1916,
+    "inbreeding_rate": 35.36,
+    "inbreeding_explanation": "His parents, Archduke Franz Karl and Princess Sophie of Bavaria (Wittelsbach), were first cousins. Their mothers were sisters, and their fathers were also first cousins, creating multiple paths of shared ancestry that resulted in a higher-than-usual rate for their offspring.",
+    "titles": "Emperor of Austria 🇦🇹, King of Hungary 🇭🇺, King of Bohemia 🇨🇿",
+    "reign_years": "1848-1916",
+    "parents": {
+      "father": { "name": "Franz Karl, Archduke of Austria", "title": null, "house": "Habsburg-Lorraine" },
+      "mother": { "name": "Sophie of Bavaria", "title": "Princess of Bavaria", "house": "Wittelsbach" }
+    },
+    "spouses": [
+      { "name": "Elisabeth of Bavaria", "birth_title": "Duchess in Bavaria", "house": "Wittelsbach", "parents": { "father": { "name": "Maximilian Joseph", "title": "Duke in Bavaria", "house": "Wittelsbach" }, "mother": { "name": "Ludovika of Bavaria", "title": "Princess of Bavaria", "house": "Wittelsbach" } } }
+    ],
+    "children": [
+      { "name": "Rudolf", "title": "Crown Prince of Austria" },
+      { "name": "Gisela", "title": "Archduchess of Austria, Princess Consort of Bavaria" },
+      { "name": "Marie Valerie", "title": "Archduchess of Austria" }
+    ]
+  },
+  {
+    "id": "charles_i_hl",
+    "house": "Habsburg-Lorraine",
+    "name": "Charles I",
+    "nickname": null,
+    "birth_year": 1887,
+    "death_year": 1922,
+    "inbreeding_rate": 25.00,
+    "inbreeding_explanation": "His parents were second cousins. More significantly, his paternal and maternal grandfathers were first cousins, and his paternal and maternal grandmothers were also first cousins, creating a 'double second cousin' parentage that contributes to his notable inbreeding rate.",
+    "titles": "Emperor of Austria 🇦🇹, King of Hungary 🇭🇺, King of Bohemia 🇨🇿",
+    "reign_years": "1916-1918",
+    "parents": {
+      "father": { "name": "Otto Franz, Archduke of Austria", "title": null, "house": "Habsburg-Lorraine" },
+      "mother": { "name": "Maria Josepha of Saxony", "title": "Princess of Saxony", "house": "Wettin" }
+    },
+    "spouses": [
+      { "name": "Zita of Bourbon-Parma", "birth_title": "Princess of Bourbon-Parma", "house": "Bourbon-Parma", "parents": { "father": { "name": "Robert I", "title": "Duke of Parma", "house": "Bourbon-Parma" }, "mother": { "name": "Maria Antonia of Portugal", "title": "Infanta of Portugal", "house": "Braganza" } } }
+    ],
+    "children": [
+      { "name": "Otto", "title": "Crown Prince of Austria" },
+      { "name": "Adelheid", "title": "Archduchess of Austria" },
+      { "name": "Robert", "title": "Archduke of Austria-Este" },
+      { "name": "Felix", "title": "Archduchess of Austria" },
+      { "name": "Karl Ludwig", "title": "Archduchess of Austria" },
+      { "name": "Rudolf", "title": "Archduchess of Austria" }
+    ]
+  },
+  {
+    "id": "george_i_hanover",
+    "house": "Hanover",
+    "name": "George I",
+    "nickname": null,
+    "birth_year": 1660,
+    "death_year": 1727,
+    "inbreeding_rate": 25.00,
+    "inbreeding_explanation": "While his own parents were not closely related, this rate reflects the genetic makeup he passed to his heirs. His children were the product of his marriage to his first cousin, Sophia Dorothea of Celle.",
+    "titles": "King of Great Britain 🇬🇧, King of Ireland 🇮🇪, Elector of Hanover 🇩🇪",
+    "reign_years": "1714-1727",
+    "parents": {
+      "father": { "name": "Ernest Augustus, Elector of Hanover", "title": null, "house": "Welf" },
+      "mother": { "name": "Sophia of Hanover", "title": "Princess Palatine of the Rhine", "house": "Wittelsbach" }
+    },
+    "spouses": [
+      { "name": "Sophia Dorothea of Celle", "birth_title": "Duchess of Brunswick-Lüneburg", "house": "Welf", "parents": { "father": { "name": "George William", "title": "Duke of Brunswick-Lüneburg", "house": "Welf" }, "mother": { "name": "Eleonore d'Esmier d'Olbreuse", "title": null, "house": "Olbreuse" } } }
+    ],
+    "children": [
+      { "name": "George II", "title": "King of Great Britain" },
+      { "name": "Sophia Dorothea", "title": "Queen Consort of Prussia" }
+    ]
+  },
+  {
+    "id": "george_ii_hanover",
+    "house": "Hanover",
+    "name": "George II",
+    "nickname": null,
+    "birth_year": 1683,
+    "death_year": 1760,
+    "inbreeding_rate": 50.00,
+    "inbreeding_explanation": "His parents, George I of Great Britain and Sophia Dorothea of Celle (Welf), were first cousins. This is the direct source of his high inbreeding rate. Both of his grandfathers, Ernest Augustus, Elector of Hanover, and George William, Duke of Brunswick-Lüneburg, were brothers from the House of Welf.",
+    "titles": "King of Great Britain 🇬🇧, King of Ireland 🇮🇪, Elector of Hanover 🇩🇪",
+    "reign_years": "1727-1760",
+    "parents": {
+      "father": { "name": "George I", "title": "King of Great Britain", "house": "Hanover" },
+      "mother": { "name": "Sophia Dorothea of Celle", "title": "Duchess of Brunswick-Lüneburg", "house": "Welf" }
+    },
+    "spouses": [
+      { "name": "Caroline of Ansbach", "birth_title": "Margravine of Brandenburg-Ansbach", "house": "Hohenzollern", "parents": { "father": { "name": "John Frederick", "title": "Margrave of Brandenburg-Ansbach", "house": "Hohenzollern" }, "mother": { "name": "Eleonore Erdmuthe of Saxe-Eisenach", "title": null, "house": "Wettin" } } }
+    ],
+    "children": [
+      { "name": "Frederick", "title": "Prince of Wales" },
+      { "name": "Anne", "title": "Princess Royal, Princess of Great Britain, Princess Consort of Orange" },
+      { "name": "Amelia", "title": "Princess of Great Britain" },
+      { "name": "Caroline", "title": "Princess of Great Britain" },
+      { "name": "William", "title": "Duke of Cumberland" },
+      { "name": "Mary", "title": "Princess of Great Britain, Landgravine Consort of Hesse-Kassel" },
+      { "name": "Louisa", "title": "Princess of Great Britain, Queen Consort of Denmark and Norway" }
+    ]
+  },
+  {
+    "id": "george_iii_hanover",
+    "house": "Hanover",
+    "name": "George III",
+    "nickname": null,
+    "birth_year": 1738,
+    "death_year": 1820,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "King of Great Britain 🇬🇧, King of Ireland 🇮🇪, King of the United Kingdom 🇬🇧, King of Hanover 🇩🇪",
+    "reign_years": "1760-1820",
+    "parents": {
+      "father": { "name": "Frederick, Prince of Wales", "title": null, "house": "Hanover" },
+      "mother": { "name": "Augusta of Saxe-Gotha-Altenburg", "title": "Princess of Saxe-Gotha-Altenburg", "house": "Saxe-Gotha-Altenburg" }
+    },
+    "spouses": [
+      { "name": "Charlotte of Mecklenburg-Strelitz", "birth_title": "Duchess of Mecklenburg-Strelitz", "house": "Mecklenburg-Strelitz", "parents": { "father": { "name": "Charles Louis Frederick", "title": "Duke of Mecklenburg-Strelitz", "house": "Mecklenburg-Strelitz" }, "mother": { "name": "Elisabeth Albertine of Saxe-Hildburghausen", "title": null, "house": "Wettin" } } }
+    ],
+    "children": [
+      { "name": "George IV", "title": "King of the United Kingdom" },
+      { "name": "Frederick", "title": "Duke of York" },
+      { "name": "William IV", "title": "King of the United Kingdom" },
+      { "name": "Charlotte", "title": "Princess Royal, Queen Consort of Württemberg" },
+      { "name": "Edward", "title": "Duke of Kent (father of Queen Victoria)" },
+      { "name": "Augusta Sophia", "title": "Princess of the United Kingdom" },
+      { "name": "Elizabeth", "title": "Princess of the United Kingdom, Landgravine Consort of Hesse-Homburg" },
+      { "name": "Ernest Augustus", "title": "King of Hanover" },
+      { "name": "Augustus Frederick", "title": "Duke of Sussex" },
+      { "name": "Adolphus Frederick", "title": "Duke of Cambridge" },
+      { "name": "Mary", "title": "Princess of the United Kingdom, Duchess Consort of Gloucester" },
+      { "name": "Sophia", "title": "Princess of the United Kingdom" }
+    ]
+  },
+  {
+    "id": "george_iv_hanover",
+    "house": "Hanover",
+    "name": "George IV",
+    "nickname": null,
+    "birth_year": 1762,
+    "death_year": 1830,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "King of the United Kingdom 🇬🇧, King of Hanover 🇩🇪",
+    "reign_years": "1820-1830",
+    "parents": {
+      "father": { "name": "George III", "title": "King of the United Kingdom", "house": "Hanover" },
+      "mother": { "name": "Charlotte of Mecklenburg-Strelitz", "title": "Queen Consort of the United Kingdom", "house": "Mecklenburg-Strelitz" }
+    },
+    "spouses": [
+      { "name": "Caroline of Brunswick", "birth_title": "Princess of Brunswick", "house": "Welf", "parents": { "father": { "name": "Charles William Ferdinand", "title": "Duke of Brunswick-Wolfenbüttel", "house": "Welf" }, "mother": { "name": "Augusta of Great Britain", "title": "Princess of Great Britain", "house": "Hanover" } } }
+    ],
+    "children": [
+      { "name": "Charlotte Augusta of Wales", "title": "Princess of Wales" }
+    ]
+  },
+  {
+    "id": "william_iv_hanover",
+    "house": "Hanover",
+    "name": "William IV",
+    "nickname": null,
+    "birth_year": 1765,
+    "death_year": 1837,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "King of the United Kingdom 🇬🇧, King of Hanover 🇩🇪",
+    "reign_years": "1830-1837",
+    "parents": {
+      "father": { "name": "George III", "title": "King of the United Kingdom", "house": "Hanover" },
+      "mother": { "name": "Charlotte of Mecklenburg-Strelitz", "title": "Queen Consort of the United Kingdom", "house": "Mecklenburg-Strelitz" }
+    },
+    "spouses": [
+      { "name": "Adelaide of Saxe-Meiningen", "birth_title": "Princess of Saxe-Meiningen", "house": "Wettin", "parents": { "father": { "name": "George I", "title": "Duke of Saxe-Meiningen", "house": "Wettin" }, "mother": { "name": "Louise Eleonore of Hohenlohe-Langenburg", "title": null, "house": "Hohenlohe" } } }
+    ],
+    "children": []
+  },
+  {
+    "id": "victoria_hanover",
+    "house": "Hanover",
+    "name": "Victoria",
+    "nickname": null,
+    "birth_year": 1819,
+    "death_year": 1901,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "Queen of the United Kingdom 🇬🇧, Empress of India 🇮🇳",
+    "reign_years": "1837-1901",
+    "parents": {
+      "father": { "name": "Edward, Duke of Kent", "title": null, "house": "Hanover" },
+      "mother": { "name": "Victoria of Saxe-Coburg-Saalfeld", "title": "Princess of Saxe-Coburg-Saalfeld", "house": "Saxe-Coburg-Saalfeld" }
+    },
+    "spouses": [
+      { "name": "Albert of Saxe-Coburg and Gotha", "birth_title": "Prince of Saxe-Coburg and Gotha", "house": "Saxe-Coburg and Gotha", "parents": { "father": { "name": "Ernest I", "title": "Duke of Saxe-Coburg and Gotha", "house": "Saxe-Coburg and Gotha" }, "mother": { "name": "Louise of Saxe-Gotha-Altenburg", "title": null, "house": "Saxe-Gotha-Altenburg" } } }
+    ],
+    "children": [
+      { "name": "Victoria", "title": "Princess of the United Kingdom, German Empress, Queen of Prussia" },
+      { "name": "Edward VII", "title": "King of the United Kingdom" },
+      { "name": "Alice", "title": "Princess of the United Kingdom, Grand Duchess Consort of Hesse and by Rhine" },
+      { "name": "Alfred", "title": "Duke of Saxe-Coburg and Gotha" },
+      { "name": "Helena", "title": "Princess of the United Kingdom, Princess Consort Christian of Schleswig-Holstein" },
+      { "name": "Louise", "title": "Princess of the United Kingdom, Duchess Consort of Argyll" },
+      { "name": "Arthur", "title": "Duke of Connaught and Strathearn" },
+      { "name": "Leopold", "title": "Duke of Albany" },
+      { "name": "Beatrice", "title": "Princess of the United Kingdom, Princess Consort Henry of Battenberg" }
+    ]
+  },
+  {
+    "id": "frederick_i_hohenzollern",
+    "house": "Hohenzollern",
+    "name": "Frederick I",
+    "nickname": null,
+    "birth_year": 1657,
+    "death_year": 1713,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "King in Prussia 🇩🇪, Elector of Brandenburg 🇩🇪",
+    "reign_years": "1701-1713",
+    "parents": {
+      "father": { "name": "Frederick William, Elector of Brandenburg", "title": null, "house": "Hohenzollern" },
+      "mother": { "name": "Louise Henriette of Orange-Nassau", "title": "Princess of Orange", "house": "Orange-Nassau" }
+    },
+    "spouses": [
+      { "name": "Sophia Charlotte of Hanover", "birth_title": "Princess of Hanover", "house": "Welf", "parents": { "father": { "name": "Ernest Augustus, Elector of Hanover", "title": null, "house": "Welf" }, "mother": { "name": "Sophia of Hanover", "title": "Princess Palatine of the Rhine", "house": "Wittelsbach" } } }
+    ],
+    "children": [
+      { "name": "Frederick William I", "title": "King in Prussia" }
+    ]
+  },
+  {
+    "id": "frederick_william_i_hohenzollern",
+    "house": "Hohenzollern",
+    "name": "Frederick William I",
+    "nickname": "The Soldier King",
+    "birth_year": 1688,
+    "death_year": 1740,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "King in Prussia 🇩🇪, Elector of Brandenburg 🇩🇪",
+    "reign_years": "1713-1740",
+    "parents": {
+      "father": { "name": "Frederick I", "title": "King in Prussia", "house": "Hohenzollern" },
+      "mother": { "name": "Sophia Charlotte of Hanover", "title": "Princess of Hanover", "house": "Welf" }
+    },
+    "spouses": [
+      { "name": "Sophia Dorothea of Hanover", "birth_title": "Princess of Hanover", "house": "Welf", "parents": { "father": { "name": "George I", "title": "King of Great Britain", "house": "Hanover" }, "mother": { "name": "Sophia Dorothea of Celle", "title": "Duchess of Brunswick-Lüneburg", "house": "Welf" } } }
+    ],
+    "children": [
+      { "name": "Frederick II", "title": "King of Prussia" },
+      { "name": "Wilhelmine", "title": "Princess of Prussia, Margravine Consort of Brandenburg-Bayreuth" },
+      { "name": "Louise Ulrike", "title": "Princess of Prussia, Queen Consort of Sweden" },
+      { "name": "August William", "title": "Prince of Prussia" },
+      { "name": "Anne Amalie", "title": "Princess of Prussia, Abbess of Quedlinburg" },
+      { "name": "Henry", "title": "Prince of Prussia" },
+      { "name": "August Ferdinand", "title": "Prince of Prussia" }
+    ]
+  },
+  {
+    "id": "frederick_ii_hohenzollern",
+    "house": "Hohenzollern",
+    "name": "Frederick II",
+    "nickname": "The Great",
+    "birth_year": 1712,
+    "death_year": 1786,
+    "inbreeding_rate": 50.00,
+    "inbreeding_explanation": "His parents, Frederick William I of Prussia and Sophia Dorothea of Hanover (Hanover), were first cousins. His paternal grandmother, Sophia Charlotte of Hanover (Hanover), and his maternal grandfather, King George I of Great Britain (Hanover), were siblings.",
+    "titles": "King of Prussia 🇩🇪",
+    "reign_years": "1740-1786",
+    "parents": {
+      "father": { "name": "Frederick William I", "title": "King in Prussia", "house": "Hohenzollern" },
+      "mother": { "name": "Sophia Dorothea of Hanover", "title": "Princess of Hanover", "house": "Welf" }
+    },
+    "spouses": [
+      { "name": "Elisabeth Christine of Brunswick-Bevern", "birth_title": "Princess of Brunswick-Bevern", "house": "Welf", "parents": { "father": { "name": "Ferdinand Albert II", "title": "Duke of Brunswick-Wolfenbüttel", "house": "Welf" }, "mother": { "name": "Antoinette Amalie of Brunswick-Wolfenbüttel", "title": null, "house": "Welf" } } }
+    ],
+    "children": []
+  },
+  {
+    "id": "frederick_william_ii_hohenzollern",
+    "house": "Hohenzollern",
+    "name": "Frederick William II",
+    "nickname": null,
+    "birth_year": 1744,
+    "death_year": 1797,
+    "inbreeding_rate": 50.00,
+    "inbreeding_explanation": "His parents, Prince August William of Prussia and Luise of Brunswick-Wolfenbüttel (Welf), were first cousins. His paternal grandfather was King Frederick William I of Prussia, and his maternal grandmother, Philippine Charlotte of Prussia, was Frederick William I's sister.",
+    "titles": "King of Prussia 🇩🇪",
+    "reign_years": "1786-1797",
+    "parents": {
+      "father": { "name": "August William, Prince of Prussia", "title": null, "house": "Hohenzollern" },
+      "mother": { "name": "Louise Amalie of Brunswick-Wolfenbüttel", "title": "Princess of Brunswick-Wolfenbüttel", "house": "Welf" }
+    },
+    "spouses": [
+      { "name": "Elisabeth Christine Ulrike of Brunswick-Lüneburg", "birth_title": "Princess of Brunswick-Lüneburg", "house": "Welf", "parents": { "father": { "name": "Charles I", "title": "Duke of Brunswick-Wolfenbüttel", "house": "Welf" }, "mother": { "name": "Philippine Charlotte of Prussia", "title": null, "house": "Hohenzollern" } } },
+      { "name": "Frederica Louisa of Hesse-Darmstadt", "birth_title": "Princess of Hesse-Darmstadt", "house": "Hesse-Darmstadt", "parents": { "father": { "name": "Louis IX", "title": "Landgrave of Hesse-Darmstadt", "house": "Hesse-Darmstadt" }, "mother": { "name": "Caroline of Zweibrücken", "title": null, "house": "Wittelsbach" } } }
+    ],
+    "children": [
+      { "name": "Frederick William III", "title": "King of Prussia" },
+      { "name": "Louis Charles", "title": "Prince of Prussia" },
+      { "name": "Wilhelmine", "title": "Princess of Prussia, Queen Consort of the Netherlands" },
+      { "name": "Augusta", "title": "Princess of Prussia, Electress Consort of Hesse" },
+      { "name": "Henry", "title": "Prince of Prussia" },
+      { "name": "William", "title": "Prince of Prussia" }
+    ]
+  },
+  {
+    "id": "frederick_william_iii_hohenzollern",
+    "house": "Hohenzollern",
+    "name": "Frederick William III",
+    "nickname": null,
+    "birth_year": 1770,
+    "death_year": 1840,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "King of Prussia 🇩🇪",
+    "reign_years": "1797-1840",
+    "parents": {
+      "father": { "name": "Frederick William II", "title": "King of Prussia", "house": "Hohenzollern" },
+      "mother": { "name": "Frederica Louisa of Hesse-Darmstadt", "title": "Princess of Hesse-Darmstadt", "house": "Hesse-Darmstadt" }
+    },
+    "spouses": [
+      { "name": "Louise of Mecklenburg-Strelitz", "birth_title": "Duchess of Mecklenburg-Strelitz", "house": "Mecklenburg-Strelitz", "parents": { "father": { "name": "Charles II", "title": "Grand Duke of Mecklenburg-Strelitz", "house": "Mecklenburg-Strelitz" }, "mother": { "name": "Frederica of Hesse-Darmstadt", "title": null, "house": "Hesse-Darmstadt" } } }
+    ],
+    "children": [
+      { "name": "Frederick William IV", "title": "King of Prussia" },
+      { "name": "William I", "title": "German Emperor" },
+      { "name": "Charlotte", "title": "Princess of Prussia, Empress Consort of Russia" },
+      { "name": "Charles", "title": "Prince of Prussia" },
+      { "name": "Alexandrine", "title": "Princess of Prussia, Grand Duchess Consort of Mecklenburg-Schwerin" },
+      { "name": "Louise", "title": "Princess of Prussia, Landgravine Consort of Hesse-Philippsthal-Barchfeld" },
+      { "name": "Albert", "title": "Prince of Prussia" }
+    ]
+  },
+  {
+    "id": "frederick_william_iv_hohenzollern",
+    "house": "Hohenzollern",
+    "name": "Frederick William IV",
+    "nickname": null,
+    "birth_year": 1795,
+    "death_year": 1861,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "King of Prussia 🇩🇪",
+    "reign_years": "1840-1861",
+    "parents": {
+      "father": { "name": "Frederick William III", "title": "King of Prussia", "house": "Hohenzollern" },
+      "mother": { "name": "Louise of Mecklenburg-Strelitz", "title": "Queen Consort of Prussia", "house": "Mecklenburg-Strelitz" }
+    },
+    "spouses": [
+      { "name": "Elisabeth Ludovika of Bavaria", "birth_title": "Princess of Bavaria", "house": "Wittelsbach", "parents": { "father": { "name": "Maximilian I Joseph", "title": "King of Bavaria", "house": "Wittelsbach" }, "mother": { "name": "Caroline of Baden", "title": null, "house": "Zähringen" } } }
+    ],
+    "children": []
+  },
+  {
+    "id": "william_i_hohenzollern",
+    "house": "Hohenzollern",
+    "name": "William I",
+    "nickname": null,
+    "birth_year": 1797,
+    "death_year": 1888,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "German Emperor 🇩🇪, King of Prussia 🇩🇪",
+    "reign_years": "1871-1888",
+    "parents": {
+      "father": { "name": "Frederick William III", "title": "King of Prussia", "house": "Hohenzollern" },
+      "mother": { "name": "Louise of Mecklenburg-Strelitz", "title": "Queen Consort of Prussia", "house": "Mecklenburg-Strelitz" }
+    },
+    "spouses": [
+      { "name": "Augusta of Saxe-Weimar-Eisenach", "birth_title": "Princess of Saxe-Weimar-Eisenach", "house": "Wettin", "parents": { "father": { "name": "Charles Frederick", "title": "Grand Duke of Saxe-Weimar-Eisenach", "house": "Wettin" }, "mother": { "name": "Maria Pavlovna of Russia", "title": "Grand Duchess of Russia", "house": "Holstein-Gottorp-Romanov" } } }
+    ],
+    "children": [
+      { "name": "Frederick III", "title": "German Emperor" },
+      { "name": "Louise", "title": "Princess of Prussia, Grand Duchess Consort of Baden" }
+    ]
+  },
+  {
+    "id": "frederick_iii_hohenzollern",
+    "house": "Hohenzollern",
+    "name": "Frederick III",
+    "nickname": null,
+    "birth_year": 1831,
+    "death_year": 1888,
+    "inbreeding_rate": 50.00,
+    "inbreeding_explanation": "His high rate is due to his parents being second cousins, but from extremely interrelated families. His paternal grandmother and maternal grandfather were siblings, creating a close genetic link that significantly elevated his inherited inbreeding.",
+    "titles": "German Emperor 🇩🇪, King of Prussia 🇩🇪",
+    "reign_years": "1888",
+    "parents": {
+      "father": { "name": "William I", "title": "German Emperor", "house": "Hohenzollern" },
+      "mother": { "name": "Augusta of Saxe-Weimar-Eisenach", "title": "Queen Consort of Prussia", "house": "Wettin" }
+    },
+    "spouses": [
+      { "name": "Victoria", "birth_title": "Princess Royal", "house": "Hanover", "parents": { "father": { "name": "Albert", "title": "Prince Consort", "house": "Saxe-Coburg and Gotha" }, "mother": { "name": "Victoria", "title": "Queen of the United Kingdom", "house": "Hanover" } } }
+    ],
+    "children": [
+      { "name": "Wilhelm II", "title": "German Emperor" },
+      { "name": "Charlotte", "title": "Princess of Prussia, Duchess Consort of Saxe-Meiningen" },
+      { "name": "Henry", "title": "Prince of Prussia" },
+      { "name": "Sigismund", "title": "Prince of Prussia" },
+      { "name": "Victoria", "title": "Princess of Prussia, Princess Adolf of Schaumburg-Lippe" },
+      { "name": "Waldemar", "title": "Prince of Prussia" },
+      { "name": "Sophie", "title": "Princess of Prussia, Queen Consort of the Hellenes" },
+      { "name": "Margaret", "title": "Princess of Prussia, Landgravine of Hesse" }
+    ]
+  },
+  {
+    "id": "wilhelm_ii_hohenzollern",
+    "house": "Hohenzollern",
+    "name": "Wilhelm II",
+    "nickname": null,
+    "birth_year": 1859,
+    "death_year": 1941,
+    "inbreeding_rate": 50.00,
+    "inbreeding_explanation": "He was the son of a marriage between close relatives, Frederick III of Prussia and Victoria (Hanover), Princess Royal. His high rate is a product of his parents being second cousins, but his paternal and maternal grandmothers also being first cousins.",
+    "titles": "German Emperor 🇩🇪, King of Prussia 🇩🇪",
+    "reign_years": "1888-1918",
+    "parents": {
+      "father": { "name": "Frederick III", "title": "German Emperor", "house": "Hohenzollern" },
+      "mother": { "name": "Victoria", "title": "Princess Royal", "house": "Hanover" }
+    },
+    "spouses": [
+      { "name": "Augusta Victoria of Schleswig-Holstein", "birth_title": "Princess of Schleswig-Holstein-Sonderburg-Augustenburg", "house": "Schleswig-Holstein-Sonderburg-Augustenburg", "parents": { "father": { "name": "Frederick VIII", "title": "Duke of Schleswig-Holstein", "house": "Schleswig-Holstein-Sonderburg-Augustenburg" }, "mother": { "name": "Adelheid of Hohenlohe-Langenburg", "title": null, "house": "Hohenlohe" } } },
+      { "name": "Hermine Reuss of Greiz", "birth_title": "Princess Reuss of Greiz", "house": "Reuss", "parents": { "father": { "name": "Henry XXII", "title": "Prince Reuss of Greiz", "house": "Reuss" }, "mother": { "name": "Ida of Schaumburg-Lippe", "title": null, "house": "Lippe" } } }
+    ],
+    "children": [
+      { "name": "Wilhelm", "title": "Crown Prince of Germany" },
+      { "name": "Eitel Frederick", "title": "Prince of Prussia" },
+      { "name": "Adalbert", "title": "Prince of Prussia" },
+      { "name": "August Wilhelm", "title": "Prince of Prussia" },
+      { "name": "Oskar", "title": "Prince of Prussia" },
+      { "name": "Joachim", "title": "Prince of Prussia" },
+      { "name": "Victoria Louise", "title": "Princess of Prussia, Duchess of Brunswick" }
+    ]
+  },
+  {
+    "id": "george_v_windsor",
+    "house": "Windsor",
+    "name": "George V",
+    "nickname": null,
+    "birth_year": 1865,
+    "death_year": 1936,
+    "inbreeding_rate": 50.00,
+    "inbreeding_explanation": "His parents, King Edward VII (Saxe-Coburg and Gotha) and Queen Alexandra of Denmark (Glücksburg), were second cousins once removed. The high inbreeding rate listed here reflects the genetic legacy passed to his children, which was a result of his own marriage to his second cousin, Princess Mary of Teck (Württemberg), further concentrating the descendants of Queen Victoria (Hanover).",
+    "titles": "King of the United Kingdom 🇬🇧, Emperor of India 🇮🇳",
+    "reign_years": "1910-1936",
+    "parents": {
+      "father": { "name": "Edward VII", "title": "King of the United Kingdom", "house": "Saxe-Coburg and Gotha" },
+      "mother": { "name": "Alexandra of Denmark", "title": "Princess of Denmark", "house": "Glücksburg" }
+    },
+    "spouses": [
+      { "name": "Mary of Teck", "birth_title": "Princess of Teck", "house": "Württemberg", "parents": { "father": { "name": "Francis, Duke of Teck", "title": null, "house": "Württemberg" }, "mother": { "name": "Princess Mary Adelaide of Cambridge", "title": null, "house": "Hanover" } } }
+    ],
+    "children": [
+      { "name": "Edward VIII", "title": "King of the United Kingdom" },
+      { "name": "George VI", "title": "King of the United Kingdom" },
+      { "name": "Mary", "title": "Princess Royal, Countess of Harewood" },
+      { "name": "Henry", "title": "Duke of Gloucester" },
+      { "name": "George", "title": "Duke of Kent" },
+      { "name": "John", "title": "Prince of the United Kingdom" }
+    ]
+  },
+  {
+    "id": "edward_viii_windsor",
+    "house": "Windsor",
+    "name": "Edward VIII",
+    "nickname": null,
+    "birth_year": 1894,
+    "death_year": 1972,
+    "inbreeding_rate": 25.00,
+    "inbreeding_explanation": "As the son of George V and Queen Mary (Württemberg), who were second cousins, he was born with a significant inbreeding rate from a union that further concentrated the descendants of their shared great-grandmother, Queen Victoria (Hanover).",
+    "titles": "King of the United Kingdom 🇬🇧, Emperor of India 🇮🇳",
+    "reign_years": "1936",
+    "parents": {
+      "father": { "name": "George V", "title": "King of the United Kingdom", "house": "Windsor" },
+      "mother": { "name": "Mary of Teck", "title": "Princess of Teck", "house": "Württemberg" }
+    },
+    "spouses": "Never Married",
+    "children": []
+  },
+  {
+    "id": "george_vi_windsor",
+    "house": "Windsor",
+    "name": "George VI",
+    "nickname": null,
+    "birth_year": 1895,
+    "death_year": 1952,
+    "inbreeding_rate": 25.00,
+    "inbreeding_explanation": "The brother of Edward VIII, he shares the same parentage and an identical inbreeding rate, born from the union of second cousins King George V and Queen Mary (Württemberg).",
+    "titles": "King of the United Kingdom 🇬🇧, Emperor of India 🇮🇳, Head of the Commonwealth",
+    "reign_years": "1936-1947",
+    "parents": {
+      "father": { "name": "George V", "title": "King of the United Kingdom", "house": "Windsor" },
+      "mother": { "name": "Mary of Teck", "title": "Princess of Teck", "house": "Württemberg" }
+    },
+    "spouses": [
+      { "name": "Elizabeth Bowes-Lyon", "birth_title": null, "house": "Bowes-Lyon", "parents": { "father": { "name": "Claude Bowes-Lyon", "title": "14th Earl of Strathmore and Kinghorne", "house": "Bowes-Lyon" }, "mother": { "name": "Cecilia Cavendish-Bentinck", "title": null, "house": "Cavendish-Bentinck" } } }
+    ],
+    "children": [
+      { "name": "Elizabeth II", "title": "Queen of the United Kingdom" },
+      { "name": "Margaret", "title": "Princess of the United Kingdom" }
+    ]
+  },
+  {
+    "id": "elizabeth_ii_windsor",
+    "house": "Windsor",
+    "name": "Elizabeth II",
+    "nickname": null,
+    "birth_year": 1926,
+    "death_year": 2022,
+    "inbreeding_rate": 0,
+    "inbreeding_explanation": null,
+    "titles": "Queen of the United Kingdom 🇬🇧, Head of the Commonwealth",
+    "reign_years": "1952-2022",
+    "parents": {
+      "father": { "name": "George VI", "title": "King of the United Kingdom", "house": "Windsor" },
+      "mother": { "name": "Elizabeth Bowes-Lyon", "title": null, "house": "Bowes-Lyon" }
+    },
+    "spouses": [
+      { "name": "Philip, Duke of Edinburgh", "birth_title": "Prince of Greece and Denmark", "house": "Schleswig-Holstein-Sonderburg-Glücksburg", "parents": { "father": { "name": "Prince Andrew of Greece and Denmark", "title": null, "house": "Glücksburg" }, "mother": { "name": "Princess Alice of Battenberg", "title": null, "house": "Battenberg" } } }
+    ],
+    "children": [
+      { "name": "Charles III", "title": "King of the United Kingdom" },
+      { "name": "Anne", "title": "Princess Royal" },
+      { "name": "Andrew", "title": "Duke of York" },
+      { "name": "Edward", "title": "Duke of Edinburgh" }
+    ]
+  },
+  {
+    "id": "charles_iii_windsor",
+    "house": "Windsor",
+    "name": "Charles III",
+    "nickname": null,
+    "birth_year": 1948,
+    "death_year": null,
+    "inbreeding_rate": 17.68,
+    "inbreeding_explanation": "His parents, Queen Elizabeth II and Prince Philip (Glücksburg), Duke of Edinburgh, were second cousins once removed through their shared descent from King Christian IX (Glücksburg) of Denmark, and also third cousins through their shared descent from Queen Victoria (Hanover).",
+    "titles": "King of the United Kingdom 🇬🇧, Head of the Commonwealth",
+    "reign_years": "2022-Present",
+    "parents": {
+      "father": { "name": "Philip, Duke of Edinburgh", "title": "Prince of Greece and Denmark", "house": "Schleswig-Holstein-Sonderburg-Glücksburg" },
+      "mother": { "name": "Elizabeth II", "title": "Queen of the United Kingdom", "house": "Windsor" }
+    },
+    "spouses": [
+      { "name": "Diana Spencer", "birth_title": null, "house": "Spencer", "parents": { "father": { "name": "John Spencer", "title": "8th Earl Spencer", "house": "Spencer" }, "mother": { "name": "Frances Shand Kydd", "title": null, "house": "Burke" } } },
+      { "name": "Camilla Shand", "birth_title": null, "house": "Shand", "parents": { "father": { "name": "Bruce Shand", "title": null, "house": "Shand" }, "mother": { "name": "Rosalind Cubitt", "title": null, "house": "Cubitt" } } }
+    ],
+    "children": [
+      { "name": "William", "title": "Prince of Wales" },
+      { "name": "Henry", "title": "Duke of Sussex" }
+    ]
+  }
+]
