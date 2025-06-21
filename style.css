@@ -484,11 +484,9 @@ footer .footer-text:last-child {
 
 /* For Tablets and smaller devices */
 @media (max-width: 1024px) {
-    /* --- Fix Background Image Behavior --- */
+    /* --- FIX: Remove background image on smaller viewports --- */
     .website-wrapper {
-        /* This ensures the background image stays fixed and covers the screen height, just like on desktop */
-        background-attachment: fixed;
-        background-size: auto 100vh;
+        background-image: none;
     }
 
     /* --- Disable Desktop-Only Features --- */
@@ -497,7 +495,7 @@ footer .footer-text:last-child {
     }
 
     .masthead-block {
-        position: relative;
+        position: relative; 
         top: 0;
         transform: none;
         left: 0;
@@ -531,10 +529,11 @@ footer .footer-text:last-child {
     }
 
     /* --- FIX: Make Monarch Blocks Visible on Mobile --- */
-    /* This overrides the desktop animation style, ensuring blocks are visible */
+    /* This overrides the desktop animation style (opacity: 0), ensuring blocks are visible by default on mobile */
     .monarch-block {
         opacity: 1;
         transform: none;
+        transition: none; /* Also disable the transition effect on mobile */
     }
     
     /* --- Monarch Block Internal Stacking --- */
@@ -546,8 +545,6 @@ footer .footer-text:last-child {
         position: static; 
         display: block;
         margin: 0 auto 15px auto;
-        left: auto; top: auto;
-        z-index: auto; 
     }
 
     .monarch-block .monarch-name-text,
@@ -564,10 +561,10 @@ footer .footer-text:last-child {
 
     .inbreeding-crest-container {
         position: relative;
-        transform: none;
+        margin: 0 auto 30px auto;
         right: auto;
         top: auto;
-        margin: 0 auto 30px auto;
+        transform: none;
     }
 }
 
