@@ -152,7 +152,7 @@ async function initializeWebsite() {
     const navBar = document.querySelector('.navigation-bar');
 
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
-
+    
     // --- 1. Create Navigation Buttons ---
     const navButtonContainer = document.createElement('div');
     navButtonContainer.classList.add('nav-button-container');
@@ -195,7 +195,9 @@ async function initializeWebsite() {
                 const houseBlock = document.createElement('div');
                 houseBlock.classList.add('house-block');
                 houseBlock.dataset.houseNameTarget = houseName.toLowerCase().replace(/[^a-z0-9]/g, '');
+                // Pre-load the first house block
                 if (index === 0) { houseBlock.classList.add('is-visible'); }
+
                 const houseTitle = document.createElement('h3');
                 houseTitle.classList.add('house-title');
                 houseTitle.textContent = `${String(index + 1).padStart(2, '0')}. House of ${houseName.split(' ').map(word => {
@@ -209,16 +211,19 @@ async function initializeWebsite() {
                 monarchsGridContainer.classList.add('monarchs-grid');
                 mainContainer.appendChild(monarchsGridContainer);
 
-                // --- NEW: Conditional Layout Logic ---
                 if (isMobile) {
                     // MOBILE: Create all blocks in a single chronological column
-                    houseMonarchs.forEach(monarch => {
+                    houseMonarchs.forEach((monarch, monarchIndex) => {
                         const monarchBlock = createMonarchBlock(monarch, houseName);
+                        // Pre-load the first block on mobile
+                        if (index === 0 && monarchIndex === 0) {
+                            monarchBlock.classList.add('is-visible');
+                        }
                         monarchsGridContainer.appendChild(monarchBlock);
                     });
-                    resolve(); // Resolve promise when done
+                    resolve();
                 } else {
-                    // DESKTOP: Use the existing two-column masonry logic
+                    // DESKTOP: Use the two-column masonry logic
                     const leftColumn = document.createElement('div');
                     leftColumn.classList.add('monarch-column');
                     monarchsGridContainer.appendChild(leftColumn);
@@ -231,6 +236,7 @@ async function initializeWebsite() {
                         if (currentMonarchIndex < houseMonarchs.length) {
                             const monarch = houseMonarchs[currentMonarchIndex];
                             const monarchBlock = createMonarchBlock(monarch, houseName);
+                            // Pre-load the first two blocks on desktop
                             if (index === 0 && (currentMonarchIndex <= 1)) {
                                 monarchBlock.classList.add('is-visible');
                             }
@@ -254,10 +260,45 @@ async function initializeWebsite() {
     });
 
     await Promise.all(renderingPromises);
-
-    // --- Setup Intersection Observer ---
+    
+    // --- THIS IS THE SECTION THAT WAS MISSING ---
     console.log("All content rendered. Setting up IntersectionObserver.");
-    // ... (The rest of the IntersectionObserver code remains the same as before)
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = entry.target;
+                target.classList.add('is-visible');
+                if (target.classList.contains('monarch-block')) {
+                    const rate = parseFloat(target.dataset.inbreedingRate);
+                    const crestTopStroke = target.querySelector('.crest-top-stroke');
+                    const rateNumberElement = target.querySelector('.crest-rate-number');
+                    if (crestTopStroke && rateNumberElement) {
+                        const zeroPercentOffset = 391.0;
+                        const fiftyPercentOffset = 195.5;
+                        const oneHundredPercentOffset = 0.0;
+                        let offset;
+                        if (rate <= 50) {
+                            offset = mapRange(rate, 0, 50, zeroPercentOffset, fiftyPercentOffset);
+                        } else {
+                            offset = mapRange(rate, 50, 100, fiftyPercentOffset, oneHundredPercentOffset);
+                        }
+                        crestTopStroke.style.strokeDashoffset = offset;
+                        if (rate === 0) {
+                            crestTopStroke.style.opacity = '0';
+                        }
+                        setTimeout(() => {
+                             animateNumber(rateNumberElement, rate, 900);
+                        }, 400);
+                    }
+                }
+                observer.unobserve(target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.house-block:not(.is-visible)').forEach(block => observer.observe(block));
+    document.querySelectorAll('.monarch-block:not(.is-visible)').forEach(block => observer.observe(block));
+    // --- END OF MISSING SECTION ---
 }
 
 
