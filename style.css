@@ -484,13 +484,20 @@ footer .footer-text:last-child {
 
 /* For Tablets and smaller devices */
 @media (max-width: 1024px) {
+    /* --- Fix Background Image Behavior --- */
+    .website-wrapper {
+        /* This ensures the background image stays fixed and covers the screen height, just like on desktop */
+        background-attachment: fixed;
+        background-size: auto 100vh;
+    }
+
     /* --- Disable Desktop-Only Features --- */
     .navigation-bar {
         display: none;
     }
 
     .masthead-block {
-        position: relative; /* Revert to normal scrolling behavior */
+        position: relative;
         top: 0;
         transform: none;
         left: 0;
@@ -513,17 +520,24 @@ footer .footer-text:last-child {
 
     /* --- Force Single-Column Monarch Grid --- */
     .monarchs-grid {
-        flex-direction: column; /* THIS IS THE KEY: Stacks the columns vertically */
+        flex-direction: column;
         align-items: center;
     }
 
     .monarchs-grid .monarch-column {
-        width: 100%; /* Make each column take full width */
-        max-width: 500px; /* Optional: constrain max width for readability on tablets */
-        gap: 30px; /* Re-introduce gap for spacing between blocks */
+        width: 100%;
+        max-width: 500px;
+        gap: 30px;
     }
 
-    /* --- Monarch Block Internal Layout --- */
+    /* --- FIX: Make Monarch Blocks Visible on Mobile --- */
+    /* This overrides the desktop animation style, ensuring blocks are visible */
+    .monarch-block {
+        opacity: 1;
+        transform: none;
+    }
+    
+    /* --- Monarch Block Internal Stacking --- */
     .monarch-visual-and-titles-wrapper {
         height: auto;
     }
@@ -547,6 +561,7 @@ footer .footer-text:last-child {
         margin-top: 5px;
         padding-right: 0;
     }
+
     .inbreeding-crest-container {
         position: relative;
         transform: none;
