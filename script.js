@@ -45,24 +45,6 @@ function createMonarchBlock(monarch, displayHouseName) {
         nicknameYearsElement.textContent = yearsText;
     }
     monarchHeaderTop.appendChild(nicknameYearsElement);
-    
-    // --- Inbreeding Crest ---
-    const inbreedingCrestContainer = document.createElement('div');
-    inbreedingCrestContainer.classList.add('inbreeding-crest-container');
-    inbreedingCrestContainer.innerHTML = `
-        <svg viewBox="0 0 129 146">
-            <path class="crest-bottom-stroke" d="M65,7.08C33.93,7.08,7.86,30.55,7.86,30.55c0,0-8.47,88.86,57.14,108.37,65.62-19.51,57.14-108.37,57.14-108.37,0,0-26.07-23.47-57.14-23.47"/>
-            <path class="crest-top-stroke" d="M65,7.08C33.93,7.08,7.86,30.55,7.86,30.55c0,0-8.47,88.86,57.14,108.37,65.62-19.51,57.14-108.37,57.14-108.37,0,0-26.07-23.47-57.14-23.47"/>
-        </svg>
-        <div class="crest-text-overlay">
-            <span class="crest-text-label">Inbreeding</span>
-            <span class="crest-rate-number">0</span>
-            <span class="crest-text-label">Rate</span>
-        </div>
-    `;
-    // *** JAVASCRIPT CHANGE IS HERE ***
-    // The crest is now added to the header section, not the main block.
-    monarchHeaderTop.appendChild(inbreedingCrestContainer);
     monarchBlock.appendChild(monarchHeaderTop);
 
     // --- Visuals and Titles Section ---
@@ -77,6 +59,22 @@ function createMonarchBlock(monarch, displayHouseName) {
     monarchVisualsAndTitles.appendChild(titlesElement);
     monarchBlock.appendChild(monarchVisualsAndTitles);
     
+    // --- Inbreeding Crest ---
+    const inbreedingCrestContainer = document.createElement('div');
+    inbreedingCrestContainer.classList.add('inbreeding-crest-container');
+    inbreedingCrestContainer.innerHTML = `
+        <svg viewBox="0 0 129 146">
+            <path class="crest-bottom-stroke" d="M65,7.08C33.93,7.08,7.86,30.55,7.86,30.55c0,0-8.47,88.86,57.14,108.37,65.62-19.51,57.14-108.37,57.14-108.37,0,0-26.07-23.47-57.14-23.47"/>
+            <path class="crest-top-stroke" d="M65,7.08C33.93,7.08,7.86,30.55,7.86,30.55c0,0-8.47,88.86,57.14,108.37,65.62-19.51,57.14-108.37,57.14-108.37,0,0-26.07-23.47-57.14-23.47"/>
+        </svg>
+        <div class="crest-text-overlay">
+            <span class="crest-text-label">Inbreeding</span>
+            <span class="crest-rate-number">0</span>
+            <span class="crest-text-label">Rate</span>
+        </div>
+    `;
+    monarchBlock.appendChild(inbreedingCrestContainer);
+
     // --- Bottom Section (Parents/Spouses/Children) ---
     const monarchBottomSections = document.createElement('div');
     monarchBottomSections.classList.add('monarch-bottom-sections');

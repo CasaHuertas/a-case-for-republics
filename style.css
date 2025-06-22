@@ -539,37 +539,12 @@ footer .footer-text:last-child {
         width: calc(100% - 105px - 60px);
         box-sizing: border-box;
     }
-    .monarch-block .house-name-text,
-    .monarch-block .monarch-name-text,
-    .monarch-block .nickname-years-text {
-        text-align: left;
-    }
     .inbreeding-crest-container {
         right: 40px;
         top: 30px;
         transform: none;
         width: 150px;
         height: 170px;
-    }
-
-    /* --- FIX for Tablet Crest Text Spacing --- */
-    .inbreeding-crest-container .crest-text-label {
-        /* Remove fixed top/bottom positioning */
-        position: static;
-    }
-    .inbreeding-crest-container .crest-text-overlay {
-        /* Use flex gap for consistent spacing regardless of container size */
-        gap: 5px;
-    }
-
-    /* --- FIX for List Leading and Indentation --- */
-    .monarch-block .section-list li {
-        line-height: 1.5; /* Enforce consistent line height */
-        margin-bottom: 8px; /* Control space between list items */
-    }
-    .monarch-block .section-list ul.section-list {
-        margin-top: 8px; /* Control space after "daughter of" */
-        padding-left: 20px; /* Enforce consistent indent */
     }
 }
 
@@ -586,39 +561,65 @@ footer .footer-text:last-child {
 }
 
 @media (max-width: 600px) {
+    /* NEW METHOD: Using CSS Grid for robust phone layout */
     .monarch-block {
-        padding: 20px 25px; /* Adjusted padding for phone */
+        padding: 25px;
+        display: grid;
+        grid-template-areas:
+            "header"
+            "visuals"
+            "details";
+        grid-template-columns: 1fr;
     }
-    .monarch-block .monarch-header-top-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .monarch-block .monarch-name-text { order: 1; margin-bottom: 0; }
-    .monarch-block .inbreeding-crest-container { order: 2; }
-    .monarch-block .house-name-text { order: 3; margin-top: 0; }
-    .monarch-block .nickname-years-text { order: 4; }
 
-    .monarch-block .house-name-text,
-    .monarch-block .monarch-name-text,
-    .monarch-block .nickname-years-text {
+    /* Assign grid areas to the main sections */
+    .monarch-block > .monarch-header-top-section { grid-area: header; }
+    .monarch-block > .inbreeding-crest-container { grid-area: crest; } /* Will be moved by parent grid */
+    .monarch-block > .monarch-visual-and-titles-wrapper { grid-area: visuals; }
+    .monarch-block > .monarch-bottom-sections { grid-area: details; }
+
+    /* Re-order the header section itself using a nested grid */
+    .monarch-header-top-section {
+        display: grid;
+        grid-template-areas:
+            "name"
+            "crest"
+            "house"
+            "years";
+        justify-items: center; /* Center all items */
         text-align: center;
     }
-
-    /* --- FIX for Phone Crest Layout --- */
-    .inbreeding-crest-container {
-        position: relative; /* Re-establish as positioning context for children */
-        top: auto; right: auto; /* Remove tablet positioning */
-        margin-top: 20px;
-        margin-bottom: 20px;
-        width: 129px; /* Revert to original smaller size */
+    .monarch-header-top-section > .monarch-name-text { grid-area: name; }
+    .monarch-header-top-section > .house-name-text { grid-area: house; }
+    .monarch-header-top-section > .nickname-years-text { grid-area: years; }
+    
+    /* Move the Crest (which is a sibling) into the header's grid layout */
+    .monarch-block {
+        grid-template-areas:
+            "header"
+            "visuals"
+            "details";
+    }
+    /* Magic happens here: we re-assign the crest to the header's grid */
+    .monarch-header-top-section {
+        grid-template-areas:
+            "name"
+            "crest-area"
+            "house"
+            "years";
+    }
+    .monarch-block > .inbreeding-crest-container {
+        grid-area: crest-area;
+        position: static; /* Put crest back in the flow */
+        margin: 20px auto;
+        width: 129px;
         height: 146px;
     }
-    
-    .monarch-block .monarch-portrait-placeholder {
-        left: -25px; /* Match the new phone padding */
-    }
 
+    /* Keep the portrait/title layout from the tablet view, but adjust for padding */
+    .monarch-block .monarch-portrait-placeholder {
+        left: -25px;
+    }
     .monarch-block .titles-text {
         left: calc(140px + 20px);
         width: calc(100% - 140px - 20px);
@@ -637,12 +638,12 @@ footer .footer-text:last-child {
         padding-left: 15px; 
     }
     .monarch-block {
-        padding: 15px; /* Final padding squeeze */
+        padding: 15px;
     }
     .monarch-block .monarch-name-text {
         font-size: 30px;
     }
     .monarch-block .monarch-portrait-placeholder {
-        left: -15px; /* Match final padding */
+        left: -15px;
     }
 }
