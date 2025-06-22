@@ -655,7 +655,7 @@ footer .footer-text:last-child {
     /* The bottom content sections get their own padding */
     .monarch-bottom-sections {
         order: 4; 
-        padding: 0 25px 25px 25px; /* Add full padding here */
+        padding: 0 25px 50px 25px !important; /* Add full padding here */
     }
 
     .monarch-bottom-sections .section-heading {
