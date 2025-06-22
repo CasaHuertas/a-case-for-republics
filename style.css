@@ -624,7 +624,6 @@ footer .footer-text:last-child {
         order: 3; 
         display: flex;
         align-items: flex-start;
-        height: auto; 
         /* Add ONLY right padding to constrain the title text */
         padding: 0 25px 0 0; 
         margin-bottom: 25px;
