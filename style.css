@@ -518,11 +518,9 @@ footer .footer-text:last-child {
 
     /* --- Tablet-Specific Monarch Block Layout --- */
     .monarch-block {
-        /* UPDATED: Increased side padding to 60px */
         padding: 30px 60px; 
     }
 
-    /* Keep header and bottom sections aligned with the new padding */
     .monarch-block .monarch-header-top-section,
     .monarch-block .monarch-bottom-sections {
         padding-left: 0;
@@ -538,23 +536,20 @@ footer .footer-text:last-child {
     .monarch-block .monarch-portrait-placeholder {
         position: absolute;
         top: 0;
-        /* UPDATED: Negative left position to make it flush with the parent's edge */
         left: -60px; 
         margin: 0;
     }
 
     .monarch-block .titles-text {
         position: absolute;
-        /* This positioning is relative to the wrapper, which respects the parent's padding */
-        left: calc(140px + 25px); 
+        /* UPDATED: Portrait's right edge is at 80px (-60+140). 80+25 = 105px. */
+        left: 105px;
         top: 10px;
         text-align: left;
-        /* UPDATED: Adjusted width to account for the new 60px right padding */
-        width: calc(100% - 140px - 25px - 60px);
+        width: calc(100% - 105px - 60px); /* Adjust width based on new left and right margins */
         box-sizing: border-box;
     }
 
-    /* Ensure all text aligns left as per desktop */
     .monarch-block .house-name-text,
     .monarch-block .monarch-name-text,
     .monarch-block .nickname-years-text {
@@ -562,7 +557,8 @@ footer .footer-text:last-child {
     }
     
     .inbreeding-crest-container {
-        right: 40px;
+        /* UPDATED: Set right to 60px to match the block's side padding */
+        right: 60px;
         top: 30px;
         transform: none;
         width: 150px;
