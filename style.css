@@ -586,7 +586,7 @@ footer .footer-text:last-child {
     .monarch-block {
         display: flex;
         flex-direction: column;
-        padding: 0 25px 25px 25px; /* Set top padding to 0, will be controlled by crest's margin */
+        /*padding: 0 25px 25px 25px; /* Set top padding to 0, will be controlled by crest's margin */
     }
 
     /* Center the Crest and adjust its vertical spacing */
