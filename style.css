@@ -558,7 +558,7 @@ footer .footer-text:last-child {
     
     .inbreeding-crest-container {
         /* UPDATED: Set right to 60px to match the block's side padding */
-        right: 60px;
+        right: 50px;
         top: 40px;
         transform: none;
         width: 150px;
