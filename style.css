@@ -625,12 +625,6 @@ footer .footer-text:last-child {
         position: relative;
         margin-bottom: 25px;
 }
-
-    .monarch-visual-and-titles-wrapper::after {
-        content: "";
-        display: table;
-        clear: both;
-}
     
     .monarch-block .monarch-portrait-placeholder {
         /* Float the portrait to the left */
@@ -655,6 +649,7 @@ footer .footer-text:last-child {
     .monarch-bottom-sections {
         order: 4; 
         padding: 0 20px 30px 20px !important; /* Add full padding here */
+        clear: both; /* This forces this section below the floated content above */
     }
 
     .monarch-bottom-sections .section-heading {
