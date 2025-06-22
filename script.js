@@ -7,6 +7,144 @@ const navHouses = ["Bourbon", "Habsburg", "Habsburg Lorraine", "Hanover", "Hohen
 // --- Core Functions ---
 
 /**
+ * Creates the HTML for a single Monarch Block.
+ */
+function createMonarchBlock(monarch, displayHouseName) {
+    const monarchBlock = document.createElement('div');
+    monarchBlock.classList.add('monarch-block');
+    monarchBlock.dataset.id = monarch.id;
+    monarchBlock.dataset.inbreedingRate = monarch.inbreeding_rate;
+
+    // --- Top Section: Name, Nickname, etc. ---
+    const monarchHeaderTop = document.createElement('div');
+    monarchHeaderTop.classList.add('monarch-header-top-section');
+    
+    const houseNameElement = document.createElement('p');
+    houseNameElement.classList.add('house-name-text');
+    houseNameElement.textContent = `House of ${displayHouseName.split(' ').map(word => {
+        const lowercaseWords = ['of', 'and', 'the', 'de', 'd\'', 'du', 'des', 'dos', 'da', 'das', 'dei', 'del'];
+        return lowercaseWords.includes(word.toLowerCase()) ? word.toLowerCase() : word.charAt(0).toUpperCase() + word.slice(1);
+    }).join(' ')}`;
+    monarchHeaderTop.appendChild(houseNameElement);
+
+    const monarchNameElement = document.createElement('h2');
+    monarchNameElement.classList.add('monarch-name-text');
+    monarchNameElement.textContent = monarch.name.split(' ').map(word => {
+        if (word.match(/^(i{1,3}|iv|v|vi{1,3}|ix|x)$/i)) { return word.toUpperCase(); }
+        return word.charAt(0).toUpperCase() + word.slice(1);
+    }).join(' ');
+    monarchHeaderTop.appendChild(monarchNameElement);
+
+    const nicknameYearsElement = document.createElement('p');
+    nicknameYearsElement.classList.add('nickname-years-text');
+    const yearsText = `(${monarch.birth_year}–${monarch.death_year || 'Present'})`;
+    if (monarch.nickname) {
+        const formattedNickname = monarch.nickname.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+        nicknameYearsElement.textContent = `${formattedNickname}, ${yearsText}`;
+    } else {
+        nicknameYearsElement.textContent = yearsText;
+    }
+    monarchHeaderTop.appendChild(nicknameYearsElement);
+    monarchBlock.appendChild(monarchHeaderTop);
+
+    // --- Visuals and Titles Section ---
+    const monarchVisualsAndTitles = document.createElement('div');
+    monarchVisualsAndTitles.classList.add('monarch-visual-and-titles-wrapper');
+    const portraitDiv = document.createElement('div');
+    portraitDiv.classList.add('monarch-portrait-placeholder');
+    monarchVisualsAndTitles.appendChild(portraitDiv);
+    const titlesElement = document.createElement('p');
+    titlesElement.classList.add('titles-text');
+    titlesElement.textContent = `${monarch.titles.toUpperCase()} (${monarch.reign_years})`;
+    monarchVisualsAndTitles.appendChild(titlesElement);
+    monarchBlock.appendChild(monarchVisualsAndTitles);
+    
+    // --- Inbreeding Crest ---
+    const inbreedingCrestContainer = document.createElement('div');
+    inbreedingCrestContainer.classList.add('inbreeding-crest-container');
+    inbreedingCrestContainer.innerHTML = `
+        <svg viewBox="0 0 129 146">
+            <path class="crest-bottom-stroke" d="M65,7.08C33.93,7.08,7.86,30.55,7.86,30.55c0,0-8.47,88.86,57.14,108.37,65.62-19.51,57.14-108.37,57.14-108.37,0,0-26.07-23.47-57.14-23.47"/>
+            <path class="crest-top-stroke" d="M65,7.08C33.93,7.08,7.86,30.55,7.86,30.55c0,0-8.47,88.86,57.14,108.37,65.62-19.51,57.14-108.37,57.14-108.37,0,0-26.07-23.47-57.14-23.47"/>
+        </svg>
+        <div class="crest-text-overlay">
+            <span class="crest-text-label">Inbreeding</span>
+            <span class="crest-rate-number">0</span>
+            <span class="crest-text-label">Rate</span>
+        </div>
+    `;
+    monarchBlock.appendChild(inbreedingCrestContainer);
+
+    // --- Bottom Section (Parents/Spouses/Children) ---
+    const monarchBottomSections = document.createElement('div');
+    monarchBottomSections.classList.add('monarch-bottom-sections');
+
+    // --- NEW: Conditional Logic for Parents Section ---
+    if (monarch.inbreeding_rate > 0 && monarch.inbreeding_explanation) {
+        // If there's an explanation, show it
+        const explanationPara = document.createElement('p');
+        explanationPara.classList.add('inbreeding-explanation-text');
+        explanationPara.textContent = monarch.inbreeding_explanation;
+        monarchBottomSections.appendChild(explanationPara);
+    } else {
+        // Otherwise, show the original "Son of" section
+        const parentsHeading = document.createElement('p');
+        parentsHeading.classList.add('section-heading');
+        parentsHeading.textContent = 'Son of';
+        monarchBottomSections.appendChild(parentsHeading);
+        const parentsList = document.createElement('ul');
+        parentsList.classList.add('section-list');
+        parentsList.innerHTML = `
+            <li>${monarch.parents.father.name}, ${monarch.parents.father.title || ''} (House of ${monarch.parents.father.house})</li>
+            <li>${monarch.parents.mother.name}, ${monarch.parents.mother.title || ''} (House of ${monarch.parents.mother.house})</li>
+        `;
+        monarchBottomSections.appendChild(parentsList);
+    }
+    // --- End of Conditional Logic ---
+
+    const spousesHeading = document.createElement('p');
+    spousesHeading.classList.add('section-heading');
+    spousesHeading.textContent = 'Married to';
+    monarchBottomSections.appendChild(spousesHeading);
+    const spousesList = document.createElement('ul');
+    spousesList.classList.add('section-list');
+    if (monarch.spouses === "Never Married") {
+        spousesList.innerHTML = `<li>Never Married</li>`;
+    } else {
+        spousesList.innerHTML = monarch.spouses.map(spouse => `
+            <li>
+                ${spouse.name}, ${spouse.birth_title ? spouse.birth_title + ' ' : ''}(House of ${spouse.house || ''}),
+                <br>daughter of
+                <ul class="section-list" style="padding-left: 20px;">
+                    <li>${spouse.parents.father.name}, ${spouse.parents.father.title || ''} (House of ${spouse.parents.father.house || ''})</li>
+                    <li>${spouse.parents.mother.name}, ${spouse.parents.mother.title || ''} (House of ${spouse.parents.mother.house || ''})</li>
+                </ul>
+            </li>
+        `).join('');
+    }
+    monarchBottomSections.appendChild(spousesList);
+
+    const childrenHeading = document.createElement('p');
+    childrenHeading.classList.add('section-heading');
+    childrenHeading.textContent = 'Children:';
+    monarchBottomSections.appendChild(childrenHeading);
+    const childrenList = document.createElement('ul');
+    childrenList.classList.add('section-list');
+    if (monarch.children.length === 0) {
+        childrenList.innerHTML = `<li>N/A</li>`;
+    } else {
+        childrenList.innerHTML = monarch.children.map(child => `
+            <li>${child.name}, ${child.title}</li>
+        `).join('');
+    }
+    monarchBottomSections.appendChild(childrenList);
+    monarchBlock.appendChild(monarchBottomSections);
+
+    return monarchBlock;
+}
+
+
+/**
  * Main function to fetch data and render all content on the page.
  */
 async function initializeWebsite() {
@@ -16,6 +154,7 @@ async function initializeWebsite() {
     // --- 1. Create Navigation Buttons ---
     const navButtonContainer = document.createElement('div');
     navButtonContainer.classList.add('nav-button-container');
+
     navHouses.forEach(houseName => {
         const button = document.createElement('button');
         button.classList.add('nav-button');
@@ -26,15 +165,21 @@ async function initializeWebsite() {
                 targetHouseBlock.scrollIntoView({ behavior: 'smooth' });
             }
         });
-        navButtonContainer.appendChild(button);
+        navButtonContainer.appendChild(button); // Append button to the new container
     });
-    navBar.appendChild(navButtonContainer);
+
+    navBar.appendChild(navButtonContainer); // Append the container to the nav bar
 
     // --- 2. Load and Render Monarch Data ---
-    const monarchsData = await fetch('monarchs.json').then(response => response.json()).catch(error => { console.error("Error loading monarchs.json:", error); return []; });
+    const monarchsData = await fetch('monarchs.json').then(response => response.json())
+        .catch(error => {
+            console.error("Error loading monarchs.json:", error);
+            return [];
+        });
+
     console.log("Monarchs data loaded:", monarchsData.length, "monarchs");
 
-    const isMobile = window.matchMedia("(max-width: 1024px)").matches; // Use the wider breakpoint
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
     const monarchsByDisplayHouse = {};
     monarchsData.forEach(monarch => {
@@ -43,6 +188,7 @@ async function initializeWebsite() {
         else if (monarch.house.startsWith('Habsburg')) { displayHouseName = 'Habsburg'; }
         else if (monarch.house === 'Habsburg-Lorraine') { displayHouseName = 'Habsburg Lorraine'; }
         else { displayHouseName = monarch.house; }
+
         if (!monarchsByDisplayHouse[displayHouseName]) {
             monarchsByDisplayHouse[displayHouseName] = [];
         }
@@ -57,7 +203,9 @@ async function initializeWebsite() {
                 const houseBlock = document.createElement('div');
                 houseBlock.classList.add('house-block');
                 houseBlock.dataset.houseNameTarget = houseName.toLowerCase().replace(/[^a-z0-9]/g, '');
-                if (index === 0) { houseBlock.classList.add('is-visible'); }
+                if (index === 0) {
+                    houseBlock.classList.add('is-visible');
+                }
 
                 const houseTitle = document.createElement('h3');
                 houseTitle.classList.add('house-title');
@@ -72,12 +220,11 @@ async function initializeWebsite() {
                 monarchsGridContainer.classList.add('monarchs-grid');
                 mainContainer.appendChild(monarchsGridContainer);
 
-                // Always build the two-column DOM structure. CSS will handle stacking on mobile.
                 const leftColumn = document.createElement('div');
-                leftColumn.classList.add('monarch-column');
+                leftColumn.classList.add('monarch-column', 'left-column');
                 monarchsGridContainer.appendChild(leftColumn);
                 const rightColumn = document.createElement('div');
-                rightColumn.classList.add('monarch-column');
+                rightColumn.classList.add('monarch-column', 'right-column');
                 monarchsGridContainer.appendChild(rightColumn);
 
                 let currentMonarchIndex = 0;
@@ -85,11 +232,11 @@ async function initializeWebsite() {
                     if (currentMonarchIndex < houseMonarchs.length) {
                         const monarch = houseMonarchs[currentMonarchIndex];
                         const monarchBlock = createMonarchBlock(monarch, houseName);
-                        // Pre-load first one (mobile) or two (desktop) blocks of the first house
                         if (index === 0) {
-                           if (isMobile ? (currentMonarchIndex === 0) : (currentMonarchIndex <= 1)) {
-                               monarchBlock.classList.add('is-visible');
-                           }
+                            const shouldBeVisible = isMobile ? (currentMonarchIndex === 0) : (currentMonarchIndex <= 1);
+                            if (shouldBeVisible) {
+                                monarchBlock.classList.add('is-visible');
+                            }
                         }
                         setTimeout(() => {
                             requestAnimationFrame(() => {
@@ -110,8 +257,8 @@ async function initializeWebsite() {
     });
 
     await Promise.all(renderingPromises);
-    
-    // --- 3. Setup Intersection Observer for Animations (THE FULL, CORRECT CODE) ---
+
+    // --- 3. Setup Intersection Observer for Animations ---
     console.log("All content rendered. Setting up IntersectionObserver.");
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -137,7 +284,7 @@ async function initializeWebsite() {
                             crestTopStroke.style.opacity = '0';
                         }
                         setTimeout(() => {
-                             animateNumber(rateNumberElement, rate, 900);
+                            animateNumber(rateNumberElement, rate, 900);
                         }, 400);
                     }
                 }
@@ -193,13 +340,6 @@ document.addEventListener('DOMContentLoaded', initializeWebsite);
 
 // Handle all scroll-based animations for the masthead.
 window.addEventListener('scroll', () => {
-    // First, check if we're on a desktop-sized screen.
-    const isDesktop = window.matchMedia("(min-width: 769px)").matches;
-    if (!isDesktop) {
-        // If we're on mobile or tablet, do nothing.
-        return;
-    }
-
     const mastheadBlock = document.querySelector('.masthead-block');
     const mastheadTitle = document.querySelector('.masthead-title');
     const mastheadSubtitle = document.querySelector('.masthead-subtitle');
@@ -208,22 +348,25 @@ window.addEventListener('scroll', () => {
 
     const scrollY = window.scrollY;
 
-    // --- Text Fade Logic ---
+    // --- Part 1: Handle the Text Fade ---
     const fadeEndPosition = 115;
     const fadeTravelDistance = 200;
+
     const titleTop = mastheadTitle.getBoundingClientRect().top;
     const titleFadeStart = fadeEndPosition + fadeTravelDistance;
     const titleProgress = (titleFadeStart - titleTop) / fadeTravelDistance;
     const titleOpacity = 1 - Math.max(0, Math.min(titleProgress, 1));
     mastheadTitle.style.opacity = titleOpacity;
+
     const subtitleTop = mastheadSubtitle.getBoundingClientRect().top;
     const subtitleFadeStart = fadeEndPosition + fadeTravelDistance;
     const subtitleProgress = (subtitleFadeStart - subtitleTop) / fadeTravelDistance;
     const subtitleOpacity = 1 - Math.max(0, Math.min(subtitleProgress, 1));
     mastheadSubtitle.style.opacity = subtitleOpacity;
 
-    // --- Masthead Fixing Logic ---
+    // --- Part 2: Handle the Masthead Fixing ---
     const fixTriggerPoint = 740 - 115; // 625px
+
     if (scrollY >= fixTriggerPoint) {
         mastheadBlock.classList.add('is-fixed-to-top');
     } else {

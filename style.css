@@ -481,95 +481,27 @@ footer .footer-text:last-child {
 }
 
 /* Responsive adjustments */
-
-/* For Tablets and smaller devices */
-@media (max-width: 1024px) {
-    /* --- FIX: Remove background image on smaller viewports --- */
-    .website-wrapper {
-        background-image: none;
-    }
-
-    /* --- Disable Desktop-Only Features --- */
-    .navigation-bar {
-        display: none;
-    }
-
-    .masthead-block {
-        position: relative; 
-        top: 0;
-        transform: none;
-        left: 0;
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        padding: 80px 20px 50px 20px;
-        border-radius: 0; 
-    }
-
-    .masthead-block.is-fixed-to-top {
-        position: relative;
-        top: 0;
-    }
-
-    /* --- Adjust Main Layout --- */
+@media (max-width: 1240px) { 
     .main-container {
-        padding-top: 30px;
-    }
-
-    /* --- Force Single-Column Monarch Grid --- */
-    .monarchs-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .monarchs-grid .monarch-column {
         width: 100%;
-        max-width: 500px;
-        gap: 30px;
     }
-
-    /* --- FIX: Make Monarch Blocks Visible on Mobile --- */
-    /* This overrides the desktop animation style (opacity: 0), ensuring blocks are visible by default on mobile */
-    .monarch-block {
-        opacity: 1;
-        transform: none;
-        transition: none; /* Also disable the transition effect on mobile */
-    }
-    
-    /* --- Monarch Block Internal Stacking --- */
-    .monarch-visual-and-titles-wrapper {
-        height: auto;
-    }
-
-    .monarch-portrait-placeholder {
-        position: static; 
-        display: block;
-        margin: 0 auto 15px auto;
-    }
-
-    .monarch-block .monarch-name-text,
-    .monarch-block .nickname-years-text,
-    .monarch-block .titles-text {
-        text-align: center;
-    }
-    
-    .monarch-block .titles-text {
-        position: static; 
-        margin-top: 5px;
-        padding-right: 0;
-    }
-
-    .inbreeding-crest-container {
-        position: relative;
-        margin: 0 auto 30px auto;
-        right: auto;
-        top: auto;
-        transform: none;
+    .masthead-block {
+        width: 100%;
     }
 }
 
-/* For larger phones */
-@media (max-width: 768px) {
+@media (max-width: 768px) { 
+    .monarchs-grid {
+        column-count: 1; 
+        display: block; 
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%; 
+    }
+    .monarchs-grid .monarch-column {
+        width: 100%; 
+        gap: 0; 
+    }
     .masthead-title {
         font-size: 56px; 
     }
@@ -579,12 +511,57 @@ footer .footer-text:last-child {
     .house-title {
         font-size: 36px;
     }
-    .footer-text {
-        font-size: 16px;
+    .masthead-block {
+        height: auto; 
+        padding-top: 100px; 
+        padding-bottom: 50px;
+    }
+    /* Mobile Monarch Block Internal Layout - Reset Absolute Positioning */
+    .monarch-block {
+        padding: 20px; /* General padding reduction */
+    }
+    .monarch-block .monarch-header-top-section,
+    .monarch-block .monarch-visual-and-titles-wrapper,
+    .monarch-block .monarch-bottom-sections {
+        padding-left: 0; /* Reset for mobile */
+        padding-right: 0; /* Reset for mobile */
+    }
+    .monarch-block .monarch-portrait-placeholder {
+        position: static; /* Revert to static for normal flow */
+        margin: 15px auto; /* Center portrait with vertical margin */
+        left: auto; top: auto; /* Reset explicit positioning */
+        float: none; 
+        display: block; 
+        z-index: auto; 
+    }
+    .monarch-block .titles-text {
+        position: static; /* Revert to static for normal flow */
+        margin-top: 15px; 
+        margin-left: 0; 
+        text-align: center; 
+        width: auto; 
+        box-sizing: border-box; 
+        padding-left: 0; 
+        padding-right: 0; 
+    }
+    .monarch-block .section-heading,
+    .monarch-block .section-list {
+        margin-left: 0; 
+        text-align: left; 
+        clear: both; /* Ensure clearing floats */
+        padding-left: 0; 
+        padding-right: 0; 
+    }
+    .monarch-block .section-list li {
+        padding-left: 20px; 
+    }
+    .inbreeding-crest-container {
+        right: 50%;
+        transform: translateX(50%);
+        top: 10px; 
     }
 }
 
-/* For smaller phones */
 @media (max-width: 480px) { 
     .masthead-title {
         font-size: 40px;
@@ -602,4 +579,19 @@ footer .footer-text:last-child {
     .monarch-block .monarch-name-text {
         font-size: 30px;
     }
+}
+
+/* --- ANIMATION RULES (Place at bottom of CSS) --- */
+
+/* Initial hidden state for House Blocks */
+.house-block {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Final visible state for House Blocks */
+.house-block.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
