@@ -480,6 +480,21 @@ footer .footer-text:last-child {
     margin-bottom: 0;
 }
 
+/* --- ANIMATION RULES (Place at bottom of CSS) --- */
+
+/* Initial hidden state for House Blocks */
+.house-block {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Final visible state for House Blocks */
+.house-block.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Responsive adjustments */
 @media (max-width: 1240px) { 
     .main-container {
