@@ -400,18 +400,18 @@ body {
 
 .inbreeding-crest-container .crest-text-label {
 	font-weight: 400;	
-	font-size: 16px; /* MODIFIED: Increased to 16px */
-	text-transform: none; 
+	font-size: 16px;
+	text-transform: none;	
 	line-height: 1;
-	position: relative; 
+    /* 'position' property is removed entirely as it's no longer needed */
 }
 
 .inbreeding-crest-container .crest-text-label:first-of-type {
-	bottom: 8px; /* Pushes "Inbreeding" UP from its original position */
+	margin-bottom: 2px; /* Adds a small space below "Inbreeding" */
 }
 
 .inbreeding-crest-container .crest-text-label:last-of-type {
-	top: 8px; /* Pushes "Rate" DOWN from its original position */
+	margin-top: 2px; /* Adds a small space above "Rate" */
 }
 
 .inbreeding-crest-container .crest-rate-number {
@@ -624,38 +624,28 @@ footer .footer-text:last-child {
         text-align: center;
     }
 
+    /* --- NEW, Flexbox-based layout for portrait and title --- */
     /* 5. Position portrait and title line below the header group */
     .monarch-visual-and-titles-wrapper {
         order: 5; /* This entire wrapper comes after the re-ordered header items */
         position: relative;
-        height: auto; /* Allow height to be determined by content */
+        height: auto;
         width: 100%;
         padding: 0;
         margin-top: 25px;
-        overflow: hidden; /* Use overflow to contain the floated portrait */
+        display: flex; /* Use flexbox for robust alignment */
+        align-items: flex-start; /* Align items to the top */
     }
     .monarch-portrait-placeholder {
         position: relative;
-        left: -20px; /* Pull flush against the new block padding */
-        top: 0;
-        float: left; /* Float portrait to the left */
-        margin-right: 15px; /* Space between portrait and title */
+        left: -20px; /* Pulls placeholder flush with the block's left edge */
+        flex-shrink: 0; /* Prevents the portrait from shrinking */
     }
     .monarch-block .titles-text {
-        position: relative; /* Override 'absolute' positioning */
-        top: auto;
-        left: auto;
-        padding-left: 0;
-        padding-right: 0;
+        position: static; /* Reset positioning */
         width: auto;
         text-align: left;
-        display: block; /* Ensure it takes up remaining space */
-    }
-
-    /* Reset tablet-specific negative margin on portrait */
-    .monarch-block .monarch-portrait-placeholder {
-        margin: 0;
-        margin-right: 15px; /* Re-apply space for title text */
+        margin-left: 5px; /* This is 25px from portrait edge (-20px left + 5px margin) */
     }
 }
 
