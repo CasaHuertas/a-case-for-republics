@@ -386,6 +386,41 @@ body {
 	height: 100%;
 }
 
+/* The overlay's job is to center the text group within the crest. */
+.inbreeding-crest-container .crest-text-overlay {
+	position: relative;	
+	z-index: 2;	
+	font-family: 'Merriweather', serif;
+	color: var(--khaki);
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* This vertically centers the text group */
+	align-items: center;   /* This horizontally centers the text group */
+	height: 100%;
+}
+
+/* This new wrapper groups the three text elements together. */
+.crest-text-group {
+    text-align: center;
+}
+
+/* This styles the "Inbreeding" and "Rate" labels. */
+.inbreeding-crest-container .crest-text-label {
+	font-weight: 400;	
+	font-size: 16px;
+	text-transform: none;	
+	line-height: 0.75; /* Tweak this to adjust spacing */
+}
+
+/* This styles the rate number. */
+.inbreeding-crest-container .crest-rate-number {
+	font-weight: 400;	
+	font-size: 36px;
+	text-transform: lowercase;
+	color: var(--red);
+	line-height: 0.75; /* Tweak this to adjust spacing */
+}
+
 .inbreeding-crest-container .crest-text-overlay {
 	position: relative;	
 	z-index: 2;	
