@@ -621,35 +621,31 @@ footer .footer-text:last-child {
 
     /* The wrapper that holds the portrait and title */
     .monarch-visual-and-titles-wrapper {
-        order: 3; 
-        display: flex;
-        align-items: flex-start;
-        /* Add ONLY right padding to constrain the title text */
-        padding: 0 25px 0 0; 
+        order: 3;
+        position: relative;
         margin-bottom: 25px;
-        box-sizing: border-box; /* Ensures padding is calculated correctly */
-    }
+        /* This is a "clearfix" that forces the container to wrap its floated children */
+        overflow: hidden; 
+}
     
-    /* The portrait now has NO special margin or positioning */
     .monarch-block .monarch-portrait-placeholder {
+        /* Float the portrait to the left */
+        float: left; 
         position: static;
-        flex-shrink: 0;
         width: 140px;
         height: 100px;
-        /* Removed all negative margins */
-    }
+        margin-left: 0; /* Ensure no negative margin */
+}
 
-    /* The title text gets its gap from a simple margin */
     .monarch-block .titles-text {
         position: static;
-        text-align: left;
-        padding: 0;
-        margin-left: 15px;
-        padding-top: 10px;
-        flex-grow: 1;
-        min-width: 0;
+        /* This margin provides the space next to the 140px floated portrait */
+        margin-left: 155px; /* 140px portrait width + 15px gap */
+        /* Add padding to the right to respect the block's boundary */
+        padding: 10px 25px 0 0; /* Top, Right, Bottom, Left */
+        box-sizing: border-box;
         overflow-wrap: break-word;
-    }
+}
 
     /* The bottom content sections get their own padding */
     .monarch-bottom-sections {
