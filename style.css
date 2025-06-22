@@ -579,6 +579,58 @@ footer .footer-text:last-child {
     }
 }
 
+@media (max-width: 600px) {
+    /* --- Phone-Specific Monarch Block Layout --- */
+
+    /* 1. Reduce side padding for phone screens */
+    .monarch-block {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    /* 2. Use Flexbox to re-order and center the header content */
+    .monarch-block .monarch-header-top-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+    }
+
+    /* 3. Define the new visual order */
+    .monarch-block .monarch-name-text { order: 1; }
+    .monarch-block .inbreeding-crest-container { order: 2; }
+    .monarch-block .house-name-text { order: 3; }
+    .monarch-block .nickname-years-text { order: 4; }
+
+    /* 4. Center all text in the re-ordered header */
+    .monarch-block .house-name-text,
+    .monarch-block .monarch-name-text,
+    .monarch-block .nickname-years-text {
+        text-align: center;
+    }
+
+    /* 5. Reset the Crest to be in the normal flow */
+    .inbreeding-crest-container {
+        position: static; /* Remove absolute positioning */
+        transform: none;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        /* Use a slightly smaller crest on phones */
+        width: 129px;
+        height: 146px;
+    }
+
+    /* 6. Adjust the portrait to be flush with the new padding */
+    .monarch-block .monarch-portrait-placeholder {
+        left: -25px; /* Match the new padding */
+    }
+
+    /* 7. Adjust title position and width for the new padding */
+    .monarch-block .titles-text {
+        left: calc(140px + 20px); /* Keep a 20px gap from portrait */
+        width: calc(100% - 140px - 20px);
+    }
+}
+
 @media (max-width: 480px) { 
     /* --- Font size adjustments for small phones --- */
     .masthead-title {
