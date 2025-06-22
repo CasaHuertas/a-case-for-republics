@@ -586,7 +586,7 @@ footer .footer-text:last-child {
     .monarch-block {
         display: flex;
         flex-direction: column;
-        /*padding: 0 25px 25px 25px; /* Set top padding to 0, will be controlled by crest's margin */
+        padding: 0 25px 25px 25px; /* Set top padding to 0, will be controlled by crest's margin */
     }
 
     /* Center the Crest and adjust its vertical spacing */
@@ -596,7 +596,7 @@ footer .footer-text:last-child {
         top: auto;
         right: auto;
         /* This rule now controls the spacing around the crest */
-        margin: 30px auto 20px auto; /* 30px top, 20px bottom */
+        margin-top: 30px; /* 30px top, 20px bottom */
     }
 
     /* Center the main header section and adjust spacing */
