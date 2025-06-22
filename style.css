@@ -406,12 +406,13 @@ body {
     /* 'position' property is removed entirely as it's no longer needed */
 }
 
-.inbreeding-crest-container .crest-text-label:first-of-type {
-	margin-bottom: 2px; /* Adds a small space below "Inbreeding" */
+.inbreeding-crest-container .crest-text-overlay {
+    line-height: 1.2; /* Sets a baseline for spacing */
 }
 
-.inbreeding-crest-container .crest-text-label:last-of-type {
-	margin-top: 2px; /* Adds a small space above "Rate" */
+.inbreeding-crest-container .crest-rate-number {
+    line-height: 1; /* Pulls the number's line height in */
+    margin: -2px 0; /* Uses a slight negative margin to tighten the spacing */
 }
 
 .inbreeding-crest-container .crest-rate-number {
@@ -637,15 +638,15 @@ footer .footer-text:last-child {
         align-items: flex-start; /* Align items to the top */
     }
     .monarch-portrait-placeholder {
-        position: relative;
-        left: -20px; /* Pulls placeholder flush with the block's left edge */
-        flex-shrink: 0; /* Prevents the portrait from shrinking */
+        width: 140px; /* Explicitly set width to prevent shrinking */
+        margin-left: -20px; /* Pulls the element left to be flush with the block edge */
+        flex-shrink: 0;
     }
     .monarch-block .titles-text {
-        position: static; /* Reset positioning */
+        position: static;
         width: auto;
         text-align: left;
-        margin-left: 5px; /* This is 25px from portrait edge (-20px left + 5px margin) */
+        margin-left: 20px; /* Creates an exact 20px gap to the right of the portrait */
     }
 }
 
