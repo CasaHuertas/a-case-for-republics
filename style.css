@@ -624,8 +624,12 @@ footer .footer-text:last-child {
         order: 3;
         position: relative;
         margin-bottom: 25px;
-        /* This is a "clearfix" that forces the container to wrap its floated children */
-        overflow: hidden; 
+}
+
+    .monarch-visual-and-titles-wrapper::after {
+        content: "";
+        display: table;
+        clear: both;
 }
     
     .monarch-block .monarch-portrait-placeholder {
