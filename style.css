@@ -491,17 +491,20 @@ footer .footer-text:last-child {
 }
 
 @media (max-width: 1024px) {
-    /* Hide the navigation bar on tablet and mobile */
+    /* --- General Mobile/Tablet Layout (Hides Nav, etc.) --- */
     .navigation-bar {
         display: none;
     }
-
-    /* Remove the background map image on smaller screens */
     .website-wrapper {
         background-image: none;
     }
+    .masthead-block {
+        height: auto; 
+        padding-top: 100px; 
+        padding-bottom: 50px;
+    }
 
-    /* Switch from two columns to a single column */
+    /* --- Monarch Grid: Single Column --- */
     .monarchs-grid {
         display: block; 
     }
@@ -509,58 +512,60 @@ footer .footer-text:last-child {
         width: 100%; 
         gap: 0; 
     }
-    .monarch-column .monarch-block {
-        margin-bottom: 30px; /* Add space between stacked blocks */
+    .monarch-column > .monarch-block { /* Use > to avoid affecting nested blocks */
+        margin-bottom: 30px;
     }
 
-    /* Adjust masthead for a simpler vertical layout */
-    .masthead-block {
-        height: auto; 
-        padding-top: 100px; 
-        padding-bottom: 50px;
-    }
-    
-    /* Mobile Monarch Block Internal Layout - Reset Absolute Positioning */
+    /* --- Tablet-Specific Monarch Block Layout --- */
     .monarch-block {
-        padding: 20px;
+        padding: 30px; /* Consistent padding with desktop */
     }
-    .monarch-block .monarch-header-top-section,
-    .monarch-block .monarch-visual-and-titles-wrapper,
-    .monarch-block .monarch-bottom-sections {
-        padding-left: 0;
+
+    /* 1. Restore absolute positioning for Crest */
+    .inbreeding-crest-container {
+        /* Position back to the top right */
+        right: 30px;
+        top: 30px;
+        transform: none; /* Remove centering */
+        
+        /* Make the crest ~15% larger on tablets */
+        width: 150px;
+        height: 170px;
+    }
+
+    /* 2. Restore the Portrait/Title side-by-side layout */
+    .monarch-block .monarch-visual-and-titles-wrapper {
+        position: relative; /* Crucial for child absolute positioning */
+        height: 100px; /* Restore fixed height */
+        padding-left: 0; /* Reset padding to allow flush-left portrait */
         padding-right: 0;
     }
     .monarch-block .monarch-portrait-placeholder {
-        position: static; /* Revert to normal flow */
-        margin: 15px auto; /* Center portrait */
-        left: auto; top: auto;
-        float: none; 
-        display: block; 
-        z-index: auto; 
+        position: absolute; /* Revert to absolute */
+        left: 0; /* Flush with the block's content edge */
+        top: 0;
+        margin: 0; /* Remove centering margin */
     }
     .monarch-block .titles-text {
-        position: static; /* Revert to normal flow */
-        margin-top: 15px; 
-        text-align: center; 
-        width: auto; 
-        left: auto; top: auto;
-        padding-left: 15px; /* Add some side padding */
-        padding-right: 15px;
+        position: absolute; /* Revert to absolute */
+        left: calc(140px + 25px); /* Position next to the 140px portrait */
+        top: 10px;
+        text-align: left; /* Align text left */
+        width: calc(100% - 140px - 25px); /* Ensure it doesn't overflow */
+        box-sizing: border-box;
+        padding-right: 30px; /* Keep content within block padding */
     }
-    .monarch-block .section-heading,
-    .monarch-block .section-list {
-        text-align: left; 
-        clear: both;
-        padding-left: 0; 
-        padding-right: 0; 
+
+    /* 3. Ensure all text aligns left as per desktop */
+    .monarch-block .house-name-text,
+    .monarch-block .monarch-name-text,
+    .monarch-block .nickname-years-text {
+        text-align: left;
     }
-    .monarch-block .section-list li {
-        padding-left: 20px; 
-    }
-    .inbreeding-crest-container {
-        right: 50%;
-        transform: translateX(50%);
-        top: 10px; 
+
+    .monarch-block .monarch-bottom-sections {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
