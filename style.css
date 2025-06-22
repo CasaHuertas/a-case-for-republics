@@ -499,18 +499,18 @@ footer .footer-text:last-child {
         background-image: none;
     }
     .masthead-block {
-        height: auto; 
-        padding-top: 100px; 
+        height: auto;
+        padding-top: 100px;
         padding-bottom: 50px;
     }
 
     /* --- Monarch Grid: Single Column --- */
     .monarchs-grid {
-        display: block; 
+        display: block;
     }
     .monarchs-grid .monarch-column {
-        width: 100%; 
-        gap: 0; 
+        width: 100%;
+        gap: 0;
     }
     .monarch-column > .monarch-block { /* Use > to avoid affecting nested blocks */
         margin-bottom: 30px;
@@ -518,45 +518,40 @@ footer .footer-text:last-child {
 
     /* --- Tablet-Specific Monarch Block Layout --- */
     .monarch-block {
-        padding: 30px; /* Consistent padding with desktop */
+        padding: 30px; /* Consistent vertical padding */
+        padding-left: 30px; /* Set left padding */
+        padding-right: 30px; /* Set right padding */
     }
 
-    /* 1. Restore absolute positioning for Crest */
-    .inbreeding-crest-container {
-        /* Position back to the top right */
-        right: 30px;
-        top: 30px;
-        transform: none; /* Remove centering */
-        
-        /* Make the crest ~15% larger on tablets */
-        width: 150px;
-        height: 170px;
+    /* 1. Consistent Left Padding for Header */
+    .monarch-block .monarch-header-top-section {
+        padding-left: 0; /* Remove left padding to align with other content */
     }
 
-    /* 2. Restore the Portrait/Title side-by-side layout */
+    /* 2. Flush Portrait and Adjust Title Position */
     .monarch-block .monarch-visual-and-titles-wrapper {
-        position: relative; /* Crucial for child absolute positioning */
-        height: 100px; /* Restore fixed height */
-        padding-left: 0; /* Reset padding to allow flush-left portrait */
+        position: relative;
+        height: 100px;
+        padding-left: 0; /* Remove left padding to allow flush portrait */
         padding-right: 0;
     }
     .monarch-block .monarch-portrait-placeholder {
-        position: absolute; /* Revert to absolute */
+        position: absolute;
         left: 0; /* Flush with the block's content edge */
         top: 0;
-        margin: 0; /* Remove centering margin */
+        margin: 0;
     }
     .monarch-block .titles-text {
-        position: absolute; /* Revert to absolute */
-        left: calc(140px + 25px); /* Position next to the 140px portrait */
+        position: absolute;
+        left: calc(140px + 25px); /* Adjusted left position */
         top: 10px;
-        text-align: left; /* Align text left */
-        width: calc(100% - 140px - 25px); /* Ensure it doesn't overflow */
+        text-align: left;
+        width: calc(100% - 140px - 25px - 30px); /* Account for right padding */
         box-sizing: border-box;
-        padding-right: 30px; /* Keep content within block padding */
+        padding-right: 0; /* Reset right padding as it's on the main block */
     }
 
-    /* 3. Ensure all text aligns left as per desktop */
+    /* 3. Ensure all text aligns left */
     .monarch-block .house-name-text,
     .monarch-block .monarch-name-text,
     .monarch-block .nickname-years-text {
@@ -564,8 +559,17 @@ footer .footer-text:last-child {
     }
 
     .monarch-block .monarch-bottom-sections {
-        padding-left: 0;
+        padding-left: 0; /* Text content will respect main block padding */
         padding-right: 0;
+    }
+
+    /* 4. Crest Positioning */
+    .inbreeding-crest-container {
+        right: 30px;
+        top: 30px;
+        transform: none;
+        width: 150px;
+        height: 170px;
     }
 }
 
