@@ -579,80 +579,76 @@ footer .footer-text:last-child {
     }
 }
 
+/* --- NEW: Mobile Phone Specific Layout (Revised) --- */
 @media (max-width: 600px) {
 
-    /* 1. Set the main monarch block to be a vertical flex container */
+    /* Set the main monarch block to be a vertical flex container */
     .monarch-block {
         display: flex;
         flex-direction: column;
-        padding: 25px; /* Proportional padding for mobile */
+        padding: 0 25px 25px 25px; /* Set top padding to 0, will be controlled by crest's margin */
     }
 
-    /* 2. Re-order the Crest to be at the top and centered */
+    /* Center the Crest and adjust its vertical spacing */
     .inbreeding-crest-container {
-        order: 1; /* First item */
-        position: relative; /* Take it out of absolute positioning */
+        order: 1; 
+        position: relative; 
         top: auto;
         right: auto;
-        margin: 0 auto 25px auto; /* Center it and add space below */
+        /* This rule now controls the spacing around the crest */
+        margin: 30px auto 20px auto; /* 30px top, 20px bottom */
     }
 
-    /* 3. Re-order the main header section (name, house, etc.) */
+    /* Center the main header section and adjust spacing */
     .monarch-header-top-section {
-        order: 2; /* Second item */
-        display: flex; /* Use flex to re-order the text inside */
+        order: 2; 
+        display: flex;
         flex-direction: column;
-        align-items: center; /* Center all text */
-        padding: 0; /* Remove side padding */
-        margin-bottom: 25px; /* Space before the portrait section */
+        align-items: center; 
+        padding: 0; 
+        margin-bottom: 25px; 
     }
 
-    /* 4. Re-order the text *within* the header section */
-    .monarch-header-top-section .monarch-name-text {
-        order: 1;
-        text-align: center;
-    }
-    .monarch-header-top-section .house-name-text {
-        order: 2;
-        text-align: center;
-        margin-bottom: 5px; /* Reduce space to the line below */
-    }
-    .monarch-header-top-section .nickname-years-text {
-        order: 3;
-        text-align: center;
-    }
+    /* Re-order the text *within* the header section */
+    .monarch-header-top-section .monarch-name-text { order: 1; text-align: center; }
+    .monarch-header-top-section .house-name-text { order: 2; text-align: center; margin-bottom: 5px; }
+    .monarch-header-top-section .nickname-years-text { order: 3; text-align: center; }
 
-    /* 5. Re-order the portrait/titles section */
+    /* Adjust the portrait/titles wrapper */
     .monarch-visual-and-titles-wrapper {
-        order: 3; /* Third item */
+        order: 3; 
         position: relative;
-        height: auto; /* Allow height to be determined by content */
-        min-height: 100px; /* Ensure enough space for portrait */
+        min-height: 100px;
+        height: auto; 
         padding: 0;
         margin-bottom: 25px;
     }
+    
+    /* Correct the portrait's position to be flush left */
     .monarch-portrait-placeholder {
         position: absolute;
-        left: 0px; /* Flush to the new padded edge of the block */
+        /* This rule resets the negative margin inherited from tablet view */
+        left: 0;
         top: 0;
     }
+
+    /* Reposition the title text correctly next to the portrait */
     .monarch-block .titles-text {
-        position: relative; /* Change from absolute to flow naturally */
-        width: auto;
-        left: auto;
-        top: auto;
-        text-align: left; /* Keep text left-aligned */
-        margin-left: 165px; /* (140px portrait width + 25px gap) */
+        position: absolute; /* Revert to absolute for precise placement */
+        text-align: left;
         padding: 0;
+        /* These rules position the text relative to the wrapper */
+        top: 10px; /* Aligns it near the top of the portrait */
+        left: 165px; /* 140px portrait width + 25px gap */
+        width: calc(100% - 165px); /* Ensures it doesn't overflow */
     }
 
-    /* 6. Re-order the bottom content section */
+    /* Order and align the final content section */
     .monarch-bottom-sections {
-        order: 4; /* Fourth item */
-        padding: 0; /* Remove side padding */
+        order: 4; 
+        padding: 0; 
     }
-    
-    /* Make sure headings inside the bottom section are not centered */
+
     .monarch-bottom-sections .section-heading {
         text-align: left;
     }
