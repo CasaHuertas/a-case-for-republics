@@ -145,156 +145,194 @@ function createMonarchBlock(monarch, displayHouseName) {
 
 
 /**
- * Main function to fetch data and render all content on the page.
- */
+ * Main function to fetch data and render all content on the page.
+ */
 async function initializeWebsite() {
-    const mainContainer = document.querySelector('.main-container');
-    const navBar = document.querySelector('.navigation-bar');
+    const mainContainer = document.querySelector('.main-container');
+    const navBar = document.querySelector('.navigation-bar');
+    
+    // --- 1. Create Navigation Buttons ---
+    const navButtonContainer = document.createElement('div');
+    navButtonContainer.classList.add('nav-button-container');
+
+    navHouses.forEach(houseName => {
+        const button = document.createElement('button');
+        button.classList.add('nav-button');
+        button.textContent = houseName.toUpperCase();
+        button.addEventListener('click', () => {
+            const targetHouseBlock = document.querySelector(`[data-house-name-target="${houseName.toLowerCase().replace(/[^a-z0-9]/g, '')}"]`);
+            if (targetHouseBlock) {
+                targetHouseBlock.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+        navButtonContainer.appendChild(button);
+    });
+
+    navBar.appendChild(navButtonContainer);
+
+    // --- 2. Load and Render Monarch Data ---
+    const monarchsData = await fetch('monarchs.json').then(response => response.json())
+        .catch(error => {
+            console.error("Error loading monarchs.json:", error);
+            return [];
+        });
+
+    console.log("Monarchs data loaded:", monarchsData.length, "monarchs");
     
-    // --- 1. Create Navigation Buttons ---
-    const navButtonContainer = document.createElement('div');
-    navButtonContainer.classList.add('nav-button-container');
+    // Check for mobile/tablet view based on our new breakpoint.
+    const isMobileView = window.matchMedia("(max-width: 1024px)").matches;
 
-    navHouses.forEach(houseName => {
-        const button = document.createElement('button');
-        button.classList.add('nav-button');
-        button.textContent = houseName.toUpperCase();
-        button.addEventListener('click', () => {
-            const targetHouseBlock = document.querySelector(`[data-house-name-target="${houseName.toLowerCase().replace(/[^a-z0-9]/g, '')}"]`);
-            if (targetHouseBlock) {
-                targetHouseBlock.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-        navButtonContainer.appendChild(button); // Append button to the new container
-    });
+    const monarchsByDisplayHouse = {};
+    monarchsData.forEach(monarch => {
+        let displayHouseName = '';
+        if (monarch.house.startsWith('Bourbon')) { displayHouseName = 'Bourbon'; }
+        else if (monarch.house.startsWith('Habsburg')) { displayHouseName = 'Habsburg'; }
+        else if (monarch.house === 'Habsburg-Lorraine') { displayHouseName = 'Habsburg Lorraine'; }
+        else { displayHouseName = monarch.house; }
 
-    navBar.appendChild(navButtonContainer); // Append the container to the nav bar
+        if (!monarchsByDisplayHouse[displayHouseName]) {
+            monarchsByDisplayHouse[displayHouseName] = [];
+        }
+        monarchsByDisplayHouse[displayHouseName].push(monarch);
+    });
 
-    // --- 2. Load and Render Monarch Data ---
-    const monarchsData = await fetch('monarchs.json').then(response => response.json())
-        .catch(error => {
-            console.error("Error loading monarchs.json:", error);
-            return [];
-        });
+    const renderingPromises = [];
+    navHouses.forEach((houseName, index) => {
+        const houseMonarchs = monarchsByDisplayHouse[houseName] || [];
+        if (houseMonarchs.length > 0) {
+            const housePromise = new Promise((resolve) => {
+                const houseBlock = document.createElement('div');
+                houseBlock.classList.add('house-block');
+                houseBlock.dataset.houseNameTarget = houseName.toLowerCase().replace(/[^a-z0-9]/g, '');
+                if (index === 0) {
+                    houseBlock.classList.add('is-visible');
+                }
 
-    console.log("Monarchs data loaded:", monarchsData.length, "monarchs");
+                const houseTitle = document.createElement('h3');
+                houseTitle.classList.add('house-title');
+                houseTitle.textContent = `${String(index + 1).padStart(2, '0')}. House of ${houseName.split(' ').map(word => {
+                    const lowercaseWords = ['of', 'and', 'the', 'de', 'd\'', 'du', 'des', 'dos', 'da', 'das', 'dei', 'del'];
+                    return lowercaseWords.includes(word.toLowerCase()) ? word.toLowerCase() : word.charAt(0).toUpperCase() + word.slice(1);
+                }).join(' ')}`;
+                houseBlock.appendChild(houseTitle);
+                mainContainer.appendChild(houseBlock);
 
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+                if (isMobileView) {
+                    // --- MOBILE/TABLET PATH: Single Column ---
+                	const monarchsGridContainer = document.createElement('div');
+                	monarchsGridContainer.classList.add('monarchs-grid');
+                	mainContainer.appendChild(monarchsGridContainer);
 
-    const monarchsByDisplayHouse = {};
-    monarchsData.forEach(monarch => {
-        let displayHouseName = '';
-        if (monarch.house.startsWith('Bourbon')) { displayHouseName = 'Bourbon'; }
-        else if (monarch.house.startsWith('Habsburg')) { displayHouseName = 'Habsburg'; }
-        else if (monarch.house === 'Habsburg-Lorraine') { displayHouseName = 'Habsburg Lorraine'; }
-        else { displayHouseName = monarch.house; }
+                    const singleColumn = document.createElement('div');
+                    singleColumn.classList.add('monarch-column');
+                    monarchsGridContainer.appendChild(singleColumn);
 
-        if (!monarchsByDisplayHouse[displayHouseName]) {
-            monarchsByDisplayHouse[displayHouseName] = [];
-        }
-        monarchsByDisplayHouse[displayHouseName].push(monarch);
-    });
+                	let currentMonarchIndex = 0;
+                	const appendNextMonarch = () => {
+                    	if (currentMonarchIndex < houseMonarchs.length) {
+                        	const monarch = houseMonarchs[currentMonarchIndex];
+                        	const monarchBlock = createMonarchBlock(monarch, houseName);
+                        	if (index === 0) {
+                            	const shouldBeVisible = (currentMonarchIndex === 0);
+                            	if (shouldBeVisible) {
+                                	monarchBlock.classList.add('is-visible');
+                            	}
+                        	}
+                        	setTimeout(() => {
+                            	requestAnimationFrame(() => {
+                                	singleColumn.appendChild(monarchBlock);
+                                	currentMonarchIndex++;
+                                	appendNextMonarch();
+                            	});
+                        	}, 50);
+                    	} else {
+                        	resolve();
+                    	}
+                	};
+                	appendNextMonarch();
 
-    const renderingPromises = [];
-    navHouses.forEach((houseName, index) => {
-        const houseMonarchs = monarchsByDisplayHouse[houseName] || [];
-        if (houseMonarchs.length > 0) {
-            const housePromise = new Promise((resolve) => {
-                const houseBlock = document.createElement('div');
-                houseBlock.classList.add('house-block');
-                houseBlock.dataset.houseNameTarget = houseName.toLowerCase().replace(/[^a-z0-9]/g, '');
-                if (index === 0) {
-                    houseBlock.classList.add('is-visible');
+                } else {
+                    // --- DESKTOP PATH: Two-Column Masonry (Original Logic) ---
+                	const monarchsGridContainer = document.createElement('div');
+                	monarchsGridContainer.classList.add('monarchs-grid');
+                	mainContainer.appendChild(monarchsGridContainer);
+
+                	const leftColumn = document.createElement('div');
+                	leftColumn.classList.add('monarch-column', 'left-column');
+                	monarchsGridContainer.appendChild(leftColumn);
+                	const rightColumn = document.createElement('div');
+                	rightColumn.classList.add('monarch-column', 'right-column');
+                	monarchsGridContainer.appendChild(rightColumn);
+
+                	let currentMonarchIndex = 0;
+                	const appendNextMonarch = () => {
+                    	if (currentMonarchIndex < houseMonarchs.length) {
+                        	const monarch = houseMonarchs[currentMonarchIndex];
+                        	const monarchBlock = createMonarchBlock(monarch, houseName);
+                        	if (index === 0) {
+                            	const shouldBeVisible = (currentMonarchIndex <= 1);
+                            	if (shouldBeVisible) {
+                                	monarchBlock.classList.add('is-visible');
+                            	}
+                        	}
+                        	setTimeout(() => {
+                            	requestAnimationFrame(() => {
+                                	if (leftColumn.offsetHeight <= rightColumn.offsetHeight) { leftColumn.appendChild(monarchBlock); }
+                                	else { rightColumn.appendChild(monarchBlock); }
+                                	currentMonarchIndex++;
+                                	appendNextMonarch();
+                            	});
+                        	}, 50);
+                    	} else {
+                        	resolve();
+                    	}
+                	};
+                	appendNextMonarch();
                 }
+            });
+            renderingPromises.push(housePromise);
+        }
+    });
 
-                const houseTitle = document.createElement('h3');
-                houseTitle.classList.add('house-title');
-                houseTitle.textContent = `${String(index + 1).padStart(2, '0')}. House of ${houseName.split(' ').map(word => {
-                    const lowercaseWords = ['of', 'and', 'the', 'de', 'd\'', 'du', 'des', 'dos', 'da', 'das', 'dei', 'del'];
-                    return lowercaseWords.includes(word.toLowerCase()) ? word.toLowerCase() : word.charAt(0).toUpperCase() + word.slice(1);
-                }).join(' ')}`;
-                houseBlock.appendChild(houseTitle);
-                mainContainer.appendChild(houseBlock);
+    await Promise.all(renderingPromises);
 
-                const monarchsGridContainer = document.createElement('div');
-                monarchsGridContainer.classList.add('monarchs-grid');
-                mainContainer.appendChild(monarchsGridContainer);
+    // --- 3. Setup Intersection Observer for Animations ---
+    console.log("All content rendered. Setting up IntersectionObserver.");
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = entry.target;
+                target.classList.add('is-visible');
+                if (target.classList.contains('monarch-block')) {
+                    const rate = parseFloat(target.dataset.inbreedingRate);
+                    const crestTopStroke = target.querySelector('.crest-top-stroke');
+                    const rateNumberElement = target.querySelector('.crest-rate-number');
+                    if (crestTopStroke && rateNumberElement) {
+                        const zeroPercentOffset = 391.0;
+                        const fiftyPercentOffset = 195.5;
+                        const oneHundredPercentOffset = 0.0;
+                        let offset;
+                        if (rate <= 50) {
+                            offset = mapRange(rate, 0, 50, zeroPercentOffset, fiftyPercentOffset);
+                        } else {
+                            offset = mapRange(rate, 50, 100, fiftyPercentOffset, oneHundredPercentOffset);
+                        }
+                        crestTopStroke.style.strokeDashoffset = offset;
+                        if (rate === 0) {
+                            crestTopStroke.style.opacity = '0';
+                        }
+                        setTimeout(() => {
+                            animateNumber(rateNumberElement, rate, 900);
+                        }, 400);
+                    }
+                }
+                observer.unobserve(target);
+            }
+        });
+    }, { threshold: 0.2 });
 
-                const leftColumn = document.createElement('div');
-                leftColumn.classList.add('monarch-column', 'left-column');
-                monarchsGridContainer.appendChild(leftColumn);
-                const rightColumn = document.createElement('div');
-                rightColumn.classList.add('monarch-column', 'right-column');
-                monarchsGridContainer.appendChild(rightColumn);
-
-                let currentMonarchIndex = 0;
-                const appendNextMonarch = () => {
-                    if (currentMonarchIndex < houseMonarchs.length) {
-                        const monarch = houseMonarchs[currentMonarchIndex];
-                        const monarchBlock = createMonarchBlock(monarch, houseName);
-                        if (index === 0) {
-                            const shouldBeVisible = isMobile ? (currentMonarchIndex === 0) : (currentMonarchIndex <= 1);
-                            if (shouldBeVisible) {
-                                monarchBlock.classList.add('is-visible');
-                            }
-                        }
-                        setTimeout(() => {
-                            requestAnimationFrame(() => {
-                                if (leftColumn.offsetHeight <= rightColumn.offsetHeight) { leftColumn.appendChild(monarchBlock); }
-                                else { rightColumn.appendChild(monarchBlock); }
-                                currentMonarchIndex++;
-                                appendNextMonarch();
-                            });
-                        }, 50);
-                    } else {
-                        resolve();
-                    }
-                };
-                appendNextMonarch();
-            });
-            renderingPromises.push(housePromise);
-        }
-    });
-
-    await Promise.all(renderingPromises);
-
-    // --- 3. Setup Intersection Observer for Animations ---
-    console.log("All content rendered. Setting up IntersectionObserver.");
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const target = entry.target;
-                target.classList.add('is-visible');
-                if (target.classList.contains('monarch-block')) {
-                    const rate = parseFloat(target.dataset.inbreedingRate);
-                    const crestTopStroke = target.querySelector('.crest-top-stroke');
-                    const rateNumberElement = target.querySelector('.crest-rate-number');
-                    if (crestTopStroke && rateNumberElement) {
-                        const zeroPercentOffset = 391.0;
-                        const fiftyPercentOffset = 195.5;
-                        const oneHundredPercentOffset = 0.0;
-                        let offset;
-                        if (rate <= 50) {
-                            offset = mapRange(rate, 0, 50, zeroPercentOffset, fiftyPercentOffset);
-                        } else {
-                            offset = mapRange(rate, 50, 100, fiftyPercentOffset, oneHundredPercentOffset);
-                        }
-                        crestTopStroke.style.strokeDashoffset = offset;
-                        if (rate === 0) {
-                            crestTopStroke.style.opacity = '0';
-                        }
-                        setTimeout(() => {
-                            animateNumber(rateNumberElement, rate, 900);
-                        }, 400);
-                    }
-                }
-                observer.unobserve(target);
-            }
-        });
-    }, { threshold: 0.2 });
-
-    document.querySelectorAll('.house-block:not(.is-visible)').forEach(block => observer.observe(block));
-    document.querySelectorAll('.monarch-block:not(.is-visible)').forEach(block => observer.observe(block));
+    document.querySelectorAll('.house-block:not(.is-visible)').forEach(block => observer.observe(block));
+    document.querySelectorAll('.monarch-block:not(.is-visible)').forEach(block => observer.observe(block));
 }
 
 
