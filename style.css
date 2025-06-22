@@ -579,7 +579,7 @@ footer .footer-text:last-child {
     }
 }
 
-/* --- NEW: Mobile Phone Specific Layout (Definitive) --- */
+/* --- NEW: Mobile Phone Specific Layout (Final v2) --- */
 @media (max-width: 600px) {
 
     /* Set the main monarch block to be a vertical flex container */
@@ -609,7 +609,6 @@ footer .footer-text:last-child {
         margin-bottom: 25px; 
     }
     
-    /* This rule RESETS the inherited margin on the H2, fixing the spacing issue */
     .monarch-header-top-section .monarch-name-text { 
         order: 1; 
         text-align: center;
@@ -619,7 +618,7 @@ footer .footer-text:last-child {
     .monarch-header-top-section .house-name-text { order: 2; text-align: center; margin-bottom: 5px; }
     .monarch-header-top-section .nickname-years-text { order: 3; text-align: center; }
 
-    /* This wrapper is now pulled to the edges of the monarch block */
+    /* Wrapper is now kept within the block's padding */
     .monarch-visual-and-titles-wrapper {
         order: 3; 
         position: relative;
@@ -627,25 +626,28 @@ footer .footer-text:last-child {
         height: auto; 
         padding: 0;
         margin-bottom: 25px;
-        /* These negative margins pull the container to the block's edges */
-        margin-left: -25px;
-        margin-right: -25px;
+        /* Removed the negative margins from here */
     }
     
+    /* Apply negative margin DIRECTLY to the portrait */
     .monarch-block .monarch-portrait-placeholder {
         position: absolute;
         top: 0;
-        left: 0 !important;
+        /* This pulls the portrait left by the padding amount */
+        left: -25px;
     }
 
+    /* Constrain the title on BOTH sides */
     .monarch-block .titles-text {
         position: absolute; 
         text-align: left;
         padding: 0;
-        width: auto;
         top: 10px;
-        /* Recalculated 'left' to account for the negative margin */
-        left: 180px !important; /* 25px original padding + 140px portrait + 15px gap */
+        /* Position starts 15px to the right of the portrait */
+        left: 155px; /* 140px portrait width + 15px gap */
+        /* Position ends at the block's right padding edge */
+        right: 0;
+        width: auto; /* Width is now determined by left/right constraints */
     }
 
     /* Order and align the final content section */
