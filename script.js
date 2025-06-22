@@ -378,36 +378,40 @@ document.addEventListener('DOMContentLoaded', initializeWebsite);
 
 // Handle all scroll-based animations for the masthead.
 window.addEventListener('scroll', () => {
-    const mastheadBlock = document.querySelector('.masthead-block');
-    const mastheadTitle = document.querySelector('.masthead-title');
-    const mastheadSubtitle = document.querySelector('.masthead-subtitle');
+    // --- NEW: Only run these animations on desktop screens ---
+    if (!window.matchMedia("(max-width: 1024px)").matches) {
+        
+        const mastheadBlock = document.querySelector('.masthead-block');
+        const mastheadTitle = document.querySelector('.masthead-title');
+        const mastheadSubtitle = document.querySelector('.masthead-subtitle');
 
-    if (!mastheadBlock || !mastheadTitle) return;
+        if (!mastheadBlock || !mastheadTitle) return;
 
-    const scrollY = window.scrollY;
+        const scrollY = window.scrollY;
 
-    // --- Part 1: Handle the Text Fade ---
-    const fadeEndPosition = 115;
-    const fadeTravelDistance = 200;
+        // --- Part 1: Handle the Text Fade ---
+        const fadeEndPosition = 115;
+        const fadeTravelDistance = 200;
 
-    const titleTop = mastheadTitle.getBoundingClientRect().top;
-    const titleFadeStart = fadeEndPosition + fadeTravelDistance;
-    const titleProgress = (titleFadeStart - titleTop) / fadeTravelDistance;
-    const titleOpacity = 1 - Math.max(0, Math.min(titleProgress, 1));
-    mastheadTitle.style.opacity = titleOpacity;
+        const titleTop = mastheadTitle.getBoundingClientRect().top;
+        const titleFadeStart = fadeEndPosition + fadeTravelDistance;
+        const titleProgress = (titleFadeStart - titleTop) / fadeTravelDistance;
+        const titleOpacity = 1 - Math.max(0, Math.min(titleProgress, 1));
+        mastheadTitle.style.opacity = titleOpacity;
 
-    const subtitleTop = mastheadSubtitle.getBoundingClientRect().top;
-    const subtitleFadeStart = fadeEndPosition + fadeTravelDistance;
-    const subtitleProgress = (subtitleFadeStart - subtitleTop) / fadeTravelDistance;
-    const subtitleOpacity = 1 - Math.max(0, Math.min(subtitleProgress, 1));
-    mastheadSubtitle.style.opacity = subtitleOpacity;
+        const subtitleTop = mastheadSubtitle.getBoundingClientRect().top;
+        const subtitleFadeStart = fadeEndPosition + fadeTravelDistance;
+        const subtitleProgress = (subtitleFadeStart - subtitleTop) / fadeTravelDistance;
+        const subtitleOpacity = 1 - Math.max(0, Math.min(subtitleProgress, 1));
+        mastheadSubtitle.style.opacity = subtitleOpacity;
 
-    // --- Part 2: Handle the Masthead Fixing ---
-    const fixTriggerPoint = 740 - 115; // 625px
+        // --- Part 2: Handle the Masthead Fixing ---
+        const fixTriggerPoint = 740 - 115; // 625px
 
-    if (scrollY >= fixTriggerPoint) {
-        mastheadBlock.classList.add('is-fixed-to-top');
-    } else {
-        mastheadBlock.classList.remove('is-fixed-to-top');
+        if (scrollY >= fixTriggerPoint) {
+            mastheadBlock.classList.add('is-fixed-to-top');
+        } else {
+            mastheadBlock.classList.remove('is-fixed-to-top');
+        }
     }
 });
