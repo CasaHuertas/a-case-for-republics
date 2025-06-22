@@ -491,7 +491,6 @@ footer .footer-text:last-child {
 }
 
 @media (max-width: 1024px) {
-    /* --- General Mobile/Tablet Layout (Hides Nav, etc.) --- */
     .navigation-bar {
         display: none;
     }
@@ -503,8 +502,6 @@ footer .footer-text:last-child {
         padding-top: 100px; 
         padding-bottom: 50px;
     }
-
-    /* --- Monarch Grid: Single Column --- */
     .monarchs-grid {
         display: block; 
     }
@@ -515,59 +512,68 @@ footer .footer-text:last-child {
     .monarch-column > .monarch-block {
         margin-bottom: 30px;
     }
-
-    /* --- Tablet-Specific Monarch Block Layout --- */
     .monarch-block {
         padding: 30px 60px; 
     }
-
     .monarch-block .monarch-header-top-section,
     .monarch-block .monarch-bottom-sections {
         padding-left: 0;
         padding-right: 0;
     }
-    
     .monarch-block .monarch-visual-and-titles-wrapper {
         position: relative;
         height: 100px;
         padding: 0;
     }
-
     .monarch-block .monarch-portrait-placeholder {
         position: absolute;
         top: 0;
         left: -60px; 
         margin: 0;
     }
-
     .monarch-block .titles-text {
         position: absolute;
-        /* UPDATED: Portrait's right edge is at 80px (-60+140). 80+25 = 105px. */
         left: 105px;
         top: 10px;
         text-align: left;
-        width: calc(100% - 105px - 60px); /* Adjust width based on new left and right margins */
+        width: calc(100% - 105px - 60px);
         box-sizing: border-box;
     }
-
     .monarch-block .house-name-text,
     .monarch-block .monarch-name-text,
     .monarch-block .nickname-years-text {
         text-align: left;
     }
-    
     .inbreeding-crest-container {
-        /* UPDATED: Set right to 60px to match the block's side padding */
         right: 40px;
         top: 30px;
         transform: none;
         width: 150px;
         height: 170px;
     }
+
+    /* --- FIX for Tablet Crest Text Spacing --- */
+    .inbreeding-crest-container .crest-text-label {
+        /* Remove fixed top/bottom positioning */
+        position: static;
+    }
+    .inbreeding-crest-container .crest-text-overlay {
+        /* Use flex gap for consistent spacing regardless of container size */
+        gap: 5px;
+    }
+
+    /* --- FIX for List Leading and Indentation --- */
+    .monarch-block .section-list li {
+        line-height: 1.5; /* Enforce consistent line height */
+        margin-bottom: 8px; /* Control space between list items */
+    }
+    .monarch-block .section-list ul.section-list {
+        margin-top: 8px; /* Control space after "daughter of" */
+        padding-left: 20px; /* Enforce consistent indent */
+    }
 }
 
 @media (max-width: 768px) { 
-    /* --- Font size adjustments for smaller tablets and phones --- */
     .masthead-title {
         font-size: 56px; 
     }
@@ -580,59 +586,46 @@ footer .footer-text:last-child {
 }
 
 @media (max-width: 600px) {
-    /* --- Phone-Specific Monarch Block Layout --- */
-
-    /* 1. Reduce side padding for phone screens */
     .monarch-block {
-        padding-left: 25px;
-        padding-right: 25px;
+        padding: 20px 25px; /* Adjusted padding for phone */
     }
-
-    /* 2. Use Flexbox to re-order and center the header content */
     .monarch-block .monarch-header-top-section {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center items horizontally */
+        align-items: center;
     }
-
-    /* 3. Define the new visual order */
-    .monarch-block .monarch-name-text { order: 1; }
+    .monarch-block .monarch-name-text { order: 1; margin-bottom: 0; }
     .monarch-block .inbreeding-crest-container { order: 2; }
-    .monarch-block .house-name-text { order: 3; }
+    .monarch-block .house-name-text { order: 3; margin-top: 0; }
     .monarch-block .nickname-years-text { order: 4; }
 
-    /* 4. Center all text in the re-ordered header */
     .monarch-block .house-name-text,
     .monarch-block .monarch-name-text,
     .monarch-block .nickname-years-text {
         text-align: center;
     }
 
-    /* 5. Reset the Crest to be in the normal flow */
+    /* --- FIX for Phone Crest Layout --- */
     .inbreeding-crest-container {
-        position: static; /* Remove absolute positioning */
-        transform: none;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        /* Use a slightly smaller crest on phones */
-        width: 129px;
+        position: relative; /* Re-establish as positioning context for children */
+        top: auto; right: auto; /* Remove tablet positioning */
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 129px; /* Revert to original smaller size */
         height: 146px;
     }
-
-    /* 6. Adjust the portrait to be flush with the new padding */
+    
     .monarch-block .monarch-portrait-placeholder {
-        left: -25px; /* Match the new padding */
+        left: -25px; /* Match the new phone padding */
     }
 
-    /* 7. Adjust title position and width for the new padding */
     .monarch-block .titles-text {
-        left: calc(140px + 20px); /* Keep a 20px gap from portrait */
+        left: calc(140px + 20px);
         width: calc(100% - 140px - 20px);
     }
 }
 
 @media (max-width: 480px) { 
-    /* --- Font size adjustments for small phones --- */
     .masthead-title {
         font-size: 40px;
     }
@@ -644,9 +637,12 @@ footer .footer-text:last-child {
         padding-left: 15px; 
     }
     .monarch-block {
-        padding: 15px; 
+        padding: 15px; /* Final padding squeeze */
     }
     .monarch-block .monarch-name-text {
         font-size: 30px;
+    }
+    .monarch-block .monarch-portrait-placeholder {
+        left: -15px; /* Match final padding */
     }
 }
