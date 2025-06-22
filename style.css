@@ -579,14 +579,14 @@ footer .footer-text:last-child {
     }
 }
 
-/* --- NEW: Mobile Phone Specific Layout (Revised) --- */
+/* --- NEW: Mobile Phone Specific Layout (Final) --- */
 @media (max-width: 600px) {
 
     /* Set the main monarch block to be a vertical flex container */
     .monarch-block {
         display: flex;
         flex-direction: column;
-        padding: 0 25px 25px 25px; /* Set top padding to 0, will be controlled by crest's margin */
+        padding: 0 25px 25px 25px; 
     }
 
     /* Center the Crest and adjust its vertical spacing */
@@ -595,8 +595,8 @@ footer .footer-text:last-child {
         position: relative; 
         top: auto;
         right: auto;
-        /* This rule now controls the spacing around the crest */
-        margin: 10px auto 0px auto; /* 10px top, 0px bottom */
+        /* User's preferred spacing */
+        margin: 10px auto 0 auto; 
     }
 
     /* Center the main header section and adjust spacing */
@@ -606,6 +606,8 @@ footer .footer-text:last-child {
         flex-direction: column;
         align-items: center; 
         padding: 0; 
+        /* This rule adds the 10px space below the crest */
+        margin-top: 10px;
         margin-bottom: 25px; 
     }
 
@@ -625,22 +627,22 @@ footer .footer-text:last-child {
     }
     
     /* Correct the portrait's position to be flush left */
-    .monarch-portrait-placeholder {
+    .monarch-block .monarch-portrait-placeholder {
         position: absolute;
-        /* This rule resets the negative margin inherited from tablet view */
-        left: 0;
         top: 0;
+        /* This rule now FORCES the portrait to the left edge, overriding tablet styles */
+        left: 0 !important;
     }
 
     /* Reposition the title text correctly next to the portrait */
     .monarch-block .titles-text {
-        position: absolute; /* Revert to absolute for precise placement */
+        position: absolute; 
         text-align: left;
         padding: 0;
-        /* These rules position the text relative to the wrapper */
-        top: 10px; /* Aligns it near the top of the portrait */
-        left: 165px; /* 140px portrait width + 25px gap */
-        width: calc(100% - 165px); /* Ensures it doesn't overflow */
+        width: auto;
+        top: 10px;
+        /* This rule FORCES the title text to the correct position, overriding tablet styles */
+        left: 155px !important; /* 140px portrait width + 15px gap */
     }
 
     /* Order and align the final content section */
