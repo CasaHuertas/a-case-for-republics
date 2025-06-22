@@ -365,114 +365,86 @@ body {
 
 /* Inbreeding Rate Device (SVG Crest) Styling */
 .inbreeding-crest-container {
-	width: 129px;	
-	height: 146px;	
-	position: absolute;	
-	top: 30px; /* Aligned with top padding */
-	right: 30px; /* Aligned with right padding */
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	pointer-events: none;	
+    width: 129px; 
+    height: 146px; 
+    position: absolute; 
+    top: 30px; /* Aligned with top padding */
+    right: 30px; /* Aligned with right padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    pointer-events: none; 
 }
 
 .inbreeding-crest-container svg {
-	position: absolute;	
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-/* The overlay's job is to center the text group within the crest. */
-.inbreeding-crest-container .crest-text-overlay {
-	position: relative;	
-	z-index: 2;	
-	font-family: 'Merriweather', serif;
-	color: var(--khaki);
-	display: flex;
-	flex-direction: column;
-	justify-content: center; /* This vertically centers the text group */
-	align-items: center;   /* This horizontally centers the text group */
-	height: 100%;
-}
-
-/* This new wrapper groups the three text elements together. */
-.crest-text-group {
-    text-align: center;
-}
-
-/* This styles the "Inbreeding" and "Rate" labels. */
-.inbreeding-crest-container .crest-text-label {
-	font-weight: 400;	
-	font-size: 16px;
-	text-transform: none;	
-	line-height: 0.75; /* Tweak this to adjust spacing */
-}
-
-/* This styles the rate number. */
-.inbreeding-crest-container .crest-rate-number {
-	font-weight: 400;	
-	font-size: 36px;
-	text-transform: lowercase;
-	color: var(--red);
-	line-height: 0.75; /* Tweak this to adjust spacing */
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .inbreeding-crest-container .crest-text-overlay {
-	position: relative;	
-	z-index: 2;	
-	font-family: 'Merriweather', serif;
-	color: var(--khaki);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-	line-height: 1.2; /* Sets a baseline for spacing */
+    position: relative; 
+    z-index: 2; 
+    font-family: 'Merriweather', serif;
+    color: var(--khaki);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
 }
 
 .inbreeding-crest-container .crest-text-label {
 	font-weight: 400;	
-	font-size: 16px;
-	text-transform: none;	
+	font-size: 16px; /* MODIFIED: Increased to 16px */
+	text-transform: none; 
 	line-height: 1;
+	position: relative; 
+}
+
+.inbreeding-crest-container .crest-text-label:first-of-type {
+	bottom: 8px; /* Pushes "Inbreeding" UP from its original position */
+}
+
+.inbreeding-crest-container .crest-text-label:last-of-type {
+	top: 8px; /* Pushes "Rate" DOWN from its original position */
 }
 
 .inbreeding-crest-container .crest-rate-number {
-	font-weight: 400;	
-	font-size: 36px;
-	text-transform: lowercase;
-	color: var(--red);
-	line-height: 1; /* Pulls the number's line height in */
-	margin: -2px 0; /* Uses a slight negative margin to tighten the spacing */
+    font-weight: 400; 
+    font-size: 36px;
+    text-transform: lowercase;
+    color: var(--red);
+    line-height: 1; 
 }
 
 /* SVG specific styling for the crests */
 .inbreeding-crest-container .crest-bottom-stroke {
-	stroke: var(--stroke-bottom-color);
-	stroke-width: 7px;
-	fill: none;	
-	stroke-miterlimit: 10;	
+    stroke: var(--stroke-bottom-color);
+    stroke-width: 7px;
+    fill: none; 
+    stroke-miterlimit: 10; 
 }
 
 .inbreeding-crest-container .crest-top-stroke {
-	stroke: var(--stroke-top-color);
-	stroke-width: 7px;
-	fill: none;	
-	stroke-miterlimit: 10; 	
-	stroke-linecap: round; 	
-	
-	stroke-dasharray: 391;
-	stroke-dashoffset: 391;
-	
-	/* MODIFIED: Using a more pronounced, exponential easing curve */
-	transition: stroke-dashoffset 0.9s cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s;
+    stroke: var(--stroke-top-color);
+    stroke-width: 7px;
+    fill: none; 
+    stroke-miterlimit: 10;  
+    stroke-linecap: round;  
+    
+    stroke-dasharray: 391;
+    stroke-dashoffset: 391;
+    
+    /* MODIFIED: Using a more pronounced, exponential easing curve */
+    transition: stroke-dashoffset 0.9s cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s;
 
-	transform-origin: center;
-	transform: scaleX(-1);
+    transform-origin: center;
+    transform: scaleX(-1);
 }
 
 /* --- NEW: Footer Styling --- */
@@ -604,76 +576,6 @@ footer .footer-text:last-child {
     }
     .house-title {
         font-size: 36px;
-    }
-}
-
-@media (max-width: 600px) {
-    /* --- NEW: Mobile-Specific Monarch Block Layout --- */
-
-    /* 1. Adjust overall block padding for mobile */
-    .monarch-block {
-        padding: 25px 20px;
-    }
-    .monarch-block .monarch-header-top-section,
-    .monarch-block .monarch-bottom-sections {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .monarch-block .monarch-header-top-section {
-        /* Use Flexbox to control the order and alignment of header items */
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Center-align all children */
-    }
-
-    /* 2 & 3. Center monarch name and move it to the top, then the crest */
-    .monarch-block .monarch-name-text {
-        order: 1; /* First item */
-        text-align: center;
-        margin-top: 0;
-        margin-bottom: 15px; /* Space before crest */
-    }
-    .inbreeding-crest-container {
-        order: 2; /* Second item */
-        position: relative; /* Override 'absolute' positioning from desktop */
-        top: auto;
-        right: auto;
-        margin-bottom: 15px; /* Space after crest */
-    }
-
-    /* 4. Center house and nickname/years below the crest */
-    .monarch-block .house-name-text {
-        order: 3; /* Third item */
-        text-align: center;
-        margin-bottom: 5px;
-    }
-    .monarch-block .nickname-years-text {
-        order: 4; /* Fourth item */
-        text-align: center;
-    }
-
-    /* --- NEW, Flexbox-based layout for portrait and title --- */
-    /* 5. Position portrait and title line below the header group */
-    .monarch-visual-and-titles-wrapper {
-        order: 5; /* This entire wrapper comes after the re-ordered header items */
-        position: relative;
-        height: auto;
-        width: 100%;
-        padding: 0;
-        margin-top: 25px;
-        display: flex; /* Use flexbox for robust alignment */
-        align-items: flex-start; /* Align items to the top */
-    }
-    .monarch-portrait-placeholder {
-        width: 140px; /* Explicitly set width to prevent shrinking */
-        margin-left: -20px; /* Pulls the element left to be flush with the block edge */
-        flex-shrink: 0;
-    }
-    .monarch-block .titles-text {
-        position: static;
-        width: auto;
-        text-align: left;
-        margin-left: 20px; /* Creates an exact 20px gap to the right of the portrait */
     }
 }
 

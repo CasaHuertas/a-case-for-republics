@@ -15,68 +15,65 @@ function createMonarchBlock(monarch, displayHouseName) {
     monarchBlock.dataset.id = monarch.id;
     monarchBlock.dataset.inbreedingRate = monarch.inbreeding_rate;
 
-// --- Top Section: Name, Nickname, etc. ---
-    const monarchHeaderTop = document.createElement('div');
-    monarchHeaderTop.classList.add('monarch-header-top-section');
-    
-    const houseNameElement = document.createElement('p');
-    houseNameElement.classList.add('house-name-text');
-    houseNameElement.textContent = `House of ${displayHouseName.split(' ').map(word => {
-        const lowercaseWords = ['of', 'and', 'the', 'de', 'd\'', 'du', 'des', 'dos', 'da', 'das', 'dei', 'del'];
-        return lowercaseWords.includes(word.toLowerCase()) ? word.toLowerCase() : word.charAt(0).toUpperCase() + word.slice(1);
-    }).join(' ')}`;
-    monarchHeaderTop.appendChild(houseNameElement);
+    // --- Top Section: Name, Nickname, etc. ---
+    const monarchHeaderTop = document.createElement('div');
+    monarchHeaderTop.classList.add('monarch-header-top-section');
+    
+    const houseNameElement = document.createElement('p');
+    houseNameElement.classList.add('house-name-text');
+    houseNameElement.textContent = `House of ${displayHouseName.split(' ').map(word => {
+        const lowercaseWords = ['of', 'and', 'the', 'de', 'd\'', 'du', 'des', 'dos', 'da', 'das', 'dei', 'del'];
+        return lowercaseWords.includes(word.toLowerCase()) ? word.toLowerCase() : word.charAt(0).toUpperCase() + word.slice(1);
+    }).join(' ')}`;
+    monarchHeaderTop.appendChild(houseNameElement);
 
-    const monarchNameElement = document.createElement('h2');
-    monarchNameElement.classList.add('monarch-name-text');
-    monarchNameElement.textContent = monarch.name.split(' ').map(word => {
-        if (word.match(/^(i{1,3}|iv|v|vi{1,3}|ix|x)$/i)) { return word.toUpperCase(); }
-        return word.charAt(0).toUpperCase() + word.slice(1);
-    }).join(' ');
-    monarchHeaderTop.appendChild(monarchNameElement);
+    const monarchNameElement = document.createElement('h2');
+    monarchNameElement.classList.add('monarch-name-text');
+    monarchNameElement.textContent = monarch.name.split(' ').map(word => {
+        if (word.match(/^(i{1,3}|iv|v|vi{1,3}|ix|x)$/i)) { return word.toUpperCase(); }
+        return word.charAt(0).toUpperCase() + word.slice(1);
+    }).join(' ');
+    monarchHeaderTop.appendChild(monarchNameElement);
 
-    const nicknameYearsElement = document.createElement('p');
-    nicknameYearsElement.classList.add('nickname-years-text');
-    const yearsText = `(${monarch.birth_year}–${monarch.death_year || 'Present'})`;
-    if (monarch.nickname) {
-        const formattedNickname = monarch.nickname.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-        nicknameYearsElement.textContent = `${formattedNickname}, ${yearsText}`;
-    } else {
-        nicknameYearsElement.textContent = yearsText;
-    }
-    monarchHeaderTop.appendChild(nicknameYearsElement);
-
-    // --- Inbreeding Crest ---
-    const inbreedingCrestContainer = document.createElement('div');
-    inbreedingCrestContainer.classList.add('inbreeding-crest-container');
-    inbreedingCrestContainer.innerHTML = `
-        <svg viewBox="0 0 129 146">
-            <path class="crest-bottom-stroke" d="M65,7.08C33.93,7.08,7.86,30.55,7.86,30.55c0,0-8.47,88.86,57.14,108.37,65.62-19.51,57.14-108.37,57.14-108.37,0,0-26.07-23.47-57.14-23.47"/>
-            <path class="crest-top-stroke" d="M65,7.08C33.93,7.08,7.86,30.55,7.86,30.55c0,0-8.47,88.86,57.14,108.37,65.62-19.51,57.14-108.37,57.14-108.37,0,0-26.07-23.47-57.14-23.47"/>
-        </svg>
-        <div class="crest-text-overlay">
-            <span class="crest-text-label">Inbreeding</span>
-            <span class="crest-rate-number">0</span>
-            <span class="crest-text-label">Rate</span>
-        </div>
-    `;
-    // --- MODIFICATION ---
-    // Crest is now appended to the header section. This is safe for desktop
-    // because the crest's CSS uses 'position: absolute'.
-    monarchHeaderTop.appendChild(inbreedingCrestContainer);
+    const nicknameYearsElement = document.createElement('p');
+    nicknameYearsElement.classList.add('nickname-years-text');
+    const yearsText = `(${monarch.birth_year}–${monarch.death_year || 'Present'})`;
+    if (monarch.nickname) {
+        const formattedNickname = monarch.nickname.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+        nicknameYearsElement.textContent = `${formattedNickname}, ${yearsText}`;
+    } else {
+        nicknameYearsElement.textContent = yearsText;
+    }
+    monarchHeaderTop.appendChild(nicknameYearsElement);
     monarchBlock.appendChild(monarchHeaderTop);
 
-    // --- Visuals and Titles Section ---
-    const monarchVisualsAndTitles = document.createElement('div');
-    monarchVisualsAndTitles.classList.add('monarch-visual-and-titles-wrapper');
-    const portraitDiv = document.createElement('div');
-    portraitDiv.classList.add('monarch-portrait-placeholder');
-    monarchVisualsAndTitles.appendChild(portraitDiv);
-    const titlesElement = document.createElement('p');
-    titlesElement.classList.add('titles-text');
-    titlesElement.textContent = `${monarch.titles.toUpperCase()} (${monarch.reign_years})`;
-    monarchVisualsAndTitles.appendChild(titlesElement);
-    monarchBlock.appendChild(monarchVisualsAndTitles);
+    // --- Visuals and Titles Section ---
+    const monarchVisualsAndTitles = document.createElement('div');
+    monarchVisualsAndTitles.classList.add('monarch-visual-and-titles-wrapper');
+    const portraitDiv = document.createElement('div');
+    portraitDiv.classList.add('monarch-portrait-placeholder');
+    monarchVisualsAndTitles.appendChild(portraitDiv);
+    const titlesElement = document.createElement('p');
+    titlesElement.classList.add('titles-text');
+    titlesElement.textContent = `${monarch.titles.toUpperCase()} (${monarch.reign_years})`;
+    monarchVisualsAndTitles.appendChild(titlesElement);
+    monarchBlock.appendChild(monarchVisualsAndTitles);
+    
+    // --- Inbreeding Crest ---
+    const inbreedingCrestContainer = document.createElement('div');
+    inbreedingCrestContainer.classList.add('inbreeding-crest-container');
+    inbreedingCrestContainer.innerHTML = `
+        <svg viewBox="0 0 129 146">
+            <path class="crest-bottom-stroke" d="M65,7.08C33.93,7.08,7.86,30.55,7.86,30.55c0,0-8.47,88.86,57.14,108.37,65.62-19.51,57.14-108.37,57.14-108.37,0,0-26.07-23.47-57.14-23.47"/>
+            <path class="crest-top-stroke" d="M65,7.08C33.93,7.08,7.86,30.55,7.86,30.55c0,0-8.47,88.86,57.14,108.37,65.62-19.51,57.14-108.37,57.14-108.37,0,0-26.07-23.47-57.14-23.47"/>
+        </svg>
+        <div class="crest-text-overlay">
+            <span class="crest-text-label">Inbreeding</span>
+            <span class="crest-rate-number">0</span>
+            <span class="crest-text-label">Rate</span>
+        </div>
+    `;
+    monarchBlock.appendChild(inbreedingCrestContainer);
 
     // --- Bottom Section (Parents/Spouses/Children) ---
     const monarchBottomSections = document.createElement('div');
