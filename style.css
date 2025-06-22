@@ -579,14 +579,15 @@ footer .footer-text:last-child {
     }
 }
 
-/* --- NEW: Mobile Phone Specific Layout (Flexbox Fix) --- */
+/* --- NEW: Mobile Phone Specific Layout (Padding Restructure) --- */
 @media (max-width: 600px) {
 
-    /* Set the main monarch block to be a vertical flex container */
+    /* The monarch block itself now has NO padding */
     .monarch-block {
         display: flex;
         flex-direction: column;
-        padding: 0 25px 25px 25px; 
+        padding: 0;
+        margin-bottom: 30px; /* Re-add margin here as it was part of the old padding */
     }
 
     /* Center the Crest and adjust its vertical spacing */
@@ -604,7 +605,7 @@ footer .footer-text:last-child {
         display: flex;
         flex-direction: column;
         align-items: center; 
-        padding: 0; 
+        padding: 0 25px; /* Add side padding here */
         margin-top: 10px;
         margin-bottom: 25px; 
     }
@@ -618,48 +619,43 @@ footer .footer-text:last-child {
     .monarch-header-top-section .house-name-text { order: 2; text-align: center; margin-bottom: 5px; }
     .monarch-header-top-section .nickname-years-text { order: 3; text-align: center; }
 
-    /* --- FLEXBOX REWRITE FOR PORTRAIT AND TITLE --- */
-
-    /* The wrapper is now a flex container */
+    /* The wrapper that holds the portrait and title */
     .monarch-visual-and-titles-wrapper {
         order: 3; 
-        position: relative; /* Keep for any potential z-index needs */
         display: flex;
-        align-items: flex-start; /* Aligns items to the top of the container */
-        min-height: 100px;
+        align-items: flex-start;
         height: auto; 
-        padding: 0;
+        /* Add ONLY right padding to constrain the title text */
+        padding: 0 25px 0 0; 
         margin-bottom: 25px;
+        box-sizing: border-box; /* Ensures padding is calculated correctly */
     }
     
-    /* Portrait is now a flex item, not absolutely positioned */
+    /* The portrait now has NO special margin or positioning */
     .monarch-block .monarch-portrait-placeholder {
-        position: static; /* Remove absolute positioning */
-        flex-shrink: 0; /* Prevents the portrait from shrinking */
+        position: static;
+        flex-shrink: 0;
         width: 140px;
         height: 100px;
-        /* Negative margin now works predictably on a flex item */
-        margin-left: -25px; 
+        /* Removed all negative margins */
     }
 
-    /* Title is now a flex item, not absolutely positioned */
+    /* The title text gets its gap from a simple margin */
     .monarch-block .titles-text {
-        position: static; /* Remove absolute positioning */
+        position: static;
         text-align: left;
         padding: 0;
-        /* Simple margin creates the gap next to the portrait */
         margin-left: 15px;
-        /* A small top padding to vertically align the text */
         padding-top: 10px;
+        flex-grow: 1;
+        min-width: 0;
+        overflow-wrap: break-word;
     }
 
-    /* --- End of Flexbox Rewrite --- */
-
-
-    /* Order and align the final content section */
+    /* The bottom content sections get their own padding */
     .monarch-bottom-sections {
         order: 4; 
-        padding: 0; 
+        padding: 0 25px 25px 25px; /* Add full padding here */
     }
 
     .monarch-bottom-sections .section-heading {
