@@ -47,18 +47,6 @@ function createMonarchBlock(monarch, displayHouseName) {
     monarchHeaderTop.appendChild(nicknameYearsElement);
     monarchBlock.appendChild(monarchHeaderTop);
 
-    // --- Visuals and Titles Section ---
-    const monarchVisualsAndTitles = document.createElement('div');
-    monarchVisualsAndTitles.classList.add('monarch-visual-and-titles-wrapper');
-    const portraitDiv = document.createElement('div');
-    portraitDiv.classList.add('monarch-portrait-placeholder');
-    monarchVisualsAndTitles.appendChild(portraitDiv);
-    const titlesElement = document.createElement('p');
-    titlesElement.classList.add('titles-text');
-    titlesElement.textContent = `${monarch.titles.toUpperCase()} (${monarch.reign_years})`;
-    monarchVisualsAndTitles.appendChild(titlesElement);
-    monarchBlock.appendChild(monarchVisualsAndTitles);
-    
     // --- Inbreeding Crest ---
     const inbreedingCrestContainer = document.createElement('div');
     inbreedingCrestContainer.classList.add('inbreeding-crest-container');
@@ -75,19 +63,35 @@ function createMonarchBlock(monarch, displayHouseName) {
     `;
     monarchBlock.appendChild(inbreedingCrestContainer);
 
+    // --- Create a NEW wrapper to contain the main content for a mobile layout fix ---
+    const contentWrapper = document.createElement('div');
+    contentWrapper.classList.add('monarch-content-wrapper');
+
+
+    // --- Visuals and Titles Section ---
+    const monarchVisualsAndTitles = document.createElement('div');
+    monarchVisualsAndTitles.classList.add('monarch-visual-and-titles-wrapper');
+    const portraitDiv = document.createElement('div');
+    portraitDiv.classList.add('monarch-portrait-placeholder');
+    monarchVisualsAndTitles.appendChild(portraitDiv);
+    const titlesElement = document.createElement('p');
+    titlesElement.classList.add('titles-text');
+    titlesElement.textContent = `${monarch.titles.toUpperCase()} (${monarch.reign_years})`;
+    monarchVisualsAndTitles.appendChild(titlesElement);
+    contentWrapper.appendChild(monarchVisualsAndTitles); // Append to the new wrapper
+
+
     // --- Bottom Section (Parents/Spouses/Children) ---
     const monarchBottomSections = document.createElement('div');
     monarchBottomSections.classList.add('monarch-bottom-sections');
 
-    // --- NEW: Conditional Logic for Parents Section ---
+    // --- Conditional Logic for Parents Section ---
     if (monarch.inbreeding_rate > 0 && monarch.inbreeding_explanation) {
-        // If there's an explanation, show it
         const explanationPara = document.createElement('p');
         explanationPara.classList.add('inbreeding-explanation-text');
         explanationPara.textContent = monarch.inbreeding_explanation;
         monarchBottomSections.appendChild(explanationPara);
     } else {
-        // Otherwise, show the original "Son of" section
         const parentsHeading = document.createElement('p');
         parentsHeading.classList.add('section-heading');
         parentsHeading.textContent = 'Son of';
@@ -138,7 +142,10 @@ function createMonarchBlock(monarch, displayHouseName) {
         `).join('');
     }
     monarchBottomSections.appendChild(childrenList);
-    monarchBlock.appendChild(monarchBottomSections);
+    contentWrapper.appendChild(monarchBottomSections); // Append to the new wrapper
+
+
+    monarchBlock.appendChild(contentWrapper); // Add the single new wrapper to the monarchBlock
 
     return monarchBlock;
 }
