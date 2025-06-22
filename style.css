@@ -579,60 +579,86 @@ footer .footer-text:last-child {
     }
 }
 
-/* --- NEW: Mobile Phone Specific Layout (Structural Fix) --- */
+/* --- NEW: Mobile Phone Specific Layout (Padding Restructure) --- */
 @media (max-width: 600px) {
 
+    /* The monarch block itself now has NO padding */
     .monarch-block {
         display: flex;
         flex-direction: column;
-        padding: 0 !important;
-        margin-bottom: 30px;
+        padding: 0 !important; /* This !important will force the override */
+        margin-bottom: 30px; /* Re-add margin here as it was part of the old padding */
     }
 
-    .inbreeding-crest-container,
+    /* Center the Crest and adjust its vertical spacing */
+    .inbreeding-crest-container {
+        order: 1; 
+        position: relative; 
+        top: auto;
+        right: auto;
+        margin: 10px auto 0 auto; 
+    }
+
+    /* Center the main header section and adjust spacing */
     .monarch-header-top-section {
-        order: 1; /* These are now the first items */
-        padding-left: 25px;
-        padding-right: 25px;
+        order: 2; 
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        padding: 0 25px; /* Add side padding here */
+        margin-top: 10px;
+        margin-bottom: 25px; 
     }
     
-    .inbreeding-crest-container { margin: 10px auto 0 auto; }
-    .monarch-header-top-section { margin-top: 10px; margin-bottom: 25px; }
-
-    /* The new wrapper is now the third flex item */
-    .monarch-content-wrapper {
-        order: 2;
+    .monarch-header-top-section .monarch-name-text { 
+        order: 1; 
+        text-align: center;
+        margin-top: 0; 
     }
 
-    /* Float the portrait inside its container */
+    .monarch-header-top-section .house-name-text { order: 2; text-align: center; margin-bottom: 5px; }
+    .monarch-header-top-section .nickname-years-text { order: 3; text-align: center; }
+
+    /* The wrapper that holds the portrait and title */
+    .monarch-visual-and-titles-wrapper {
+        order: 3; 
+        display: flex;
+        align-items: flex-start;
+        /* Add ONLY right padding to constrain the title text */
+        padding: 0 25px 0 0; 
+        margin-bottom: 25px;
+        box-sizing: border-box; /* Ensures padding is calculated correctly */
+    }
+    
+    /* The portrait now has NO special margin or positioning */
     .monarch-block .monarch-portrait-placeholder {
-        float: left;
+        position: static;
+        flex-shrink: 0;
         width: 140px;
         height: 100px;
+        /* Removed all negative margins */
     }
 
-    /* Style the title text next to the float */
+    /* The title text gets its gap from a simple margin */
     .monarch-block .titles-text {
-        margin-left: 155px; /* 140px portrait width + 15px gap */
+        position: static;
+        text-align: left;
+        padding: 0;
+        margin-left: 15px;
         padding-top: 10px;
+        flex-grow: 1;
+        min-width: 0;
         overflow-wrap: break-word;
     }
 
-    /* The 'clear' property will now work correctly on this sibling element */
+    /* The bottom content sections get their own padding */
     .monarch-bottom-sections {
-        clear: left;
-        padding: 25px 20px 30px 20px;
+        order: 4; 
+        padding: 0 20px 30px 20px !important; /* Add full padding here */
     }
 
-    /* --- Resetting styles from previous attempts --- */
-    .monarch-visual-and-titles-wrapper,
-    .monarch-block .section-heading {
-        padding: 0;
-        margin-top: 0;
-    }
-    .monarch-block .section-list {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
+    .monarch-bottom-sections .section-heading {
+        text-align: left;
     }
 }
 
