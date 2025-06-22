@@ -579,7 +579,7 @@ footer .footer-text:last-child {
     }
 }
 
-/* --- NEW: Mobile Phone Specific Layout (Final) --- */
+/* --- NEW: Mobile Phone Specific Layout (Definitive) --- */
 @media (max-width: 600px) {
 
     /* Set the main monarch block to be a vertical flex container */
@@ -595,7 +595,6 @@ footer .footer-text:last-child {
         position: relative; 
         top: auto;
         right: auto;
-        /* User's preferred spacing */
         margin: 10px auto 0 auto; 
     }
 
@@ -606,17 +605,21 @@ footer .footer-text:last-child {
         flex-direction: column;
         align-items: center; 
         padding: 0; 
-        /* This rule adds the 10px space below the crest */
         margin-top: 10px;
         margin-bottom: 25px; 
     }
+    
+    /* This rule RESETS the inherited margin on the H2, fixing the spacing issue */
+    .monarch-header-top-section .monarch-name-text { 
+        order: 1; 
+        text-align: center;
+        margin-top: 0; 
+    }
 
-    /* Re-order the text *within* the header section */
-    .monarch-header-top-section .monarch-name-text { order: 1; text-align: center; }
     .monarch-header-top-section .house-name-text { order: 2; text-align: center; margin-bottom: 5px; }
     .monarch-header-top-section .nickname-years-text { order: 3; text-align: center; }
 
-    /* Adjust the portrait/titles wrapper */
+    /* This wrapper is now pulled to the edges of the monarch block */
     .monarch-visual-and-titles-wrapper {
         order: 3; 
         position: relative;
@@ -624,25 +627,25 @@ footer .footer-text:last-child {
         height: auto; 
         padding: 0;
         margin-bottom: 25px;
+        /* These negative margins pull the container to the block's edges */
+        margin-left: -25px;
+        margin-right: -25px;
     }
     
-    /* Correct the portrait's position to be flush left */
     .monarch-block .monarch-portrait-placeholder {
         position: absolute;
         top: 0;
-        /* This rule now FORCES the portrait to the left edge, overriding tablet styles */
         left: 0 !important;
     }
 
-    /* Reposition the title text correctly next to the portrait */
     .monarch-block .titles-text {
         position: absolute; 
         text-align: left;
         padding: 0;
         width: auto;
         top: 10px;
-        /* This rule FORCES the title text to the correct position, overriding tablet styles */
-        left: 155px !important; /* 140px portrait width + 15px gap */
+        /* Recalculated 'left' to account for the negative margin */
+        left: 180px !important; /* 25px original padding + 140px portrait + 15px gap */
     }
 
     /* Order and align the final content section */
