@@ -586,7 +586,7 @@ footer .footer-text:last-child {
     .monarch-block {
         display: flex;
         flex-direction: column;
-        padding: 0; !important; /* This !important will force the override */
+        padding: 0 !important; /* This !important will force the override */
         margin-bottom: 30px; /* Re-add margin here as it was part of the old padding */
     }
 
