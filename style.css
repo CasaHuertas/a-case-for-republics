@@ -596,7 +596,7 @@ footer .footer-text:last-child {
         top: auto;
         right: auto;
         /* This rule now controls the spacing around the crest */
-        margin: 30px auto 0px auto; /* 30px top, 0px bottom */
+        margin: 10px auto 0px auto; /* 10px top, 0px bottom */
     }
 
     /* Center the main header section and adjust spacing */
