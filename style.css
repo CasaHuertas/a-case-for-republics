@@ -655,7 +655,7 @@ footer .footer-text:last-child {
         padding: 0 25px 0 0; 
         margin-bottom: 25px;
         box-sizing: border-box; /* Ensures padding is calculated correctly */
-        height: auto; /* This allows the container to grow vertically to fit the title */
+        /* height: auto; /* This allows the container to grow vertically to fit the title */
     }
     
     /* The portrait now has NO special margin or positioning */
