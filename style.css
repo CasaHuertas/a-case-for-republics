@@ -585,10 +585,10 @@ footer .footer-text:last-child {
 
 @media (max-width: 768px) { 
     /* MODIFIED: Apply padding to the parent block instead */
-    .house-block {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
+    /* .house-block { */
+    /*  padding-left: 30px; */
+    /*    padding-right: 30px; */
+    /* } */
     /* --- Font size adjustments for smaller tablets and phones --- */
     .masthead-title {
         /* MODIFIED: Increased font size for mobile */
@@ -704,9 +704,8 @@ footer .footer-text:last-child {
     }
     .house-title {
         font-size: 28px;
-        padding-left: 0; 
+        padding-left: 15px; 
     }
-
     .monarch-block {
         padding: 15px; 
     }
