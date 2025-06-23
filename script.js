@@ -58,7 +58,7 @@ function createMonarchBlock(monarch, displayHouseName) {
     portraitImg.alt = `Portrait of ${monarch.name}`; // For accessibility
     portraitImg.width = 140; // Helps browser performance
     portraitImg.height = 100; // Helps browser performance
-    portraitImg.loading = 'lazy'; // Improves performance by only loading images as you scroll
+    // portraitImg.loading = 'lazy';  Improves performance by only loading images as you scroll
     monarchVisualsAndTitles.appendChild(portraitImg);
     const titlesElement = document.createElement('p');
     titlesElement.classList.add('titles-text');
