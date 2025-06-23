@@ -329,7 +329,7 @@ async function initializeWebsite() {
                 observer.unobserve(target);
             }
         });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.01 });
 
     document.querySelectorAll('.house-block:not(.is-visible)').forEach(block => observer.observe(block));
     document.querySelectorAll('.monarch-block:not(.is-visible)').forEach(block => observer.observe(block));
