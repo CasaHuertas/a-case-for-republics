@@ -158,7 +158,7 @@ body {
     border-radius: 30px;
     display: flex;
     align-items: center;
-    padding-left: 30px; 
+    /* padding-left: 30px; */
     padding-right: 30px; /* MODIFIED: Added right padding to match the left */
     box-sizing: border-box;
     margin-top: 50px;
@@ -586,8 +586,8 @@ footer .footer-text:last-child {
 @media (max-width: 768px) { 
     /* MODIFIED: Apply padding to the parent block instead */
     .house-block {
-        padding-left: 20px;
-        padding-right: 20px;
+        /* padding-left: 20px; */
+        padding-right: 30px;
     }
     /* --- Font size adjustments for smaller tablets and phones --- */
     .masthead-title {
