@@ -608,16 +608,16 @@ footer .footer-text:last-child {
 
 /* --- NEW: Mobile Phone Specific Layout (Padding Restructure) --- */
 @media (max-width: 600px) {
-    
-    /* The monarch block itself now has NO padding */
+
+    /* MODIFIED: Changed the main layout engine to Grid to resolve a stubborn layout bug. */
     .monarch-block {
-        display: flex;
-        flex-direction: column;
-        padding: 0 !important; /* This !important will force the override */
-        margin-bottom: 30px; /* Re-add margin here as it was part of the old padding */
+        display: grid; /* USE GRID INSTEAD OF FLEX */
+        grid-template-columns: 100%; /* Ensure a single column layout */
+        padding: 0 !important;
+        margin-bottom: 30px;
     }
 
-    /* Center the Crest and adjust its vertical spacing */
+    /* The children with 'order' properties will now be Grid items, which works the same way. */
     .inbreeding-crest-container {
         order: 1; 
         position: relative; 
@@ -626,13 +626,12 @@ footer .footer-text:last-child {
         margin: 30px auto 0 auto; 
     }
 
-    /* Center the main header section and adjust spacing */
     .monarch-header-top-section {
         order: 2; 
         display: flex;
         flex-direction: column;
         align-items: center; 
-        padding: 0 25px; /* Add side padding here */
+        padding: 0 25px;
         margin-top: 10px;
         margin-bottom: 25px; 
     }
@@ -646,48 +645,40 @@ footer .footer-text:last-child {
     .monarch-header-top-section .house-name-text { order: 2; text-align: center; margin-bottom: 5px; }
     .monarch-header-top-section .nickname-years-text { order: 3; text-align: center; }
 
-    /* The wrapper that holds the portrait and title */
+    /* MODIFIED: Reverting this wrapper to a simple Flexbox model. */
     .monarch-visual-and-titles-wrapper {
-        order: 3;
-        display: grid;
-        /* MODIFIED: Use 'auto' for the second column, which is more stable here */
-        grid-template-columns: 140px auto;
-        gap: 15px; /* Creates space between portrait and text */
-        align-items: start;
-        height: auto;
-        /* MODIFIED: Ensure it takes full width and calculates padding correctly */
-        width: 100%;
-        box-sizing: border-box;
-        padding-right: 20px; /* Give the title space from the right edge */
+        order: 3; 
+        display: flex;
+        align-items: flex-start;
+        height: auto; /* Let it grow */
+        min-height: 100px; /* Ensure it's at least as tall as the portrait */
+        padding: 0 25px; /* Add horizontal padding */
         margin-bottom: 25px;
+        box-sizing: border-box;
     }
     
-    /* The portrait now has NO special margin or positioning */
+    /* MODIFIED: The portrait placeholder is a simple flex item. */
     .monarch-block .monarch-portrait-placeholder {
         position: static;
-        flex-shrink: 0;
+        flex-shrink: 0; /* Prevent it from shrinking */
         width: 140px;
         height: 100px;
-        /* Removed all negative margins */
     }
 
-    /* The title text gets its gap from a simple margin */
+    /* MODIFIED: The title text is a simple flex item that can grow and wrap. */
     .monarch-block .titles-text {
         position: static;
         text-align: left;
-        /* MODIFIED: Remove all properties now handled by the grid */
         padding: 0;
-        margin-left: 0;
+        margin-left: 15px; /* Create space from portrait */
         padding-top: 10px;
-        min-width: 0;
-        /* MODIFIED: Use a more direct word-breaking property */
+        min-width: 0; /* Allow it to shrink and wrap */
         word-break: break-word;
     }
 
-    /* The bottom content sections get their own padding */
     .monarch-bottom-sections {
         order: 4; 
-        padding: 0 20px 30px 20px !important; /* Add full padding here */
+        padding: 0 25px 30px 25px !important; /* Use consistent padding */
     }
 
     .monarch-bottom-sections .section-heading {
