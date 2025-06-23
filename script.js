@@ -186,8 +186,8 @@ async function initializeWebsite() {
     monarchsData.forEach(monarch => {
         let displayHouseName = '';
         if (monarch.house.startsWith('Bourbon')) { displayHouseName = 'Bourbon'; }
-        else if (monarch.house.startsWith('Habsburg')) { displayHouseName = 'Habsburg'; }
-        else if (monarch.house === 'Habsburg-Lorraine') { displayHouseName = 'Habsburg Lorraine'; }
+        else if (monarch.house === 'Habsburg-Lorraine') { displayHouseName = 'Habsburg Lorraine'; }
+        else if (monarch.house.startsWith('Habsburg')) { displayHouseName = 'Habsburg'; }
         else { displayHouseName = monarch.house; }
 
         if (!monarchsByDisplayHouse[displayHouseName]) {
