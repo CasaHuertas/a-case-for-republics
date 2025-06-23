@@ -159,7 +159,7 @@ body {
     display: flex;
     align-items: center;
     padding-left: 30px;
-    padding-right: 50px; /* MODIFIED: Added right padding to match the left */
+    padding-right: 40px; /* MODIFIED: Added right padding to match the left */
     box-sizing: border-box;
     margin-top: 50px;
     margin-bottom: 30px;
