@@ -593,9 +593,11 @@ footer .footer-text:last-child {
     .masthead-title {
         /* MODIFIED: Increased font size for mobile */
         font-size: 62px;
+        padding-bottom: 20px;
     }
     .masthead-subtitle {
         font-size: 24px;
+        margin-top: 5px;
     }
     .house-title {
         font-size: 36px;
