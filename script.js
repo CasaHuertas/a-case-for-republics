@@ -52,13 +52,12 @@ function createMonarchBlock(monarch, displayHouseName) {
     monarchVisualsAndTitles.classList.add('monarch-visual-and-titles-wrapper');
 
     const portraitImg = document.createElement('img');
-    portraitImg.classList.add('monarch-portrait-placeholder'); // Re-use the class for sizing
-    portraitImg.src = `images/portraits/${monarch.id}.jpg`; // Default image
-    portraitImg.srcset = `images/portraits/<span class="math-inline">\{monarch\.id\}\.jpg 1x, images/portraits/</span>{monarch.id}@2x.jpg 2x`; // For Retina
-    portraitImg.alt = `Portrait of ${monarch.name}`; // For accessibility
-    portraitImg.width = 140; // Helps browser performance
-    portraitImg.height = 100; // Helps browser performance
-    // portraitImg.loading = 'lazy';  Improves performance by only loading images as you scroll
+    portraitImg.classList.add('monarch-portrait-placeholder');
+    portraitImg.src = `images/portraits/${monarch.id}.jpg`;
+    portraitImg.srcset = `images/portraits/${monarch.id}.jpg 1x, images/portraits/${monarch.id}@2x.jpg 2x`;
+    portraitImg.alt = `Portrait of ${monarch.name}`;
+    portraitImg.width = 140;
+    portraitImg.height = 100;
     monarchVisualsAndTitles.appendChild(portraitImg);
     const titlesElement = document.createElement('p');
     titlesElement.classList.add('titles-text');
