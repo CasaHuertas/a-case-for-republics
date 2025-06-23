@@ -1234,36 +1234,8 @@
     "death_year": 1835,
     "inbreeding_rate": 50.00,
     "inbreeding_explanation": "His parents, Leopold II, Holy Roman Emperor, and Maria Luisa of Spain (Bourbon), were first cousins. His four grandparents were Francis I (Lorraine), Holy Roman Emperor; Maria Theresa (Habsburg), Archduchess of Austria; Charles III (Bourbon), King of Spain; and Maria Amalia of Saxony (Wettin), concentrating the genes of the major European powers.",
-    "titles": "Holy Roman Emperor 🇩🇪",
-    "reign_years": "1792-1806",
-    "parents": {
-      "father": { "name": "Leopold II", "title": "Holy Roman Emperor", "house": "Habsburg-Lorraine" },
-      "mother": { "name": "Maria Luisa of Spain", "title": "Infanta of Spain", "house": "Bourbon" }
-    },
-    "spouses": [
-      { "name": "Elisabeth of Württemberg", "birth_title": "Duchess of Württemberg", "house": "Württemberg", "parents": { "father": { "name": "Frederick II Eugene", "title": "Duke of Württemberg", "house": "Württemberg" }, "mother": { "name": "Friederike Dorothea of Brandenburg-Schwedt", "title": null, "house": "Hohenzollern" } } },
-      { "name": "Maria Theresa of Naples and Sicily", "birth_title": "Princess of Naples and Sicily", "house": "Bourbon-Two Sicilies", "parents": { "father": { "name": "Ferdinand I", "title": "King of the Two Sicilies", "house": "Bourbon-Two Sicilies" }, "mother": { "name": "Maria Carolina of Austria", "title": "Archduchess of Austria", "house": "Habsburg-Lorraine" } } },
-      { "name": "Maria Ludovika of Austria-Este", "birth_title": "Archduchess of Austria-Este", "house": "Habsburg-Este", "parents": { "father": { "name": "Ferdinand", "title": "Archduke of Austria-Este", "house": "Habsburg-Este" }, "mother": { "name": "Maria Beatrice d'Este", "title": "Duchess of Massa", "house": "Este" } } },
-      { "name": "Caroline Augusta of Bavaria", "birth_title": "Princess of Bavaria", "house": "Wittelsbach", "parents": { "father": { "name": "Maximilian I Joseph", "title": "King of Bavaria", "house": "Wittelsbach" }, "mother": { "name": "Augusta Wilhelmine of Hesse-Darmstadt", "title": null, "house": "Hesse-Darmstadt" } } }
-    ],
-    "children": [
-      { "name": "Ferdinand I", "title": "Emperor of Austria" },
-      { "name": "Maria Leopoldina", "title": "Archduchess of Austria, Empress Consort of Brazil" },
-      { "name": "Marie Louise", "title": "Archduchess of Austria, Empress Consort of the French" },
-      { "name": "Carolina Augusta", "title": "Archduchess of Austria" }
-    ]
-  },
-  {
-    "id": "francis_i_austria_hl",
-    "house": "Habsburg-Lorraine",
-    "name": "Francis I",
-    "nickname": null,
-    "birth_year": 1768,
-    "death_year": 1835,
-    "inbreeding_rate": 50.00,
-    "inbreeding_explanation": "His parents, Leopold II, Holy Roman Emperor, and Maria Luisa of Spain (Bourbon), were first cousins. His four grandparents were Francis I (Lorraine), Holy Roman Emperor; Maria Theresa (Habsburg), Archduchess of Austria; Charles III (Bourbon), King of Spain; and Maria Amalia of Saxony (Wettin), concentrating the genes of the major European powers.",
-    "titles": "Emperor of Austria 🇦🇹, King of Hungary 🇭🇺, King of Bohemia 🇨🇿",
-    "reign_years": "1804-1835",
+    "titles": "Holy Roman Emperor 🇩🇪, Emperor of Austria 🇦🇹, King of Hungary 🇭🇺, King of Bohemia 🇨🇿",
+    "reign_years": "1792-1835",
     "parents": {
       "father": { "name": "Leopold II", "title": "Holy Roman Emperor", "house": "Habsburg-Lorraine" },
       "mother": { "name": "Maria Luisa of Spain", "title": "Infanta of Spain", "house": "Bourbon" }
