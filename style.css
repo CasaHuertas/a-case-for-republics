@@ -516,7 +516,12 @@ footer .footer-text:last-child {
         padding-left: 60px;
         padding-right: 60px;
     }
-
+    
+    .house-block {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
     /* --- Monarch Grid: Single Column --- */
     .monarchs-grid {
         display: block; 
@@ -582,8 +587,8 @@ footer .footer-text:last-child {
 @media (max-width: 768px) { 
     /* MODIFIED: Apply padding to the parent block instead */
     .house-block {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     /* --- Font size adjustments for smaller tablets and phones --- */
     .masthead-title {
