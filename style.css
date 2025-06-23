@@ -601,6 +601,12 @@ footer .footer-text:last-child {
 /* --- NEW: Mobile Phone Specific Layout (Padding Restructure) --- */
 @media (max-width: 600px) {
 
+    /* MODIFIED: Apply padding to the parent block instead */
+    .house-block {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
     /* The monarch block itself now has NO padding */
     .monarch-block {
         display: flex;
@@ -693,11 +699,7 @@ footer .footer-text:last-child {
         font-size: 28px;
         padding-left: 0; 
     }
-    /* MODIFIED: Apply padding to the parent block instead */
-    .house-block {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+
     .monarch-block {
         padding: 15px; 
     }
