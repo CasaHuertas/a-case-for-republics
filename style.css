@@ -649,14 +649,17 @@ footer .footer-text:last-child {
     /* The wrapper that holds the portrait and title */
     .monarch-visual-and-titles-wrapper {
         order: 3;
-        display: grid; /* MODIFIED: Change to grid */
-        grid-template-columns: 140px 1fr; /* 1st column for portrait, 2nd for text */
-        gap: 15px; /* Space between portrait and text */
-        align-items: start; /* Align items to the top */
-        height: auto; /* Ensure it can grow */
-        padding: 0; /* Remove padding, gap handles spacing */
-        margin-bottom: 25px;
+        display: grid;
+        /* MODIFIED: Use 'auto' for the second column, which is more stable here */
+        grid-template-columns: 140px auto;
+        gap: 15px; /* Creates space between portrait and text */
+        align-items: start;
+        height: auto;
+        /* MODIFIED: Ensure it takes full width and calculates padding correctly */
+        width: 100%;
         box-sizing: border-box;
+        padding-right: 20px; /* Give the title space from the right edge */
+        margin-bottom: 25px;
     }
     
     /* The portrait now has NO special margin or positioning */
@@ -672,12 +675,13 @@ footer .footer-text:last-child {
     .monarch-block .titles-text {
         position: static;
         text-align: left;
+        /* MODIFIED: Remove all properties now handled by the grid */
         padding: 0;
-        margin-left: 0; /* MODIFIED: Remove margin, handled by grid gap */
+        margin-left: 0;
         padding-top: 10px;
-        flex-grow: 1; /* This property no longer applies but is harmless */
         min-width: 0;
-        overflow-wrap: break-word;
+        /* MODIFIED: Use a more direct word-breaking property */
+        word-break: break-word;
     }
 
     /* The bottom content sections get their own padding */
