@@ -50,9 +50,16 @@ function createMonarchBlock(monarch, displayHouseName) {
     // --- Visuals and Titles Section ---
     const monarchVisualsAndTitles = document.createElement('div');
     monarchVisualsAndTitles.classList.add('monarch-visual-and-titles-wrapper');
-    const portraitDiv = document.createElement('div');
-    portraitDiv.classList.add('monarch-portrait-placeholder');
-    monarchVisualsAndTitles.appendChild(portraitDiv);
+
+    const portraitImg = document.createElement('img');
+    portraitImg.classList.add('monarch-portrait-placeholder'); // Re-use the class for sizing
+    portraitImg.src = `images/portraits/${monarch.id}.jpg`; // Default image
+    portraitImg.srcset = `images/portraits/<span class="math-inline">\{monarch\.id\}\.jpg 1x, images/portraits/</span>{monarch.id}@2x.jpg 2x`; // For Retina
+    portraitImg.alt = `Portrait of ${monarch.name}`; // For accessibility
+    portraitImg.width = 140; // Helps browser performance
+    portraitImg.height = 100; // Helps browser performance
+    portraitImg.loading = 'lazy'; // Improves performance by only loading images as you scroll
+    monarchVisualsAndTitles.appendChild(portraitImg);
     const titlesElement = document.createElement('p');
     titlesElement.classList.add('titles-text');
     titlesElement.textContent = `${monarch.titles.toUpperCase()} (${monarch.reign_years})`;

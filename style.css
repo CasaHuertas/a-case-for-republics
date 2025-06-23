@@ -250,13 +250,14 @@ body {
 .monarch-portrait-placeholder {
     width: 140px;
     height: 100px;
-    background-color: var(--khaki);
+    background-color: var(--stroke-bottom-color); /* MODIFIED: Change the solid color to a subtle fallback */
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    position: absolute; /* Absolute positioning */
-    left: 0px; /* Pull left to override monarch-block's padding */
-    top: 0; /* Aligns with the top of the .monarch-visual-and-titles-wrapper */
-    z-index: 2; /* Ensure it's on top */
+    position: absolute; 
+    left: 0px; 
+    top: 0; 
+    z-index: 2; 
+    object-fit: cover; /* ADD THIS: Ensures images fill the space without being stretched or distorted */
 }
 
 /* Monarch Block Text Styles - Fine-tuned vertical spacing and alignment */
