@@ -586,7 +586,7 @@ footer .footer-text:last-child {
 @media (max-width: 768px) { 
     /* MODIFIED: Apply padding to the parent block instead */
     .house-block {
-        /* padding-left: 30px; */
+        padding-left: 30px;
         padding-right: 30px;
     }
     /* --- Font size adjustments for smaller tablets and phones --- */
