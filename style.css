@@ -648,14 +648,15 @@ footer .footer-text:last-child {
 
     /* The wrapper that holds the portrait and title */
     .monarch-visual-and-titles-wrapper {
-        order: 3; 
-        display: flex;
-        align-items: flex-start;
-        /* Add ONLY right padding to constrain the title text */
-        padding: 0 25px 0 0; 
+        order: 3;
+        display: grid; /* MODIFIED: Change to grid */
+        grid-template-columns: 140px 1fr; /* 1st column for portrait, 2nd for text */
+        gap: 15px; /* Space between portrait and text */
+        align-items: start; /* Align items to the top */
+        height: auto; /* Ensure it can grow */
+        padding: 0; /* Remove padding, gap handles spacing */
         margin-bottom: 25px;
-        box-sizing: border-box; /* Ensures padding is calculated correctly */
-        /* height: auto; /* This allows the container to grow vertically to fit the title */
+        box-sizing: border-box;
     }
     
     /* The portrait now has NO special margin or positioning */
@@ -672,9 +673,9 @@ footer .footer-text:last-child {
         position: static;
         text-align: left;
         padding: 0;
-        margin-left: 15px;
+        margin-left: 0; /* MODIFIED: Remove margin, handled by grid gap */
         padding-top: 10px;
-        flex-grow: 1;
+        flex-grow: 1; /* This property no longer applies but is harmless */
         min-width: 0;
         overflow-wrap: break-word;
     }
