@@ -584,11 +584,6 @@ footer .footer-text:last-child {
 }
 
 @media (max-width: 768px) { 
-    /* MODIFIED: Apply padding to the parent block instead */
-    /* .house-block { */
-    /*  padding-left: 30px; */
-    /*    padding-right: 30px; */
-    /* } */
     /* --- Font size adjustments for smaller tablets and phones --- */
     .masthead-title {
         /* MODIFIED: Increased font size for mobile */
@@ -660,6 +655,7 @@ footer .footer-text:last-child {
         padding: 0 25px 0 0; 
         margin-bottom: 25px;
         box-sizing: border-box; /* Ensures padding is calculated correctly */
+        height: auto; /* This allows the container to grow vertically to fit the title */
     }
     
     /* The portrait now has NO special margin or positioning */
