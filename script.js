@@ -202,6 +202,15 @@ async function initializeWebsite() {
         monarchsByDisplayHouse[displayHouseName].push(monarch);
     });
 
+// ===================== vvv INSERT NEW CODE HERE vvv =====================
+
+    // Sort monarchs within each house chronologically by birth year
+    for (const house in monarchsByDisplayHouse) {
+        monarchsByDisplayHouse[house].sort((a, b) => a.birth_year - b.birth_year);
+    }
+
+// ===================== ^^^ END OF NEW CODE ^^^ =====================
+
     const renderingPromises = [];
     navHouses.forEach((houseName, index) => {
         const houseMonarchs = monarchsByDisplayHouse[houseName] || [];
