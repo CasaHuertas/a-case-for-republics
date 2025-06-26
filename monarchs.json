@@ -39,7 +39,7 @@
     "death_year": 1547,
     "inbreeding_rate": 25.00,
     "inbreeding_explanation": "His parents, Henry VII and Elizabeth of York (York), were third cousins. His inbreeding rate primarily reflects the genetic implications of his first marriage to Catherine of Aragon (Trastámara), his deceased brother's wife, a union of close affinity. The rate is calculated for their child, Mary I.",
-    "titles": "King of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, Lord of Ireland 🇮🇪, later King of Ireland 🇮🇪",
+    "titles": "King of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, King of Ireland 🇮🇪",
     "reign_years": "1509-1547",
     "parents": {
       "father": { "name": "Henry VII", "title": "King of England", "house": "Tudor" },
@@ -195,7 +195,7 @@
     "death_year": 1625,
     "inbreeding_rate": 50,
     "inbreeding_explanation": "His high rate is due to his parents, Mary, Queen of Scots, and Henry Stuart, Lord Darnley, being closely related through multiple lines. They were primarily half-first cousins, as both descended from their shared grandmother, Margaret Tudor (Tudor). This relationship was strengthened by their more distant shared Stuart ancestry.",
-    "titles": "King of Scots 🏴󠁧󠁢󠁳󠁣󠁴󠁿, King of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, King of Ireland 🇮🇪",
+    "titles": "King of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, King of Scots and Ireland 🏴󠁧󠁢󠁳󠁣󠁴󠁿🇮🇪",
     "reign_years": "1567-1625",
     "parents": {
       "father": { "name": "Henry Stuart", "title": "Lord Darnley", "house": "Stuart" },
@@ -219,7 +219,7 @@
     "death_year": 1649,
     "inbreeding_rate": 39.53,
     "inbreeding_explanation": "His father was James I. His mother, Anne of Denmark (Oldenburg), was not a close relative, but she was herself the product of a first-cousin marriage. Charles I therefore inherited a significant genetic load from both his father's direct inbreeding and his mother's own inherited inbreeding.",
-    "titles": "King of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, King of Scots 🏴󠁧󠁢󠁳󠁣󠁴󠁿, King of Ireland 🇮🇪",
+    "titles": "King of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, King of Scots and Ireland 🏴󠁧󠁢󠁳󠁣󠁴󠁿🇮🇪",
     "reign_years": "1625-1649",
     "parents": {
       "father": { "name": "James I", "title": "King of England", "house": "Stuart" },
@@ -246,7 +246,7 @@
     "death_year": 1685,
     "inbreeding_rate": 0,
     "inbreeding_explanation": null,
-    "titles": "King of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, King of Scots 🏴󠁧󠁢󠁳󠁣󠁴󠁿, King of Ireland 🇮🇪",
+    "titles": "King of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, King of Scots and Ireland 🏴󠁧󠁢󠁳󠁣󠁴󠁿🇮🇪",
     "reign_years": "1660-1685",
     "parents": {
       "father": { "name": "Charles I", "title": "King of England", "house": "Stuart" },
@@ -266,7 +266,7 @@
     "death_year": 1701,
     "inbreeding_rate": 0,
     "inbreeding_explanation": null,
-    "titles": "King of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, King of Scots 🏴󠁧󠁢󠁳󠁣󠁴󠁿, King of Ireland 🇮🇪",
+    "titles": "King of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, King of Scots and Ireland 🏴󠁧󠁢󠁳󠁣󠁴󠁿🇮🇪",
     "reign_years": "1685-1688",
     "parents": {
       "father": { "name": "Charles I", "title": "King of England", "house": "Stuart" },
@@ -291,7 +291,7 @@
     "death_year": 1694,
     "inbreeding_rate": 0,
     "inbreeding_explanation": null,
-    "titles": "Queen of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, Queen of Scots 🏴󠁧󠁢󠁳󠁣󠁴󠁿, Queen of Ireland 🇮🇪",
+    "titles": "Queen of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, Queen of Scots and Ireland 🏴󠁧󠁢󠁳󠁣󠁴󠁿🇮🇪",
     "reign_years": "1689-1694",
     "parents": {
       "father": { "name": "James II", "title": "King of England", "house": "Stuart" },
@@ -311,7 +311,7 @@
     "death_year": 1714,
     "inbreeding_rate": 0,
     "inbreeding_explanation": null,
-    "titles": "Queen of England 🏴󠁧󠁢󠁥󠁮󠁧󠁿, Queen of Scots 🏴󠁧󠁢󠁳󠁣󠁴󠁿, Queen of Ireland 🇮🇪, later Queen of Great Britain 🇬🇧",
+    "titles": "Queen of Great Britain 🇬🇧, Queen of Ireland 🇮🇪",
     "reign_years": "1702-1714",
     "parents": {
       "father": { "name": "James II", "title": "King of England", "house": "Stuart" },
@@ -562,7 +562,7 @@
     "death_year": 1788,
     "inbreeding_rate": 8.84,
     "inbreeding_explanation": null,
-    "titles": "King of Spain 🇪🇸, King of Naples 🇮🇹, King of Sicily 🇮🇹, Duke of Parma 🇮🇹",
+    "titles": "King of Spain 🇪🇸",
     "reign_years": "1759-1788",
     "parents": {
       "father": { "name": "Philip V", "title": "King of Spain", "house": "Bourbon" },
@@ -767,7 +767,7 @@
     "death_year": 1519,
     "inbreeding_rate": 0,
     "inbreeding_explanation": null,
-    "titles": "Holy Roman Emperor 🇩🇪, Archduke of Austria 🇦🇹",
+    "titles": "Holy Roman Emperor 🇩🇪",
     "reign_years": "1493-1519",
     "parents": {
       "father": { "name": "Frederick III", "title": "Holy Roman Emperor", "house": "Habsburg" },
@@ -793,8 +793,8 @@
     "death_year": 1558,
     "inbreeding_rate": 50.00,
     "inbreeding_explanation": "His parents, Philip I of Habsburg and Joanna of Castile (Trastámara), were second cousins. The high inbreeding rate is a direct result of his grandparents' generation: his paternal grandmother, Mary of Burgundy (Valois-Burgundy), and his maternal grandfather, Ferdinand II of Aragon (Trastámara), were first cousins.",
-    "titles": "Holy Roman Emperor 🇩🇪, King of Spain 🇪🇸, Archduke of Austria 🇦🇹, Lord of the Netherlands 🇳🇱",
-    "reign_years": "1519-1556",
+    "titles": "Holy Roman Emperor 🇩🇪, King of Spain 🇪🇸",
+    "reign_years": "1516-1556",
     "parents": {
       "father": { "name": "Philip I", "title": "King of Castile", "house": "Habsburg" },
       "mother": { "name": "Joanna", "title": "Queen of Castile and Aragon", "house": "Trastámara" }
@@ -817,7 +817,7 @@
     "death_year": 1564,
     "inbreeding_rate": 50.00,
     "inbreeding_explanation": "As the brother of Emperor Charles V, he shares the same parents and the same high coefficient of inbreeding, which was a result of a first-cousin marriage in their grandparents' generation that united the Burgundian and Spanish inheritances.",
-    "titles": "Holy Roman Emperor 🇩🇪, King of Bohemia 🇨🇿, King of Hungary 🇭🇺, Archduke of Austria 🇦🇹",
+    "titles": "Holy Roman Emperor 🇩🇪",
     "reign_years": "1556-1564",
     "parents": {
       "father": { "name": "Philip I", "title": "King of Castile", "house": "Habsburg" },
@@ -842,7 +842,7 @@
     "death_year": 1576,
     "inbreeding_rate": 50.00,
     "inbreeding_explanation": "His parents, Emperor Ferdinand I and Anna of Bohemia and Hungary (Jagiellon), were first cousins. This continued the Habsburg tradition of consolidating power through close family marriage.",
-    "titles": "Holy Roman Emperor 🇩🇪, King of Bohemia 🇨🇿, King of Hungary 🇭🇺, Archduke of Austria 🇦🇹",
+    "titles": "Holy Roman Emperor 🇩🇪",
     "reign_years": "1564-1576",
     "parents": {
       "father": { "name": "Ferdinand I", "title": "Holy Roman Emperor", "house": "Habsburg" },
@@ -869,7 +869,7 @@
     "death_year": 1612,
     "inbreeding_rate": 50.00,
     "inbreeding_explanation": "His parents were first cousins: Emperor Maximilian II and Maria of Spain (Habsburg). His paternal grandfather, Emperor Ferdinand I, and his maternal grandfather, Emperor Charles V, were brothers, creating the close genetic loop responsible for his high rate.",
-    "titles": "Holy Roman Emperor 🇩🇪, King of Bohemia 🇨🇿, King of Hungary 🇭🇺, Archduke of Austria 🇦🇹",
+    "titles": "Holy Roman Emperor 🇩🇪",
     "reign_years": "1576-1612",
     "parents": {
       "father": { "name": "Maximilian II", "title": "Holy Roman Emperor", "house": "Habsburg" },
@@ -887,7 +887,7 @@
     "death_year": 1619,
     "inbreeding_rate": 50.00,
     "inbreeding_explanation": "As the brother of Rudolf II, he shares the same first-cousin parentage—Emperor Maximilian II and Maria of Spain (Habsburg)—and the identical high inbreeding rate stemming from his grandfathers being brothers.",
-    "titles": "Holy Roman Emperor 🇩🇪, King of Bohemia 🇨🇿, King of Hungary 🇭🇺, Archduke of Austria 🇦🇹",
+    "titles": "Holy Roman Emperor 🇩🇪",
     "reign_years": "1612-1619",
     "parents": {
       "father": { "name": "Maximilian II", "title": "Holy Roman Emperor", "house": "Habsburg" },
@@ -907,7 +907,7 @@
     "death_year": 1637,
     "inbreeding_rate": 50.00,
     "inbreeding_explanation": "His parents, Charles II, Archduke of Austria, and Maria Anna of Bavaria (Wittelsbach), were uncle and niece. This extremely close union is the primary source of his high inbreeding rate, as his maternal grandmother was his own paternal aunt.",
-    "titles": "Holy Roman Emperor 🇩🇪, King of Bohemia 🇨🇿, King of Hungary 🇭🇺, Archduke of Austria 🇦🇹",
+    "titles": "Holy Roman Emperor 🇩🇪",
     "reign_years": "1619-1637",
     "parents": {
       "father": { "name": "Charles II", "title": "Archduke of Austria", "house": "Habsburg" },
@@ -932,7 +932,7 @@
     "death_year": 1657,
     "inbreeding_rate": 50.00,
     "inbreeding_explanation": "His parents were first cousins: his father, Emperor Ferdinand II, and his mother, Maria Anna of Bavaria (Wittelsbach). His rate is so high because his parents were already severely inbred; his paternal grandparents were an uncle-niece pairing, and his maternal grandparents were also first cousins.",
-    "titles": "Holy Roman Emperor 🇩🇪, King of Bohemia 🇨🇿, King of Hungary 🇭🇺, Archduke of Austria 🇦🇹",
+    "titles": "Holy Roman Emperor 🇩🇪",
     "reign_years": "1637-1657",
     "parents": {
       "father": { "name": "Ferdinand II", "title": "Holy Roman Emperor", "house": "Habsburg" },
@@ -959,7 +959,7 @@
     "death_year": 1705,
     "inbreeding_rate": 35.36,
     "inbreeding_explanation": "His parents, Emperor Ferdinand III and Maria Anna of Spain, were first cousins. His rate is notably high for this union because his paternal grandparents were also first cousins, and his maternal grandparents were first cousins once removed. This dense concentration of shared ancestors on both sides of his family is the source of his high rate.",
-    "titles": "Holy Roman Emperor 🇩🇪, King of Bohemia 🇨🇿, King of Hungary 🇭🇺, Archduke of Austria 🇦🇹",
+    "titles": "Holy Roman Emperor 🇩🇪",
     "reign_years": "1658-1705",
     "parents": {
       "father": { "name": "Ferdinand III", "title": "Holy Roman Emperor", "house": "Habsburg" },
@@ -985,7 +985,7 @@
     "death_year": 1711,
     "inbreeding_rate": 0,
     "inbreeding_explanation": null,
-    "titles": "Holy Roman Emperor 🇩🇪, King of Bohemia 🇨🇿, King of Hungary 🇭🇺, Archduke of Austria 🇦🇹",
+    "titles": "Holy Roman Emperor 🇩🇪",
     "reign_years": "1705-1711",
     "parents": {
       "father": { "name": "Leopold I", "title": "Holy Roman Emperor", "house": "Habsburg" },
@@ -1008,7 +1008,7 @@
     "death_year": 1740,
     "inbreeding_rate": 0,
     "inbreeding_explanation": null,
-    "titles": "Holy Roman Emperor 🇩🇪, King of Bohemia 🇨🇿, King of Hungary 🇭🇺, Archduke of Austria 🇦🇹",
+    "titles": "Holy Roman Emperor 🇩🇪",
     "reign_years": "1711-1740",
     "parents": {
       "father": { "name": "Leopold I", "title": "Holy Roman Emperor", "house": "Habsburg" },
@@ -1030,7 +1030,7 @@
     "death_year": 1506,
     "inbreeding_rate": 0,
     "inbreeding_explanation": null,
-    "titles": "King of Castile 🇪🇸, Duke of Burgundy 🇧🇪",
+    "titles": "King of Castile 🇪🇸",
     "reign_years": "1504-1506",
     "parents": {
       "father": { "name": "Maximilian I", "title": "Holy Roman Emperor", "house": "Habsburg" },
@@ -1057,7 +1057,7 @@
     "death_year": 1598,
     "inbreeding_rate": 50.00,
     "inbreeding_explanation": "His parents, Emperor Charles V and Isabella of Portugal (Aviz), were first cousins. This union was further compounded by the fact that his paternal great-grandmother and his maternal grandmother were sisters, creating multiple loops in his ancestry.",
-    "titles": "King of Spain 🇪🇸, King of Portugal 🇵🇹, King of Naples 🇮🇹, King of Sicily 🇮🇹, Duke of Milan 🇮🇹, Lord of the Netherlands 🇳🇱",
+    "titles": "King of Spain 🇪🇸",
     "reign_years": "1556-1598",
     "parents": {
       "father": { "name": "Charles V", "title": "Holy Roman Emperor", "house": "Habsburg" },
@@ -1085,7 +1085,7 @@
     "death_year": 1621,
     "inbreeding_rate": 70.71,
     "inbreeding_explanation": "His parents were Philip II of Spain and his fourth wife, Anna of Austria. Anna was her husband Philip's niece, making their union an uncle-niece marriage. This was compounded by the fact that Philip II's own parents were first cousins, resulting in an exceptionally high rate for his son.",
-    "titles": "King of Spain 🇪🇸, King of Portugal 🇵🇹, King of Naples 🇮🇹, King of Sicily 🇮🇹, Duke of Milan 🇮🇹",
+    "titles": "King of Spain 🇪🇸",
     "reign_years": "1598-1621",
     "parents": {
       "father": { "name": "Philip II", "title": "King of Spain", "house": "Habsburg" },
@@ -1111,7 +1111,7 @@
     "death_year": 1665,
     "inbreeding_rate": 35.36,
     "inbreeding_explanation": "His parents, Philip III of Spain and Margaret of Austria, were first cousins once removed. The resulting rate is particularly high because his paternal grandparents were uncle and niece, and his maternal grandparents were also first cousins, creating an immense inherited genetic load.",
-    "titles": "King of Spain 🇪🇸, King of Portugal 🇵🇹, King of Naples 🇮🇹, King of Sicily 🇮🇹, Duke of Milan 🇮🇹",
+    "titles": "King of Spain 🇪🇸",
     "reign_years": "1621-1665",
     "parents": {
       "father": { "name": "Philip III", "title": "King of Spain", "house": "Habsburg" },
@@ -1135,7 +1135,7 @@
     "death_year": 1700,
     "inbreeding_rate": 100.00,
     "inbreeding_explanation": "His genetic collapse was the result of generations of Habsburg inbreeding. His own parents' marriage was between uncle and niece, Philip IV of Spain and Mariana of Austria. Looking back just one more generation, his maternal grandparents were first cousins. This relentless intermarriage meant that while a person normally has eight unique great-grandparents, Charles II effectively only had four. The result was a family tree so narrow that every one of his great-grandparents, regardless of the branch, was a descendant of the same ancestral couple from over a century and a half prior: Joanna (Trastámara) and Philip I of Castile (Habsburg). This produced a final coefficient of inbreeding higher than that of a child from a direct brother-sister union.",
-    "titles": "King of Spain 🇪🇸, King of Naples 🇮🇹, King of Sicily 🇮🇹, Duke of Milan 🇮🇹",
+    "titles": "King of Spain 🇪🇸",
     "reign_years": "1665-1700",
     "parents": {
       "father": { "name": "Philip IV", "title": "King of Spain", "house": "Habsburg" },
@@ -1156,7 +1156,7 @@
     "death_year": 1765,
     "inbreeding_rate": 0,
     "inbreeding_explanation": null,
-    "titles": "Holy Roman Emperor 🇩🇪, Duke of Lorraine 🇫🇷, Grand Duke of Tuscany 🇮🇹",
+    "titles": "Holy Roman Emperor 🇩🇪",
     "reign_years": "1745-1765",
     "parents": {
       "father": { "name": "Leopold", "title": "Duke of Lorraine", "house": "Lorraine" },
@@ -1184,7 +1184,7 @@
     "death_year": 1790,
     "inbreeding_rate": 0,
     "inbreeding_explanation": null,
-    "titles": "Holy Roman Emperor 🇩🇪, Archduke of Austria 🇦🇹, King of Bohemia 🇨🇿, King of Hungary 🇭🇺",
+    "titles": "Holy Roman Emperor 🇩🇪",
     "reign_years": "1765-1790",
     "parents": {
       "father": { "name": "Francis I Stephen", "title": "Holy Roman Emperor", "house": "Habsburg-Lorraine" },
@@ -1205,7 +1205,7 @@
     "death_year": 1792,
     "inbreeding_rate": 0,
     "inbreeding_explanation": null,
-    "titles": "Holy Roman Emperor 🇩🇪, Grand Duke of Tuscany 🇮🇹, Archduke of Austria 🇦🇹",
+    "titles": "Holy Roman Emperor 🇩🇪",
     "reign_years": "1790-1792",
     "parents": {
       "father": { "name": "Francis I Stephen", "title": "Holy Roman Emperor", "house": "Habsburg-Lorraine" },
@@ -1234,7 +1234,7 @@
     "death_year": 1835,
     "inbreeding_rate": 50.00,
     "inbreeding_explanation": "His parents, Leopold II, Holy Roman Emperor, and Maria Luisa of Spain (Bourbon), were first cousins. His four grandparents were Francis I (Lorraine), Holy Roman Emperor; Maria Theresa (Habsburg), Archduchess of Austria; Charles III (Bourbon), King of Spain; and Maria Amalia of Saxony (Wettin), concentrating the genes of the major European powers.",
-    "titles": "Holy Roman Emperor 🇩🇪, Emperor of Austria 🇦🇹, King of Hungary 🇭🇺, King of Bohemia 🇨🇿",
+    "titles": "Holy Roman Emperor 🇩🇪",
     "reign_years": "1792-1835",
     "parents": {
       "father": { "name": "Leopold II", "title": "Holy Roman Emperor", "house": "Habsburg-Lorraine" },
@@ -1262,7 +1262,7 @@
     "death_year": 1875,
     "inbreeding_rate": 50.00,
     "inbreeding_explanation": "His high rate is a direct result of his parents, Emperor Francis I and Maria Theresa of Naples and Sicily (Bourbon-Two Sicilies), being double first cousins. This was reflected in his significant health problems, including epilepsy.",
-    "titles": "Emperor of Austria 🇦🇹, King of Hungary 🇭🇺, King of Bohemia 🇨🇿",
+    "titles": "Emperor of Austria 🇦🇹",
     "reign_years": "1835-1848",
     "parents": {
       "father": { "name": "Francis I", "title": "Emperor of Austria", "house": "Habsburg-Lorraine" },
@@ -1282,7 +1282,7 @@
     "death_year": 1916,
     "inbreeding_rate": 35.36,
     "inbreeding_explanation": "His parents, Archduke Franz Karl and Princess Sophie of Bavaria (Wittelsbach), were first cousins. Their mothers were sisters, and their fathers were also first cousins, creating multiple paths of shared ancestry that resulted in a higher-than-usual rate for their offspring.",
-    "titles": "Emperor of Austria 🇦🇹, King of Hungary 🇭🇺, King of Bohemia 🇨🇿",
+    "titles": "Emperor of Austria 🇦🇹",
     "reign_years": "1848-1916",
     "parents": {
       "father": { "name": "Franz Karl, Archduke of Austria", "title": null, "house": "Habsburg-Lorraine" },
@@ -1306,7 +1306,7 @@
     "death_year": 1922,
     "inbreeding_rate": 25.00,
     "inbreeding_explanation": "His parents were second cousins. More significantly, his paternal and maternal grandfathers were first cousins, and his paternal and maternal grandmothers were also first cousins, creating a 'double second cousin' parentage that contributes to his notable inbreeding rate.",
-    "titles": "Emperor of Austria 🇦🇹, King of Hungary 🇭🇺, King of Bohemia 🇨🇿",
+    "titles": "Emperor of Austria 🇦🇹",
     "reign_years": "1916-1918",
     "parents": {
       "father": { "name": "Otto Franz, Archduke of Austria", "title": null, "house": "Habsburg-Lorraine" },
@@ -1333,7 +1333,7 @@
     "death_year": 1727,
     "inbreeding_rate": 25.00,
     "inbreeding_explanation": "While his own parents were not closely related, this rate reflects the genetic makeup he passed to his heirs. His children were the product of his marriage to his first cousin, Sophia Dorothea of Celle.",
-    "titles": "King of Great Britain 🇬🇧, King of Ireland 🇮🇪, Elector of Hanover 🇩🇪",
+    "titles": "King of Great Britain 🇬🇧, King of Ireland 🇮🇪",
     "reign_years": "1714-1727",
     "parents": {
       "father": { "name": "Ernest Augustus, Elector of Hanover", "title": null, "house": "Welf" },
@@ -1356,7 +1356,7 @@
     "death_year": 1760,
     "inbreeding_rate": 50.00,
     "inbreeding_explanation": "His parents, George I of Great Britain and Sophia Dorothea of Celle (Welf), were first cousins. This is the direct source of his high inbreeding rate. Both of his grandfathers, Ernest Augustus, Elector of Hanover, and George William, Duke of Brunswick-Lüneburg, were brothers from the House of Welf.",
-    "titles": "King of Great Britain 🇬🇧, King of Ireland 🇮🇪, Elector of Hanover 🇩🇪",
+    "titles": "King of Great Britain 🇬🇧",
     "reign_years": "1727-1760",
     "parents": {
       "father": { "name": "George I", "title": "King of Great Britain", "house": "Hanover" },
@@ -1384,7 +1384,7 @@
     "death_year": 1820,
     "inbreeding_rate": 0,
     "inbreeding_explanation": null,
-    "titles": "King of Great Britain 🇬🇧, King of Ireland 🇮🇪, King of the United Kingdom 🇬🇧, King of Hanover 🇩🇪",
+    "titles": "King of the United Kingdom 🇬🇧",
     "reign_years": "1760-1820",
     "parents": {
       "father": { "name": "Frederick, Prince of Wales", "title": null, "house": "Hanover" },
@@ -1417,7 +1417,7 @@
     "death_year": 1830,
     "inbreeding_rate": 0,
     "inbreeding_explanation": null,
-    "titles": "King of the United Kingdom 🇬🇧, King of Hanover 🇩🇪",
+    "titles": "King of the United Kingdom 🇬🇧",
     "reign_years": "1820-1830",
     "parents": {
       "father": { "name": "George III", "title": "King of the United Kingdom", "house": "Hanover" },
@@ -1439,7 +1439,7 @@
     "death_year": 1837,
     "inbreeding_rate": 0,
     "inbreeding_explanation": null,
-    "titles": "King of the United Kingdom 🇬🇧, King of Hanover 🇩🇪",
+    "titles": "King of the United Kingdom 🇬🇧",
     "reign_years": "1830-1837",
     "parents": {
       "father": { "name": "George III", "title": "King of the United Kingdom", "house": "Hanover" },
@@ -1459,7 +1459,7 @@
     "death_year": 1901,
     "inbreeding_rate": 0,
     "inbreeding_explanation": null,
-    "titles": "Queen of the United Kingdom 🇬🇧, Empress of India 🇮🇳",
+    "titles": "Queen of the United Kingdom 🇬🇧",
     "reign_years": "1837-1901",
     "parents": {
       "father": { "name": "Edward, Duke of Kent", "title": null, "house": "Hanover" },
@@ -1489,7 +1489,7 @@
     "death_year": 1713,
     "inbreeding_rate": 0,
     "inbreeding_explanation": null,
-    "titles": "King in Prussia 🇩🇪, Elector of Brandenburg 🇩🇪",
+    "titles": "King of Prussia 🇩🇪",
     "reign_years": "1701-1713",
     "parents": {
       "father": { "name": "Frederick William, Elector of Brandenburg", "title": null, "house": "Hohenzollern" },
@@ -1511,7 +1511,7 @@
     "death_year": 1740,
     "inbreeding_rate": 0,
     "inbreeding_explanation": null,
-    "titles": "King in Prussia 🇩🇪, Elector of Brandenburg 🇩🇪",
+    "titles": "King of Prussia 🇩🇪",
     "reign_years": "1713-1740",
     "parents": {
       "father": { "name": "Frederick I", "title": "King in Prussia", "house": "Hohenzollern" },
@@ -1635,7 +1635,7 @@
     "death_year": 1888,
     "inbreeding_rate": 0,
     "inbreeding_explanation": null,
-    "titles": "German Emperor 🇩🇪, King of Prussia 🇩🇪",
+    "titles": "German Emperor 🇩🇪",
     "reign_years": "1871-1888",
     "parents": {
       "father": { "name": "Frederick William III", "title": "King of Prussia", "house": "Hohenzollern" },
@@ -1658,7 +1658,7 @@
     "death_year": 1888,
     "inbreeding_rate": 50.00,
     "inbreeding_explanation": "His high rate is due to his parents being second cousins, but from extremely interrelated families. His paternal grandmother and maternal grandfather were siblings, creating a close genetic link that significantly elevated his inherited inbreeding.",
-    "titles": "German Emperor 🇩🇪, King of Prussia 🇩🇪",
+    "titles": "German Emperor 🇩🇪",
     "reign_years": "1888",
     "parents": {
       "father": { "name": "William I", "title": "German Emperor", "house": "Hohenzollern" },
@@ -1687,7 +1687,7 @@
     "death_year": 1941,
     "inbreeding_rate": 50.00,
     "inbreeding_explanation": "He was the son of a marriage between close relatives, Frederick III of Prussia and Victoria (Hanover), Princess Royal. His high rate is a product of his parents being second cousins, but his paternal and maternal grandmothers also being first cousins.",
-    "titles": "German Emperor 🇩🇪, King of Prussia 🇩🇪",
+    "titles": "German Emperor 🇩🇪",
     "reign_years": "1888-1918",
     "parents": {
       "father": { "name": "Frederick III", "title": "German Emperor", "house": "Hohenzollern" },
@@ -1716,7 +1716,7 @@
     "death_year": 1936,
     "inbreeding_rate": 50.00,
     "inbreeding_explanation": "His parents, King Edward VII (Saxe-Coburg and Gotha) and Queen Alexandra of Denmark (Glücksburg), were second cousins once removed. The high inbreeding rate listed here reflects the genetic legacy passed to his children, which was a result of his own marriage to his second cousin, Princess Mary of Teck (Württemberg), further concentrating the descendants of Queen Victoria (Hanover).",
-    "titles": "King of the United Kingdom 🇬🇧, Emperor of India 🇮🇳",
+    "titles": "King of the United Kingdom 🇬🇧",
     "reign_years": "1910-1936",
     "parents": {
       "father": { "name": "Edward VII", "title": "King of the United Kingdom", "house": "Saxe-Coburg and Gotha" },
@@ -1743,7 +1743,7 @@
     "death_year": 1972,
     "inbreeding_rate": 25.00,
     "inbreeding_explanation": "As the son of George V and Queen Mary (Württemberg), who were second cousins, he was born with a significant inbreeding rate from a union that further concentrated the descendants of their shared great-grandmother, Queen Victoria (Hanover).",
-    "titles": "King of the United Kingdom 🇬🇧, Emperor of India 🇮🇳",
+    "titles": "King of the United Kingdom 🇬🇧",
     "reign_years": "1936",
     "parents": {
       "father": { "name": "George V", "title": "King of the United Kingdom", "house": "Windsor" },
@@ -1761,7 +1761,7 @@
     "death_year": 1952,
     "inbreeding_rate": 25.00,
     "inbreeding_explanation": "The brother of Edward VIII, he shares the same parentage and an identical inbreeding rate, born from the union of second cousins King George V and Queen Mary (Württemberg).",
-    "titles": "King of the United Kingdom 🇬🇧, Emperor of India 🇮🇳, Head of the Commonwealth",
+    "titles": "King of the United Kingdom 🇬🇧",
     "reign_years": "1936-1947",
     "parents": {
       "father": { "name": "George V", "title": "King of the United Kingdom", "house": "Windsor" },
@@ -1784,7 +1784,7 @@
     "death_year": 2022,
     "inbreeding_rate": 0,
     "inbreeding_explanation": null,
-    "titles": "Queen of the United Kingdom 🇬🇧, Head of the Commonwealth",
+    "titles": "Queen of the United Kingdom 🇬🇧",
     "reign_years": "1952-2022",
     "parents": {
       "father": { "name": "George VI", "title": "King of the United Kingdom", "house": "Windsor" },
@@ -1809,7 +1809,7 @@
     "death_year": null,
     "inbreeding_rate": 17.68,
     "inbreeding_explanation": "His parents, Queen Elizabeth II and Prince Philip (Glücksburg), Duke of Edinburgh, were second cousins once removed through their shared descent from King Christian IX (Glücksburg) of Denmark, and also third cousins through their shared descent from Queen Victoria (Hanover).",
-    "titles": "King of the United Kingdom 🇬🇧, Head of the Commonwealth",
+    "titles": "King of the United Kingdom 🇬🇧",
     "reign_years": "2022-Present",
     "parents": {
       "father": { "name": "Philip, Duke of Edinburgh", "title": "Prince of Greece and Denmark", "house": "Schleswig-Holstein-Sonderburg-Glücksburg" },
