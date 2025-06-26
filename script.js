@@ -202,10 +202,17 @@ async function initializeWebsite() {
         monarchsByDisplayHouse[displayHouseName].push(monarch);
     });
 
-    // Sort monarchs within each house chronologically by birth year
+    // Sort monarchs within each house chronologically by the start of their reign
     for (const house in monarchsByDisplayHouse) {
-        monarchsByDisplayHouse[house].sort((a, b) => a.birth_year - b.birth_year);
-    }
+        monarchsByDisplayHouse[house].sort((a, b) => {
+            // Find the first 4-digit number in the reign_years string for monarch 'a'
+            const startYearA = parseInt(a.reign_years.match(/\d{4}/)[0]);
+            // Find the first 4-digit number in the reign_years string for monarch 'b'
+            const startYearB = parseInt(b.reign_years.match(/\d{4}/)[0]);
+            // Compare the two numbers to determine the correct order
+        return startYearA - startYearB;
+    });
+}
 
     const renderingPromises = [];
     navHouses.forEach((houseName, index) => {
