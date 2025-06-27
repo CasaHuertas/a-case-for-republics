@@ -437,20 +437,20 @@ window.addEventListener('scroll', () => {
         const scrollY = window.scrollY;
 
         // --- Part 1: Handle the Text Fade ---
-        const fadeEndPosition = 115;
+        // The scroll position (in pixels) where the fade should start.
+        const fadeStartScrollY = 50;
+        // The number of pixels over which the fade should occur.
         const fadeTravelDistance = 200;
 
-        const titleTop = mastheadTitle.getBoundingClientRect().top;
-        const titleFadeStart = fadeEndPosition + fadeTravelDistance;
-        const titleProgress = (titleFadeStart - titleTop) / fadeTravelDistance;
-        const titleOpacity = 1 - Math.max(0, Math.min(titleProgress, 1));
-        mastheadTitle.style.opacity = titleOpacity;
+        // Calculate the progress of the scroll through the fade zone.
+        const scrollProgress = (scrollY - fadeStartScrollY) / fadeTravelDistance;
 
-        const subtitleTop = mastheadSubtitle.getBoundingClientRect().top;
-        const subtitleFadeStart = fadeEndPosition + fadeTravelDistance;
-        const subtitleProgress = (subtitleFadeStart - subtitleTop) / fadeTravelDistance;
-        const subtitleOpacity = 1 - Math.max(0, Math.min(subtitleProgress, 1));
-        mastheadSubtitle.style.opacity = subtitleOpacity;
+        // Clamp the progress between 0 and 1, and calculate opacity.
+        const newOpacity = 1 - Math.max(0, Math.min(scrollProgress, 1));
+
+        // Apply the new opacity to both elements.
+        mastheadTitle.style.opacity = newOpacity;
+        mastheadSubtitle.style.opacity = newOpacity;
 
         // --- Part 2: Handle the Masthead Fixing ---
         const fixTriggerPoint = 740 - 115; // 625px
